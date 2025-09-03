@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[80vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/resort-hero.jpg')" }}>
+      <section className="relative h-[80vh] bg-cover bg-center"
+       style={{backgroundImage: "url('/images/contoh.jpg"}}>
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-2xl md:text-6xl font-bold">Selamat Datang di Sribudaya Resort & Homestay</h1>
@@ -31,6 +32,7 @@ export default function Home() {
           Kami bukan sekadar resort, tapi sebuah pengalaman. Dari pemandangan tropis hingga pelayanan hangat, kami siap menemani liburan Anda.
         </p>
       </section>
+
     </div>
   );
 }
