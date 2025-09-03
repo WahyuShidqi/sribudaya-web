@@ -4,4 +4,28 @@
 
 body {
   background-color: #e9e4dc;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ! DO NOT DELETE! BELOW ARE TAILWIND COMPONENTS */
+
+.green-btn {
+  @apply text-white font-medium rounded-lg px-5 py-2.5 text-center text-base md:text-lg focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 transition-all duration-300;
+
+  background-image: linear-gradient(to right, #22c55e, #15803d);
+}
+
+.green-btn:hover {
+  background-image: linear-gradient(to right, #16a34a, #14532d);
 }
