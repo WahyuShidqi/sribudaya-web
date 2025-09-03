@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <section id="navbar-section" className="sticky top-0 z-50">
-      <nav className="border-gray-200 bg-[#e9e4dc]">
+      <nav className="border-gray-200 bg-[#e9e4dc] relative">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           {/* Logo */}
           <Link
@@ -61,9 +61,10 @@ const Navbar = () => {
               }
               overflow-hidden transition-all duration-500 ease-in-out
               w-full md:max-h-none md:opacity-100 md:translate-y-0
+              absolute top-[90%] left-0 md:static
             `}
           >
-            <ul className="flex flex-col font-medium mt-4 rounded-lg bg-[#2f2f2f] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+            <ul className="flex flex-col font-medium mt-2 md:mt-0 rounded-lg bg-[#2f2f2f] md:space-x-8 rtl:space-x-reverse md:flex-row md:border-0 md:bg-transparent shadow-lg md:shadow-none">
               {[
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About" },
