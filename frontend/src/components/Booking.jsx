@@ -4,7 +4,9 @@ const Booking = () => {
   return (
     <section id="booking" className="">
       <div className="container">
-        <h1>this is booking page</h1>
+        <div className="wrapper">
+          <h2>test</h2>
+        </div>
       </div>
     </section>
   );
