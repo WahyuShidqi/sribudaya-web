@@ -6,11 +6,17 @@ body {
   background-color: #e9e4dc;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Epunda Slab", serif
 }
 .font-beau-rivage {
   font-family: "Beau Rivage", cursive !important;
   font-style: normal !important;
+}
+
+.font-epunda-slab {
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
 }
 
 html {
