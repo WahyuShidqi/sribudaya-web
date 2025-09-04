@@ -15,7 +15,7 @@ import useFancybox from "../fancybox";
 import { Autoplay, Pagination } from "swiper/modules";
 
 // import font awesome icon
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 /* import all the icons in Free Solid, Free Regular, and Brands styles */
@@ -97,50 +97,45 @@ const Booking = () => {
           </div>
         </div>
       </div>
+
       {/* Booking room section */}
-      <div className="container">
+      <div className="my-container w-full">
         <div className="wrapper my-10">
           <div className="family-suite ">
             {/* Booking room 1 */}
             <div
               id="booking-room1"
-              className="flex justify-center items-center gap-5 "
+              className="w-full flex justify-center flex-col p-10 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
             >
-              <div ref={fancyboxRefRoom1} className="grid-images">
+              <div ref={fancyboxRefRoom1} className="grid-images ">
                 <img data-fancybox="gallery" src="/images/contoh.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/wedding.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
               </div>
-              <div className="family-suite-desc w-1/2">
+              <div className="family-suite-desc p-10  w-auto lg:text-left lg:text-wrap">
+                <h1 className="font-normal text-6xl font-beau-rivage mb-4">
+                  Family Suite
+                </h1>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Neque fugit excepturi cumque qui optio, iste odit atque
-                  expedita? Quasi mollitia, officiis illo perferendis odit
-                  quisquam explicabo. Aspernatur temporibus repudiandae
-                  asperiores! Dolor veritatis temporibus, ipsa, sapiente, ipsum
-                  libero minus aut odit facere quibusdam excepturi sequi
-                  repudiandae possimus perferendis? Nihil perferendis totam
-                  voluptate eaque sapiente, impedit, corporis eveniet sit
-                  reiciendis, eos enim! Similique repudiandae porro aliquam
-                  animi, praesentium ipsa autem officia! Vitae commodi facere
-                  dolore, fuga odio amet placeat, doloribus animi voluptatum in
-                  perferendis dolor, beatae necessitatibus. Labore minus maiores
-                  quia omnis.
                 </p>
               </div>
             </div>
-            <div
+
+            {/* Booking room 2 */}
+            {/* <div
               id="booking-room2"
-              className="flex justify-center items-center gap-5 "
+              className="w-full bg-green-700 flex justify-center items-center flex-col p-10 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row-reverse "
             >
-              <div ref={fancyboxRefRoom2} className="grid-images">
+              <div ref={fancyboxRefRoom2} className="grid-images ">
                 <img data-fancybox="gallery" src="/images/contoh.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/wedding.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
               </div>
-              <div className="family-suite-desc w-1/2">
+              <div className="family-suite-desc text-white p-10 text-center lg:w-1/2 lg:text-left lg:text-wrap">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Neque fugit excepturi cumque qui optio, iste odit atque
@@ -157,18 +152,20 @@ const Booking = () => {
                   quia omnis.
                 </p>
               </div>
-            </div>
-            <div
+            </div> */}
+
+            {/* Booking room 3 */}
+            {/* <div
               id="booking-room3"
-              className="flex justify-center items-center gap-5 "
+              className="w-full flex justify-center items-center flex-col p-10 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
             >
-              <div ref={fancyboxRefRoom3} className="grid-images">
+              <div ref={fancyboxRefRoom3} className="grid-images ">
                 <img data-fancybox="gallery" src="/images/contoh.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/wedding.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
               </div>
-              <div className="family-suite-desc w-1/2">
+              <div className="family-suite-desc p-10 text-center lg:w-1/2 lg:text-left lg:text-wrap">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Neque fugit excepturi cumque qui optio, iste odit atque
@@ -185,7 +182,7 @@ const Booking = () => {
                   quia omnis.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

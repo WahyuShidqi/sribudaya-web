@@ -6,6 +6,11 @@ body {
   background-color: #e9e4dc;
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.font-beau-rivage {
+  font-family: "Beau Rivage", cursive !important;
+  font-style: normal !important;
 }
 
 html {
@@ -36,8 +41,8 @@ html {
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
   gap: 2px; /* spacing between images */
-  width: 500px; /* adjust size as you want */
-  height: 300px; /* makes the whole block a square */
+  width: 20rem;
+  height: 18.75rem; /* makes the whole block a square */
 }
 
 .grid-images img {
@@ -48,4 +53,11 @@ html {
 
 .grid-images img:hover {
   cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .grid-images {
+    width: 31.25rem;
+    height: auto;
+  }
 }
