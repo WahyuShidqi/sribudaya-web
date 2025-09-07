@@ -520,6 +520,16 @@ const Booking = () => {
           <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
         </div>
 
+        {/* wedding section description */}
+        <div className="booking-title  mb-8 w-fit">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem
+            quam est, exercitationem beatae, modi sequi porro quibusdam debitis,
+            minima veniam temporibus molestias similique quae impedit et minus
+            ipsa mollitia!
+          </p>
+        </div>
+
         <PackageCard />
       </div>
 
