@@ -6,11 +6,9 @@
 
 // // export default Home;
 
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
-
 
 const Home = () => {
   const images = [
@@ -18,7 +16,7 @@ const Home = () => {
     "/images/hall1.jpg",
     "/images/hotel.jpg",
     "/images/pool.jpg",
-    "/images/wedding.jpg"
+    "/images/wedding.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +44,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <section id="homepage" className="mb-36">
       {/* Hero dengan slider */}
       <section
         className="relative h-[80vh] bg-cover bg-center transition-all duration-[2000ms] ease-in-out"
@@ -91,20 +89,19 @@ const Home = () => {
           <FaChevronRight className="text-white text-2xl md:text-4xl" />
         </button>
         {/* Indicator dots */}
-<div className="absolute bottom-6 w-full flex justify-center space-x-2">
-  {images.map((_, index) => (
-    <button
-      key={index}
-      onClick={() => setCurrentIndex(index)}
-      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-        currentIndex === index
-          ? "bg-blue-600 scale-110"
-          : "bg-white bg-opacity-50 hover:bg-opacity-80"
-      }`}
-    ></button>
-  ))}
-</div>
-
+        <div className="absolute bottom-6 w-full flex justify-center space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentIndex === index
+                  ? "bg-blue-600 scale-110"
+                  : "bg-white bg-opacity-50 hover:bg-opacity-80"
+              }`}
+            ></button>
+          ))}
+        </div>
       </section>
 
       {/* About Section */}
@@ -120,8 +117,8 @@ const Home = () => {
             </h2>
             <div className="w-16 h-[2px] bg-blue-600 mb-6"></div>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Sribudaya resort is designed to meet the requirements of modern day
-              travelers. We understand each trip is different and have
+              Sribudaya resort is designed to meet the requirements of modern
+              day travelers. We understand each trip is different and have
               thoughtfully balanced the scapes of a peaceful home and a luxury
               hotel.
             </p>
@@ -147,8 +144,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-            {/* Our Rooms Section */}
-      <section className="px-10 py-20 bg-gray-50">
+
+      {/* Our Rooms Section */}
+      <section className="px-10 py-20 ">
         <div className="text-center mb-12">
           <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
             Our Rooms
@@ -176,7 +174,7 @@ const Home = () => {
               </p>
               <div className="mt-4 flex space-x-4">
                 <button className="border-2 border-blue-600 px-4 py-2 rounded-md hover:bg-white hover:text-black transition">
-                  View  Detail
+                  View Detail
                 </button>
               </div>
             </div>
@@ -208,57 +206,96 @@ const Home = () => {
       </section>
       {/* Our Rooms Section */}
 
-{/* Amenities Section */}
-<section className="py-20 px-6 md:px-12 bg-gray-50">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    
-    {/* Bagian teks kiri */}
-    <div>
-      <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-        Amenities
-      </p>
-      <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-        Your All-Inclusive <br /> Experience
-      </h2>
-      <p className="text-gray-600 leading-relaxed">
-        Indulge in a world of luxury and comfort with our exclusive resort amenities, 
-        designed to create unforgettable experiences for you.
-      </p>
-    </div>
+      {/* Amenities Section */}
+      <section className="py-20 px-6 md:px-12 ">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Bagian teks kiri */}
+          <div>
+            <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
+              Amenities
+            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+              Your All-Inclusive <br /> Experience
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Indulge in a world of luxury and comfort with our exclusive resort
+              amenities, designed to create unforgettable experiences for you.
+            </p>
+          </div>
 
-    {/* Bagian icon kanan */}
-    <div className="grid grid-cols-2 gap-6">
-      {/* Wifi */}
-      <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-        <img src="/images/icons/wifi.png" alt="Free Wifi" className="w-10 h-10 mb-3" />
-        <p className="text-gray-700 font-medium">Free Wifi</p>
-      </div>
+          {/* Bagian icon kanan */}
+          <div className="grid grid-cols-2 gap-6">
+            {/* Wifi */}
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
+              <img
+                src="/images/icons/wifi.png"
+                alt="Free Wifi"
+                className="w-10 h-10 mb-3"
+              />
+              <p className="text-gray-700 font-medium">Free Wifi</p>
+            </div>
 
-      {/* Furnishing */}
-      <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-        <img src="/images/icons/furnishing.png" alt="Fine Furnishing" className="w-10 h-10 mb-3" />
-        <p className="text-gray-700 font-medium">Fine Furnishing</p>
-      </div>
+            {/* Furnishing */}
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
+              <img
+                src="/images/icons/furnishing.png"
+                alt="Fine Furnishing"
+                className="w-10 h-10 mb-3"
+              />
+              <p className="text-gray-700 font-medium">Fine Furnishing</p>
+            </div>
 
-      {/* Parking */}
-      <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-        <img src="/images/icons/parking.png" alt="Private Parking" className="w-10 h-10 mb-3" />
-        <p className="text-gray-700 font-medium">Private Parking</p>
-      </div>
+            {/* Parking */}
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
+              <img
+                src="/images/icons/parking.png"
+                alt="Private Parking"
+                className="w-10 h-10 mb-3"
+              />
+              <p className="text-gray-700 font-medium">Private Parking</p>
+            </div>
 
-      {/* AC */}
-      <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-        <img src="/images/icons/ac.png" alt="Air Conditioning" className="w-10 h-10 mb-3" />
-        <p className="text-gray-700 font-medium">Air Conditioning</p>
-      </div>
-    </div>
-  </div>
-</section>
-    </div>
+            {/* AC */}
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
+              <img
+                src="/images/icons/ac.png"
+                alt="Air Conditioning"
+                className="w-10 h-10 mb-3"
+              />
+              <p className="text-gray-700 font-medium">Air Conditioning</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section id="location" className="py-20 px-20 h-[25rem] md:h-[40rem]">
+        {/* location title */}
+        <div className="text-center mb-12">
+          <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
+            Location
+          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+            Our Resort's Location
+          </h2>
+        </div>
+
+        {/* Google Maps */}
+        <div className="w-full flex justify-center items-center h-full overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl ">
+          <iframe
+            title="google-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3493821911425!2d95.32108227506707!3d5.5150531944649845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3040392caa277e19%3A0xd761fb6d5e2daf74!2sSribudaya%20resort%20%26%20homestay!5e0!3m2!1sen!2sid!4v1757240120401!5m2!1sen!2sid"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </section>
   );
 };
 
 export default Home;
-
-
-
