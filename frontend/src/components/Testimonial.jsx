@@ -1,8 +1,5 @@
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 
 const testimonials = [
   {
@@ -23,23 +20,45 @@ const testimonials = [
     text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
     img: "/images/client3.jpg",
   },
+  {
+    name: "Sarah Johnson",
+    role: "Marketing Manager",
+    text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
+    img: "/images/client3.jpg",
+  },
+  {
+    name: "Sarah Johnson",
+    role: "Marketing Manager",
+    text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
+    img: "/images/client3.jpg",
+  },
+  {
+    name: "Sarah Johnson",
+    role: "Marketing Manager",
+    text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
+    img: "/images/oran3.jpg",
+  },
 ];
 
 const Testimonial = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20">
       <h2 className="text-center text-3xl font-bold mb-10">People Love Us</h2>
       <Swiper
-        modules={[Navigation, Pagination]}
         spaceBetween={20}
         navigation
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+        }}
+        speed={2000}
+        modules={[Navigation, Pagination, Autoplay]}
         className="px-6 md:px-12 lg:px-20"
         breakpoints={{
-          0: { slidesPerView: 1 },     // HP
-          640: { slidesPerView: 1 },   // small tablet
-          768: { slidesPerView: 2 },   // tablet
-          1024: { slidesPerView: 3 },  // desktop
+          0: { slidesPerView: 1 }, // HP
+          640: { slidesPerView: 1 }, // small tablet
+          768: { slidesPerView: 2 }, // tablet
+          1024: { slidesPerView: 3 }, // desktop
         }}
       >
         {testimonials.map((item, index) => (
