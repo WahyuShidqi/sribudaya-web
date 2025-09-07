@@ -120,13 +120,14 @@ const Contact = () => {
             {/* Google Maps */}
             <div className="w-full h-[24rem] md:h-full overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
               <iframe
-                title="Lokasi Sribudaya Resort & Homestay"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.2163901967276!2d95.31976211476535!3d5.556271995817812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3040375f4a742a27%3A0x633d4e8c15664a13!2sSribudaya%20Resto%20%26%20Homestay!5e0!3m2!1sid!2sid!4v1628102927909!5m2!1sid!2sid"
+                title="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3493821911425!2d95.32108227506707!3d5.5150531944649845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3040392caa277e19%3A0xd761fb6d5e2daf74!2sSribudaya%20resort%20%26%20homestay!5e0!3m2!1sen!2sid!4v1757240120401!5m2!1sen!2sid"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
