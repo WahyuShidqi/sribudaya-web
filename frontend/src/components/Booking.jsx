@@ -22,6 +22,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import PackageCard from "./PackageCard";
 
 library.add(fas, far, fab);
 
@@ -43,7 +44,7 @@ const Booking = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="booking" className="m-0 p-0 w-full">
+    <section id="booking" className="m-0 p-0  w-full">
       {/* Slide section */}
       <div className="w-full ">
         <div className="wrapper">
@@ -81,7 +82,7 @@ const Booking = () => {
             </Swiper>
             <div className="absolute inset-0 z-10 bg-black bg-opacity-40"></div>
             {/* Description for Hero section */}
-            <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white flex-col">
+            <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white  flex-col">
               <div className="header text-center w-[85%]">
                 <h1 className="text-3xl md:text-5xl font-bold p-5">
                   We offer you a cozy room suitable for you and your loved one!
@@ -92,7 +93,7 @@ const Booking = () => {
                   Order your room right here and right now before it's too late!
                 </h2>
                 <div className=" mt-12">
-                  <a href="#order-section" className="green-btn">
+                  <a href="#order-section" className="blue-btn">
                     Book Now!
                   </a>
                 </div>
@@ -109,10 +110,27 @@ const Booking = () => {
       >
         <div className="wrapper my-10">
           <div className="family-suite flex flex-col gap-5 justify-center">
+            {/* title for booking section */}
+            <div className="booking-title relative mt-8 w-fit">
+              <h2 className="subtitle text-left">ROOM LIST</h2>
+              <h1 className="title">Our Room For You</h1>
+              <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+            </div>
+
+            {/* booking section description */}
+            <div className="booking-title  mb-8 w-fit">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                quidem quam est, exercitationem beatae, modi sequi porro
+                quibusdam debitis, minima veniam temporibus molestias similique
+                quae impedit et minus ipsa mollitia!
+              </p>
+            </div>
+
             {/* Booking room 1 */}
             <div
               id="booking-room1"
-              className="w-full border-2 border-gray-400 bg-dark rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
+              className="w-full border-2 border-black rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
             >
               <div ref={fancyboxRefRoom1} className="grid-images ">
                 <img data-fancybox="gallery" src="/images/contoh.jpg" alt="" />
@@ -120,19 +138,17 @@ const Booking = () => {
                 <img data-fancybox="gallery" src="/images/wedding.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
               </div>
-              <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-gray-300  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
+              <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
                 <div className="family-suite-desc-text">
-                  <h1 className="font-normal text-white text-5xl md:text-6xl font-beau-rivage mb-4">
-                    Family Suite
-                  </h1>
-                  <p className="text-white">
+                  <h1 className="card-title">Family Suite</h1>
+                  <p className="">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Neque fugit excepturi cumque qui optio, iste odit atque
                   </p>
                 </div>
                 <div className="benefit-icon flex flex-col mt-4 gap-2">
                   {/* icon description 1*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -149,7 +165,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 2*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -165,7 +181,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 3*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -181,7 +197,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 4*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -198,7 +214,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 5*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -215,7 +231,7 @@ const Booking = () => {
                   </div>
                 </div>
               </div>
-              <div className="pricing flex flex-col  text-white lg:w-[24rem] h-full w-full py-6 px-4 ">
+              <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
                 <h1 className="text-3xl font-semibold">Harga :</h1>
                 <h2 className="text-2xl font-semibold mt-6">
                   Rp.1300,000/malam
@@ -227,7 +243,7 @@ const Booking = () => {
                   href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="green-btn mt-24 md:text-xl"
+                  className="blue-btn mt-24 md:text-xl"
                 >
                   <span className="text-2xl pr-1">
                     <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
@@ -240,7 +256,7 @@ const Booking = () => {
             {/* Booking room 2 */}
             <div
               id="booking-room2"
-              className="w-full border-2 border-gray-400 bg-dark rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
+              className="w-full border-2 border-black  rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
             >
               <div ref={fancyboxRefRoom2} className="grid-images ">
                 <img data-fancybox="gallery" src="/images/contoh.jpg" alt="" />
@@ -248,19 +264,17 @@ const Booking = () => {
                 <img data-fancybox="gallery" src="/images/wedding.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
               </div>
-              <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-gray-300  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
+              <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
                 <div className="family-suite-desc-text">
-                  <h1 className="font-normal text-white text-5xl md:text-6xl font-beau-rivage mb-4">
-                    Family Studio
-                  </h1>
-                  <p className="text-white">
+                  <h1 className="card-title">Family Studio</h1>
+                  <p className="">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Neque fugit excepturi cumque qui optio, iste odit atque
                   </p>
                 </div>
                 <div className="benefit-icon flex flex-col mt-4 gap-2">
                   {/* icon description 1*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -277,7 +291,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 2*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -293,7 +307,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 3*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -309,7 +323,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 4*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -326,7 +340,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 5*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -343,7 +357,7 @@ const Booking = () => {
                   </div>
                 </div>
               </div>
-              <div className="pricing flex flex-col  text-white lg:w-[24rem] h-full w-full py-6 px-4 ">
+              <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
                 <h1 className="text-3xl font-semibold">Harga :</h1>
                 <h2 className="text-2xl font-semibold mt-6">
                   Rp.1300,000/malam
@@ -355,7 +369,7 @@ const Booking = () => {
                   href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20Studio"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="green-btn mt-24 md:text-xl"
+                  className="blue-btn mt-24 md:text-xl"
                 >
                   <span className="text-2xl pr-1">
                     <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
@@ -368,7 +382,7 @@ const Booking = () => {
             {/* Booking room 3 */}
             <div
               id="booking-room3"
-              className="w-full border-2 border-gray-400 bg-dark rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
+              className="w-full border-2 border-black  rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row "
             >
               <div ref={fancyboxRefRoom3} className="grid-images ">
                 <img data-fancybox="gallery" src="/images/contoh.jpg" alt="" />
@@ -376,19 +390,17 @@ const Booking = () => {
                 <img data-fancybox="gallery" src="/images/wedding.jpg" alt="" />
                 <img data-fancybox="gallery" src="/images/hotel.jpg" alt="" />
               </div>
-              <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-gray-300  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
+              <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
                 <div className="family-suite-desc-text">
-                  <h1 className="font-normal text-white text-5xl md:text-6xl font-beau-rivage mb-4">
-                    Family Deluxe
-                  </h1>
-                  <p className="text-white">
+                  <h1 className="card-title">Family Deluxe</h1>
+                  <p className="">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Neque fugit excepturi cumque qui optio, iste odit atque
                   </p>
                 </div>
                 <div className="benefit-icon flex flex-col mt-4 gap-2">
                   {/* icon description 1*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -405,7 +417,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 2*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -421,7 +433,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 3*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -437,7 +449,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 4*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -454,7 +466,7 @@ const Booking = () => {
                     </div>
                   </div>
                   {/* icon description 5*/}
-                  <div className="icon-desc flex gap-4 text-white">
+                  <div className="icon-desc flex gap-4 ">
                     <div className="booking-icon">
                       <span className="">
                         <FontAwesomeIcon
@@ -471,7 +483,7 @@ const Booking = () => {
                   </div>
                 </div>
               </div>
-              <div className="pricing flex flex-col  text-white lg:w-[24rem] h-full w-full py-6 px-4 ">
+              <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
                 <h1 className="text-3xl font-semibold">Harga :</h1>
                 <h2 className="text-2xl font-semibold mt-6">
                   Rp. 1.300,000/malam
@@ -483,7 +495,7 @@ const Booking = () => {
                   href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20deluxe"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="green-btn mt-24 md:text-xl"
+                  className="blue-btn mt-24 md:text-xl"
                 >
                   <span className="text-2xl pr-1">
                     <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
@@ -496,14 +508,33 @@ const Booking = () => {
         </div>
       </div>
 
+      {/* Wedding Section */}
+
+      <div className="wedding-container py-24 px-5 md:px-12 lg:px-24 ">
+        {/* title for FAQ section */}
+        <div className="booking-title relative my-8 w-fit ">
+          <h2 className="subtitle text-left">WEDDING HALL</h2>
+          <h1 className="title">
+            A Modern Wedding Hall Designed <br /> for Your Special Day
+          </h1>
+          <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+        </div>
+
+        <PackageCard />
+      </div>
+
       {/* Accordion section */}
-      <div className="accordion-container  px-5 py-24 bg-dark lg:px-60">
-        <h1 className="title text-center font-semibold text-white mb-6 text-3xl">
-          F.A.Q
-        </h1>
-        <div className="w-full rounded-xl">
+      <div className="accordion-container py-24 px-5 md:px-12 lg:px-24 ">
+        {/* title for FAQ section */}
+        <div className="booking-title relative mt-8 w-fit">
+          <h2 className="subtitle text-left">F.A.Q.</h2>
+          <h1 className="title">Frequently Asked Questions</h1>
+          <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+        </div>
+
+        <div className="w-full mt-10 rounded-xl">
           {/* Item 1 */}
-          <div className="border bg-main rounded-t-lg border-gray-400 ">
+          <div className="border mt-2 bg-main rounded-lg border-black ">
             <button
               onClick={() => setOpenIndex(openIndex === 0 ? null : 0)}
               className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100 hover:rounded-t-lg gap-3"
@@ -532,7 +563,7 @@ const Booking = () => {
                 openIndex === 0 ? "max-h-96" : "max-h-0"
               }`}
             >
-              <div className="p-5 border-t border-gray-700 ">
+              <div className="p-5 border-t border-black ">
                 <p className="mb-2 ">
                   Flowbite is an open-source library of interactive components
                   built on top of Tailwind CSS including buttons, dropdowns,
@@ -543,7 +574,7 @@ const Booking = () => {
           </div>
 
           {/* Item 2 */}
-          <div className="border bg-main border-gray-400 ">
+          <div className="border mt-2 bg-main rounded-lg border-black ">
             <button
               onClick={() => setOpenIndex(openIndex === 1 ? null : 1)}
               className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100  gap-3"
@@ -572,7 +603,7 @@ const Booking = () => {
                 openIndex === 1 ? "max-h-96" : "max-h-0"
               }`}
             >
-              <div className="p-5 border-t border-gray-700 ">
+              <div className="p-5 border-t border-black ">
                 <p className="mb-2 ">
                   Flowbite is first conceptualized and designed using the Figma
                   software so everything you see in the library has a design
@@ -583,7 +614,7 @@ const Booking = () => {
           </div>
 
           {/* Item 3 */}
-          <div className="border rounded-b-lg bg-main border-gray-400 ">
+          <div className="border mt-2 rounded-lg bg-main border-black ">
             <button
               onClick={() => setOpenIndex(openIndex === 2 ? null : 2)}
               className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100 hover:rounded-b-lg gap-3"
@@ -614,7 +645,7 @@ const Booking = () => {
                 openIndex === 2 ? "max-h-96" : "max-h-0"
               }`}
             >
-              <div className="p-5 border-t border-gray-700 ">
+              <div className="p-5 border-t border-black ">
                 <p className="mb-2 ">
                   The main difference is that the core components from Flowbite
                   are open source under the MIT license, whereas Tailwind UI is

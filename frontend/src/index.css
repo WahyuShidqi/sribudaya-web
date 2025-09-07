@@ -37,6 +37,7 @@ html {
 .bg-main {
   background-color: #e9e4dc;
 }
+
 .green-btn {
   @apply text-white font-medium rounded-lg px-5 py-2.5 text-center text-base md:text-lg focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 transition-all duration-300;
 
@@ -45,6 +46,26 @@ html {
 
 .green-btn:hover {
   background-image: linear-gradient(to right, #16a34a, #14532d);
+}
+
+.blue-btn {
+  @apply text-white bg-blue-600 font-medium rounded-lg px-5 py-2.5 text-center text-base md:text-lg focus:ring-4 focus:outline-none focus:ring-white  transition-all duration-300;
+}
+
+.blue-btn:hover {
+  @apply bg-blue-900;
+}
+
+.title {
+  @apply font-bold  text-3xl md:text-5xl mb-8 inline-block leading-snug;
+}
+
+.subtitle {
+  @apply text-blue-600 font-bold tracking-widest uppercase mb-2 text-lg font-sans;
+}
+
+.card-title {
+  @apply font-normal text-5xl md:text-6xl font-beau-rivage mb-4;
 }
 
 /* These are for grid gallery */
