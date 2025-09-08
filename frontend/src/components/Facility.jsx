@@ -140,6 +140,16 @@ const Facility = () => {
           </div>
         </div>
       </div>
+      {/* title for facility list */}
+      <div className="px-24 !mt-40">
+        <div className="booking-title relative my-8 w-fit">
+          <h2 className="subtitle text-left">WEDDING HALL</h2>
+          <h1 className="title">
+            A Modern Wedding Hall Designed <br /> for Your Special Day
+          </h1>
+          <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+        </div>
+      </div>
 
       {/* List Fasilitas */}
       <div className="space-y-12 py-10 px-6 md:px-20">
@@ -147,46 +157,61 @@ const Facility = () => {
           if (facility.title === "Wedding Venue") {
             // Khusus Wedding Venue
             return (
-              <div key={index} className="relative w-full h-[500px] mb-12">
-                <img
-                  src={facility.image}
-                  alt={facility.title}
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-                <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center rounded-2xl px-6">
-                  <h3 className="text-4xl font-beau-rivage text-white mb-4">
-                    {facility.title}
-                  </h3>
-                  <p className="text-lg text-gray-100 max-w-2xl">
-                    {facility.description}
-                  </p>
+              <>
+                {/* title for wedding venue */}
+                <div className="wedding-venue-title !mt-40">
+                  <div className="booking-title relative my-8 w-fit">
+                    <h2 className="subtitle text-left">WEDDING HALL</h2>
+                    <h1 className="title">
+                      A Modern Wedding Hall Designed <br /> for Your Special Day
+                    </h1>
+                    <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+                  </div>
                 </div>
-              </div>
+
+                <div key={index} className="relative w-full h-[500px] ">
+                  <img
+                    src={facility.image}
+                    alt={facility.title}
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center rounded-2xl px-6">
+                    <h3 className="text-4xl font-beau-rivage text-white mb-4">
+                      {facility.title}
+                    </h3>
+                    <p className="text-lg text-gray-100 max-w-2xl">
+                      {facility.description}
+                    </p>
+                  </div>
+                </div>
+              </>
             );
           } else {
             // Fasilitas lainnya
             return (
-              <div
-                key={index}
-                className={`flex flex-col md:flex-row items-center overflow-hidden ${
-                  index % 2 === 1 ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Gambar */}
-                <img
-                  src={facility.image}
-                  alt={facility.title}
-                  className="w-full md:w-1/2 h-80 object-cover rounded-2xl"
-                />
+              <>
+                <div
+                  key={index}
+                  className={`flex flex-col md:flex-row items-center overflow-hidden ${
+                    index % 2 === 1 ? "md:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Gambar */}
+                  <img
+                    src={facility.image}
+                    alt={facility.title}
+                    className="w-full md:w-1/2 h-80 object-cover rounded-2xl"
+                  />
 
-                {/* Teks */}
-                <div className="p-8 md:w-1/2">
-                  <h3 className="rivage-title mb-4">{facility.title}</h3>
-                  <p className="text-gray-800 text-base leading-relaxed">
-                    {facility.description}
-                  </p>
+                  {/* Teks */}
+                  <div className="p-8 md:w-1/2">
+                    <h3 className="rivage-title mb-4">{facility.title}</h3>
+                    <p className="text-gray-800 text-base leading-relaxed">
+                      {facility.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </>
             );
           }
         })}
