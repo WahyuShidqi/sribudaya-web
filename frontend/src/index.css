@@ -57,7 +57,7 @@ html {
 }
 
 .title {
-  @apply font-bold  text-3xl md:text-5xl mb-8 inline-block leading-snug;
+  @apply font-bold  text-4xl md:text-5xl mb-8 inline-block leading-snug;
 }
 
 .subtitle {
