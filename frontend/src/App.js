@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Booking from "./components/Booking";
 import Contact from "./components/Contact";
 import Facility from "./components/Facility";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/facility" element={<Facility />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
