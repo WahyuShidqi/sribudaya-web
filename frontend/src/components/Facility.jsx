@@ -181,9 +181,7 @@ const Facility = () => {
 
                 {/* Teks */}
                 <div className="p-8 md:w-1/2">
-                  <h3 className="text-2xl  font-beau-rivage text-[#000000] mb-4">
-                    {facility.title}
-                  </h3>
+                  <h3 className="rivage-title mb-4">{facility.title}</h3>
                   <p className="text-gray-800 text-base leading-relaxed">
                     {facility.description}
                   </p>

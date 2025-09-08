@@ -68,6 +68,10 @@ html {
   @apply font-normal text-5xl md:text-6xl font-beau-rivage mb-4;
 }
 
+.rivage-title {
+  @apply font-beau-rivage inline-block leading-snug text-4xl md:text-5xl;
+}
+
 /* These are for grid gallery */
 .grid-images {
   display: grid;
