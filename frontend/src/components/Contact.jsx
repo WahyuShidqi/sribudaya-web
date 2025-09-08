@@ -14,7 +14,7 @@ library.add(fas, far, fab)
 
 const Contact = () => {
   return (
-    <div className="min-h-screen  bg-[#F5F5DC] text-gray-800 p-8 flex flex-col items-center">
+    <div className="min-h-screen p-8 flex flex-col items-center">
       <div className="max-w-4xl w-full">
         {/* Header */}
         <div className="text-center mb-10 mt-12">
