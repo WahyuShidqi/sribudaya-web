@@ -7,44 +7,38 @@ const testimonials = [
     name: "Hannah Schmitt",
     role: "Lead Designer",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.",
-    img: "/images/client1.jpg",
   },
   {
     name: "John Doe",
     role: "CEO Company",
     text: "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.",
-    img: "/images/client2.jpg",
   },
   {
     name: "Sarah Johnson",
     role: "Marketing Manager",
     text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
-    img: "/images/client3.jpg",
   },
   {
     name: "Sarah Johnson",
     role: "Marketing Manager",
     text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
-    img: "/images/client3.jpg",
   },
   {
     name: "Sarah Johnson",
     role: "Marketing Manager",
     text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
-    img: "/images/client3.jpg",
   },
   {
     name: "Sarah Johnson",
     role: "Marketing Manager",
     text: "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh.",
-    img: "/images/oran3.jpg",
   },
 ];
 
 const Testimonial = () => {
   return (
     <section className="py-20">
-      <h2 className="text-center text-3xl font-bold mb-10">People Love Us</h2>
+      <h2 className="text-center text-3xl font-bold mb-10">Testimonial</h2>
       <Swiper
         spaceBetween={20}
         navigation
