@@ -511,7 +511,7 @@ const Booking = () => {
       {/* Wedding Section */}
 
       <div className="wedding-container py-24 px-5 md:px-12 lg:px-24 ">
-        {/* title for FAQ section */}
+        {/* title for Wedding section */}
         <div className="booking-title relative my-8 w-fit ">
           <h2 className="subtitle text-left">WEDDING HALL</h2>
           <h1 className="title">
