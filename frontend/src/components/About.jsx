@@ -67,6 +67,7 @@ const About = () => {
 
       <Testimonial />
     </section>
+    
   );
   };
 export default About;

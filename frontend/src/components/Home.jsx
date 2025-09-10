@@ -116,7 +116,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
               Discover <br /> Our Story
             </h2>
-            <div className="w-16 h-[2px] bg-blue-600 mb-6"></div>
+            <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
             <p className="text-gray-600 leading-relaxed mb-8">
               Sribudaya resort is designed to meet the requirements of modern
               day travelers. We understand each trip is different and have
@@ -134,11 +134,12 @@ const Home = () => {
           {/* Bagian gambar kanan */}
           <div className="relative max-w-md mx-auto">
             {/* Border dekoratif di belakang */}
-            <div className="absolute top-6 right-6 w-full h-full rounded-lg border-2 border-blue-600"></div>
+            <div className="absolute top-6 right-6 w-full h-full rounded-lg border-[3px] border-blue-600 "></div>
+
 
             {/* Gambar utama */}
             <img
-              src="./images/hall1.jpg"
+              src="./images/villa.jpg"
               alt="resort"
               className="relative z-10 rounded-lg shadow-lg w-full object-cover"
             />
@@ -152,9 +153,10 @@ const Home = () => {
           <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
             Our Rooms
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-            Exquisite Cottage <br /> Accommodations
+          <h2 className="text-4xl font-bold text-gray-900 leading-snug inline-block border-b-[3px] border-blue-600 text-center mb-[1px]">
+            modern and elegant <br /> Accommodations
           </h2>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -283,6 +285,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
               Your All-Inclusive <br /> Experience
             </h2>
+            <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
             <p className="text-gray-600 leading-relaxed">
               Indulge in a world of luxury and comfort with our exclusive resort
               amenities, designed to create unforgettable experiences for you.
