@@ -1,4 +1,3 @@
-
 import Testimonial from "./Testimonial";
 import React from "react";
 //import React, { useState, useEffect } from "react";
@@ -29,7 +28,11 @@ const About = () => {
             <div className=" mb-12 about-title text-center  ">
               <h1 className="title relative">
                 About Sribudaya{" "}
-                <span className="absolute left-0 w-1/2 top-20 h-[2px] bg-blue-600"></span>
+                {/* <div className="flex mt-8 justify-center items-center flex-col gap-4 w-full">
+                  <div className=" w-1/2 max-h-[2px] bg-slate-600/40"></div>
+                  <div className=" w-1/4 max-h-[2px] bg-slate-600/40"></div>
+                  <div className=" w-1/6 max-h-[2px] bg-slate-600/40"></div>
+                </div> */}
               </h1>
             </div>
             <p>
@@ -67,7 +70,6 @@ const About = () => {
 
       <Testimonial />
     </section>
-    
   );
-  };
+};
 export default About;
