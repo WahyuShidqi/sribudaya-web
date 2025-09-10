@@ -20,7 +20,11 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* default everywhere */
+}
+
+html.smooth-scroll {
+  scroll-behavior: smooth; /* only when Booking is mounted */
 }
 
 .centralize {
