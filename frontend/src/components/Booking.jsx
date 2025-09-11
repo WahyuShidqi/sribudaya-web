@@ -198,12 +198,12 @@ const Booking = () => {
             {/* Description for Hero section */}
             <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white  flex-col">
               <div className="header text-center w-[85%]">
-                <h1 className="text-3xl md:text-5xl font-bold p-5">
+                <h1 className="title drop-shadow-lg">
                   We offer you a cozy room suitable for you and your loved one!
                 </h1>
               </div>
               <div className="subheader text-center px-4">
-                <h2 className="font-semibold text-xl md:text-2xl">
+                <h2 className="title-desc">
                   Order your room right here and right now before it's too late!
                 </h2>
                 <div className=" mt-12">
@@ -227,13 +227,13 @@ const Booking = () => {
             {/* title for booking section */}
             <div className="booking-title relative mt-8 w-fit">
               <h2 className="subtitle text-left">ROOM LIST</h2>
-              <h1 className="title">Our Room For You</h1>
+              <h1 className="page-title">Our Room For You</h1>
               <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
             </div>
 
             {/* booking section description */}
-            <div className="booking-title  mb-8 w-fit">
-              <p>
+            <div className="mb-8 w-fit">
+              <p className="page-title-desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
                 quidem quam est, exercitationem beatae, modi sequi porro
                 quibusdam debitis, minima veniam temporibus molestias similique
@@ -628,15 +628,15 @@ const Booking = () => {
         {/* title for Wedding section */}
         <div className="booking-title relative my-8 w-fit ">
           <h2 className="subtitle text-left">WEDDING HALL</h2>
-          <h1 className="title">
+          <h1 className="page-title">
             A Modern Wedding Hall Designed <br /> for Your Special Day
           </h1>
-          <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+          <span className="absolute left-0 w-1/2 -bottom-4 h-[2px] bg-blue-600"></span>
         </div>
 
         {/* wedding section description */}
-        <div className="booking-title  mb-8 w-fit">
-          <p>
+        <div className="mb-8 w-fit">
+          <p className="page-title-desc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem
             quam est, exercitationem beatae, modi sequi porro quibusdam debitis,
             minima veniam temporibus molestias similique quae impedit et minus
@@ -649,19 +649,17 @@ const Booking = () => {
         {/* Wedding package list section */}
         <div className="wedding-package py-10 mt-12">
           {/* Section Header */}
-          <div className="text-center mb-12 space-y-4">
+          <div className="text-center">
             <div className="inline-block">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight relative">
-                Our Wedding Package
-                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100"></span>
-              </h2>
+              <h2 className="subtitle ">Wedding Package</h2>
+              <h1 className="page-title !mb-4">Our Wedding Package</h1>
             </div>
-            <p className="text-lg  max-w-2xl mx-auto mt-6">
+            <p className="page-title-desc max-w-2xl mx-auto !mb-12">
               Explore our wedding package created for you
             </p>
-            <div className="flex justify-center items-center gap-3 mt-4">
+            {/* <div className="flex justify-center items-center gap-3 mt-4">
               <div className="w-1/5 h-1 bg-blue-600 rounded-full"></div>
-            </div>
+            </div> */}
           </div>
           <div className="wrapper max-w-6xl mx-auto flex justify-center items-center gap-2">
             <Swiper
@@ -784,19 +782,19 @@ const Booking = () => {
         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-main">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-12 space-y-4">
+            <div className="text-center mb-12">
               <div className="inline-block">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight relative">
-                  Gallery
-                  <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100"></span>
-                </h2>
+                <h2 className="subtitle">wedding gallery</h2>
+                <h1 className="page-title !mb-4">
+                  Our Gallery Showcasing the wedding
+                </h1>
               </div>
-              <p className="text-lg  max-w-2xl mx-auto mt-6">
+              <p className="page-title-desc !mb-12">
                 Explore our stunning collection of moments captured in time
               </p>
-              <div className="flex justify-center items-center gap-3 mt-4">
+              {/* <div className="flex justify-center items-center gap-3 mt-4">
                 <div className="w-1/5 h-1 bg-blue-600 rounded-full"></div>
-              </div>
+              </div> */}
             </div>
 
             {/* Gallery Grid with Fancybox */}
@@ -874,12 +872,12 @@ const Booking = () => {
       </div>
 
       {/* Accordion section */}
-      <div className="accordion-container py-24 px-5 md:px-12 lg:px-24 ">
+      <div className="accordion-container pb-16 px-5 md:px-12 lg:px-24 ">
         {/* title for FAQ section */}
         <div className="booking-title relative mt-8 w-fit">
           <h2 className="subtitle text-left">F.A.Q.</h2>
-          <h1 className="title">Frequently Asked Questions</h1>
-          <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+          <h1 className="page-title">Frequently Asked Questions</h1>
+          <span className="absolute left-0 w-1/2  -bottom-4 h-[2px] bg-blue-600"></span>
         </div>
 
         <div className="w-full mt-10 rounded-xl">

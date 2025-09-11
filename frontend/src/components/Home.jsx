@@ -53,10 +53,10 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center text-white px-6">
-            <h1 className="text-2xl md:text-6xl font-bold drop-shadow-lg">
+            <h1 className="title drop-shadow-lg">
               Selamat Datang di Sribudaya Resort & Homestay
             </h1>
-            <p className="mt-4 text-lg drop-shadow-md">
+            <p className="mt-4 title-desc text-white drop-shadow-md">
               Nikmati keindahan alam & kenyamanan terbaik untuk liburan Anda
             </p>
             <div className="mt-8">
@@ -110,14 +110,12 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           {/* Bagian teks kiri */}
           <div className="text-left">
-            <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-              About
-            </p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+            <p className="subtitle">About</p>
+            <h2 className="page-title">
               Discover <br /> Our Story
             </h2>
             <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
-            <p className="text-gray-600 leading-relaxed mb-8">
+            <p className="mb-8">
               Sribudaya resort is designed to meet the requirements of modern
               day travelers. We understand each trip is different and have
               thoughtfully balanced the scapes of a peaceful home and a luxury
@@ -149,9 +147,7 @@ const Home = () => {
       {/* Our Rooms Section */}
       <section className="px-10 py-20 ">
         <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-            Our Rooms
-          </p>
+          <p className="subtitle">Our Rooms</p>
           <h2 className="text-4xl font-bold text-gray-900 leading-snug inline-block text-center mb-[1px]">
             modern and elegant <br /> Accommodations
           </h2>
@@ -168,7 +164,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
             <div className="absolute bottom-0 p-6 text-white">
               <h3 className="text-xl font-semibold">Luxury Cottage Room</h3>
-              <p className="text-sm mt-2">
+              <p className="mt-2">
                 Our spacious suites embody luxury and sophistication and enjoy
                 the experience with a spacious sitting area, luxury bedding and
                 free Wi-Fi.
@@ -194,7 +190,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
             <div className="absolute bottom-0 p-6 text-white">
               <h3 className="text-xl font-semibold">Heritage Cottage Room</h3>
-              <p className="text-sm mt-2">
+              <p className="mt-2">
                 Our spacious suites embody luxury and sophistication and enjoy
                 the experience with a spacious sitting area, luxury bedding and
                 free Wi-Fi.
@@ -218,10 +214,8 @@ const Home = () => {
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
           {/* location title */}
           <div className="text-center mb-12">
-            <h2 className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-              Partner Sites
-            </h2>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+            <h2 className="subtitle">Partner Sites</h2>
+            <h2 className="page-title">
               You can find us at popular booking sites
             </h2>
           </div>
@@ -277,14 +271,12 @@ const Home = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Bagian teks kiri */}
           <div>
-            <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-              Amenities
-            </p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+            <p className="subtitle">Amenities</p>
+            <h2 className="page-title">
               Your All-Inclusive <br /> Experience
             </h2>
             <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="leading-relaxed">
               Indulge in a world of luxury and comfort with our exclusive resort
               amenities, designed to create unforgettable experiences for you.
             </p>
@@ -338,12 +330,8 @@ const Home = () => {
       >
         {/* location title */}
         <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-            Location
-          </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-            Our Resort's Location
-          </h2>
+          <p className="subtitle">Location</p>
+          <h2 className="page-title">Our Resort's Location</h2>
         </div>
 
         {/* Google Maps */}
@@ -366,12 +354,8 @@ const Home = () => {
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
           {/* location title */}
           <div className="text-center mb-12">
-            <h2 className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
-              Social Media
-            </h2>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-              Follow Our Social Media For More
-            </h2>
+            <h2 className="subtitle">Social Media</h2>
+            <h2 className="page-title">Follow Our Social Media For More</h2>
           </div>
 
           {/* Sosmed Icons */}

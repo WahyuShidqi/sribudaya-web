@@ -151,15 +151,11 @@ const GalleryViewAll = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-4">
               Photo Gallery
             </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg max-w-3xl mx-auto">
               Discover our complete collection of stunning moments and memorable
               experiences
             </p>
-            <div className="flex justify-center items-center gap-3 mt-6">
-              <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
-              <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full"></div>
-              <div className="w-12 h-1 bg-gradient-to-r from-pink-500 to-red-500 rounded-full"></div>
-            </div>
+            <div className="flex justify-center items-center gap-3 mt-6"></div>
           </div>
 
           {/* Filter Buttons */}

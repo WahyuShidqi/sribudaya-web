@@ -96,8 +96,17 @@ const Facility = () => {
     );
   };
 
+  // for smooth scrolling specific page
+  useEffect(() => {
+    document.documentElement.classList.add("smooth-scroll"); // add to <html>
+
+    return () => {
+      document.documentElement.classList.remove("smooth-scroll"); // clean up
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-main">
+    <div className="min-h-screen bg-main smooth-scroll">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
@@ -178,7 +187,7 @@ const Facility = () => {
               className="opacity-0 animate-pulse"
               style={{ animation: "fadeIn 1s ease-out forwards" }}
             >
-              <div className="flex items-center justify-center mb-6">
+              {/* <div className="flex items-center justify-center mb-6">
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-amber-400"></div>
                 <svg
                   className="w-8 h-8 mx-4 text-amber-400"
@@ -188,12 +197,10 @@ const Facility = () => {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400"></div>
-              </div>
+              </div> */}
 
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent">
-                  Fasilitas Unggulan
-                </span>
+                <span className=" bg-clip-text ">Fasilitas Unggulan</span>
               </h1>
 
               <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed max-w-3xl mx-auto">
@@ -362,7 +369,7 @@ const Facility = () => {
                     <p className="text-lg text-gray-600 leading-relaxed">
                       {facility.description}
                     </p>
-
+                    {/* 
                     <div className="flex items-center text-blue-600 hover:text-blue-700 cursor-pointer font-medium group">
                       <span>Pelajari lebih lanjut</span>
                       <svg
@@ -378,7 +385,7 @@ const Facility = () => {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               );
