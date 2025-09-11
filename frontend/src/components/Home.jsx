@@ -115,7 +115,7 @@ const Home = () => {
               Discover <br /> Our Story
             </h2>
             <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
-            <p className="mb-8">
+            <p className="mb-8 page-title-desc">
               Sribudaya resort is designed to meet the requirements of modern
               day travelers. We understand each trip is different and have
               thoughtfully balanced the scapes of a peaceful home and a luxury
@@ -276,7 +276,7 @@ const Home = () => {
               Your All-Inclusive <br /> Experience
             </h2>
             <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
-            <p className="leading-relaxed">
+            <p className="page-title-desc">
               Indulge in a world of luxury and comfort with our exclusive resort
               amenities, designed to create unforgettable experiences for you.
             </p>

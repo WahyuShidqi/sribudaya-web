@@ -199,11 +199,11 @@ const Facility = () => {
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400"></div>
               </div> */}
 
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span className=" bg-clip-text ">Fasilitas Unggulan</span>
+              <h1 className="title !mb-4">
+                <span className=" bg-clip-text">Fasilitas Unggulan</span>
               </h1>
 
-              <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed max-w-3xl mx-auto">
+              <p className="title-desc mb-8">
                 Selamat datang di{" "}
                 <span className="font-semibold text-amber-200">
                   Sribudaya Resort & Homestay
@@ -234,7 +234,7 @@ const Facility = () => {
       <section id="facilities" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
+            {/* <div className="flex items-center justify-center mb-6">
               <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
               <svg
                 className="w-8 h-8 mx-6 text-amber-500"
@@ -244,15 +244,13 @@ const Facility = () => {
                 <path d="M9.5 2A1.5 1.5 0 008 3.5v1A1.5 1.5 0 009.5 6h5A1.5 1.5 0 0016 4.5v-1A1.5 1.5 0 0014.5 2h-5zM12 7a8 8 0 108 8 8 8 0 00-8-8zm0 2a6 6 0 016 6 6 6 0 01-6 6 6 6 0 01-6-6 6 6 0 016-6z" />
               </svg>
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
-            </div>
+            </div> */}
+            <h2 className="subtitle">Facilities</h2>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <span className="page-title">Premium Facilities</span>
+            </h1>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-gray-800 via-amber-600 to-emerald-600 bg-clip-text text-transparent">
-                Premium Facilities
-              </span>
-            </h2>
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="page-title-desc">
               Nikmati pengalaman menginap yang tak terlupakan dengan fasilitas
               kelas dunia yang dirancang khusus untuk kenyamanan dan kepuasan
               Anda
@@ -279,7 +277,7 @@ const Facility = () => {
                         <div className="h-px w-16 bg-gradient-to-l from-transparent to-rose-400"></div>
                       </div>
 
-                      <h3 className="text-4xl md:text-5xl font-bold mb-4">
+                      <h3 className="text-4xl font-bold mb-4">
                         <span className="bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
                           Wedding Hall
                         </span>
@@ -357,18 +355,14 @@ const Facility = () => {
                   {/* Content */}
                   <div className="lg:w-1/2 space-y-6">
                     <div className="flex items-center gap-3">
-                      <span className="px-3 py-1 bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700 rounded-full text-sm font-medium">
+                      <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
                         {facility.category}
                       </span>
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-                      {facility.title}
-                    </h3>
+                    <h3 className="page-title">{facility.title}</h3>
 
-                    <p className="text-lg text-gray-600 leading-relaxed">
-                      {facility.description}
-                    </p>
+                    <p className="page-title-desc">{facility.description}</p>
                     {/* 
                     <div className="flex items-center text-blue-600 hover:text-blue-700 cursor-pointer font-medium group">
                       <span>Pelajari lebih lanjut</span>
@@ -395,7 +389,7 @@ const Facility = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="booking" className="py-20 bg-main">
+      <section id="booking" className="py-36 bg-main">
         <div className="max-w-4xl mx-auto text-center px-6">
           {/* <svg
             className="w-16 h-16 mx-auto mb-8 text-blue-600"
@@ -404,10 +398,8 @@ const Facility = () => {
           >
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg> */}
-          <h2 className="text-4xl md:text-5xl font-bold  mb-6">
-            Ready for an Unforgettable Experience?
-          </h2>
-          <p className="text-xl /90 mb-8 leading-relaxed">
+          <h2 className="page-title">Ready for an Unforgettable Experience?</h2>
+          <p className="page-title-desc mb-8">
             Rasakan kemewahan dan kenyamanan yang tak tertandingi di Sribudaya
             Resort & Homestay
           </p>
