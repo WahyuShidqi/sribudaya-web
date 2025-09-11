@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -23,6 +23,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import PackageCard from "./PackageCard";
+import { Link } from "react-router-dom";
 
 library.add(fas, far, fab);
 
@@ -40,11 +41,93 @@ const Booking = () => {
     groupAll: false,
   });
 
+  const [fancyboxRefGallery] = useFancybox({
+    groupAll: true,
+    // Additional custom options for gallery
+    loop: true,
+    buttons: [
+      "zoom",
+      "share",
+      "slideShow",
+      "fullScreen",
+      "download",
+      "thumbs",
+      "close",
+    ],
+    animationEffect: "zoom-in-out",
+    transitionEffect: "slide",
+    protect: true,
+    keyboard: true,
+    thumbs: {
+      autoStart: true,
+    },
+  });
+
   // useState to handle accordion opening and closing
   const [openIndex, setOpenIndex] = useState(null);
 
+  const galleryImages = [
+    {
+      id: 1,
+      thumb: "/images/gallery/thumb-1.jpg",
+      full: "/images/gallery/full-1.jpg",
+      title: "Sunset Paradise",
+      caption: "A breathtaking view of the golden sunset",
+      alt: "Sunset view",
+    },
+    {
+      id: 2,
+      thumb: "/images/gallery/thumb-2.jpg",
+      full: "/images/gallery/full-2.jpg",
+      title: "Ocean Dreams",
+      caption: "Crystal clear waters meet the horizon",
+      alt: "Ocean view",
+    },
+    {
+      id: 3,
+      thumb: "/images/gallery/thumb-3.jpg",
+      full: "/images/gallery/full-3.jpg",
+      title: "Mountain Peak",
+      caption: "Majestic mountains touching the clouds",
+      alt: "Mountain landscape",
+    },
+    {
+      id: 4,
+      thumb: "/images/gallery/thumb-4.jpg",
+      full: "/images/gallery/full-4.jpg",
+      title: "City Lights",
+      caption: "Urban landscape illuminated at night",
+      alt: "City night view",
+    },
+    {
+      id: 5,
+      thumb: "/images/gallery/thumb-5.jpg",
+      full: "/images/gallery/full-5.jpg",
+      title: "Forest Path",
+      caption: "A serene journey through nature",
+      alt: "Forest pathway",
+    },
+    {
+      id: 6,
+      thumb: "/images/gallery/thumb-6.jpg",
+      full: "/images/gallery/full-6.jpg",
+      title: "Desert Dunes",
+      caption: "Golden sands stretching to infinity",
+      alt: "Desert landscape",
+    },
+  ];
+
+  // for smooth scrolling specific page
+  useEffect(() => {
+    document.documentElement.classList.add("smooth-scroll"); // add to <html>
+
+    return () => {
+      document.documentElement.classList.remove("smooth-scroll"); // clean up
+    };
+  }, []);
+
   return (
-    <section id="booking" className="m-0 p-0  w-full">
+    <section id="booking" className="m-0 p-0  w-full smooth-scroll">
       {/* Slide section */}
       <div className="w-full ">
         <div className="wrapper">
@@ -531,6 +614,98 @@ const Booking = () => {
         </div>
 
         <PackageCard />
+
+        {/*Wedding Gallery Section */}
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-main">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12 space-y-4">
+              <div className="inline-block">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight relative">
+                  Gallery
+                  <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100"></span>
+                </h2>
+              </div>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-6">
+                Explore our stunning collection of moments captured in time
+              </p>
+              <div className="flex justify-center items-center gap-3 mt-4">
+                <div className="w-1/5 h-1 bg-blue-600 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Gallery Grid with Fancybox */}
+            <div
+              ref={fancyboxRefGallery}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6"
+            >
+              {galleryImages.map((image) => (
+                <a
+                  key={image.id}
+                  href={image.full}
+                  data-fancybox="gallery"
+                  data-caption={image.caption}
+                  className="group relative block overflow-hidden rounded-xl lg:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gray-100"
+                >
+                  {/* Image Container with Aspect Ratio */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
+                    <img
+                      src={image.thumb}
+                      alt={image.alt}
+                      className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    {/* Content Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <h3 className="text-white text-lg font-semibold mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        {image.title}
+                      </h3>
+                      <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 line-clamp-2">
+                        {image.caption}
+                      </p>
+                    </div>
+
+                    {/* Corner Icon with FontAwesome */}
+                    <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
+                      <FontAwesomeIcon
+                        icon={["fas", "magnifying-glass-plus"]}
+                        className="text-white text-sm"
+                      />
+                    </div>
+
+                    {/* Side Badge (optional) */}
+                    <div className="absolute top-4 left-4 px-3 py-1 bg-black/30 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-2 group-hover:translate-x-0">
+                      <span className="text-white text-xs font-medium">
+                        View
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Optional: Load More / View All Button */}
+            <div className="text-center mt-12">
+              <Link
+                to="/gallery"
+                className="relative inline-flex items-center gap-2 px-8 py-3 overflow-hidden font-semibold text-white rounded-full group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <span className="relative z-10">View All Photos</span>
+                <FontAwesomeIcon
+                  icon={["fas", "arrow-right"]}
+                  className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                />
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* End of wedding gallery section */}
       </div>
 
       {/* Accordion section */}
@@ -673,3 +848,52 @@ const Booking = () => {
 };
 
 export default Booking;
+
+// * Contoh integrasi fancybox dengan fancybox
+
+//  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-main">
+//       <div className="max-w-7xl mx-auto">
+//         <Swiper
+//           spaceBetween={20}
+//           slidesPerView={1}
+//           breakpoints={{
+//             640: {
+//               slidesPerView: 2,
+//               spaceBetween: 20,
+//             },
+//             768: {
+//               slidesPerView: 3,
+//               spaceBetween: 30,
+//             },
+//           }}
+//           autoplay={{
+//             delay: 3000,
+//             disableOnInteraction: false,
+//           }}
+//           pagination={{
+//             clickable: true,
+//             dynamicBullets: true,
+//           }}
+//           modules={[Autoplay, Pagination]}
+//           className="gallery-swiper"
+//         >
+//           {galleryImages.map((image) => (
+//             <SwiperSlide key={image.id}>
+//               <a
+//                 href={image.full}
+//                 data-fancybox="gallery-swiper"
+//                 data-caption={image.caption}
+//                 ref={fancyboxRefGallery}
+//                 className="block"
+//               >
+//                 <img
+//                   src={image.thumb}
+//                   alt={image.alt}
+//                   className="w-full rounded-xl"
+//                 />
+//               </a>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
+//       </div>
+//     </section>

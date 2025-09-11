@@ -9,6 +9,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
   const images = [
@@ -105,7 +106,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="px-10 py-20">
+      <section className="px-12 md:px-28 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           {/* Bagian teks kiri */}
           <div className="text-left">
@@ -115,7 +116,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
               Discover <br /> Our Story
             </h2>
-            <div className="w-16 h-[2px] bg-blue-600 mb-6"></div>
+            <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
             <p className="text-gray-600 leading-relaxed mb-8">
               Sribudaya resort is designed to meet the requirements of modern
               day travelers. We understand each trip is different and have
@@ -133,11 +134,12 @@ const Home = () => {
           {/* Bagian gambar kanan */}
           <div className="relative max-w-md mx-auto">
             {/* Border dekoratif di belakang */}
-            <div className="absolute top-6 right-6 w-full h-full rounded-lg border-2 border-blue-600"></div>
+            <div className="absolute top-6 right-6 w-full h-full rounded-lg border-[3px] border-blue-600 "></div>
+
 
             {/* Gambar utama */}
             <img
-              src="./images/hall1.jpg"
+              src="./images/villa.jpg"
               alt="resort"
               className="relative z-10 rounded-lg shadow-lg w-full object-cover"
             />
@@ -151,9 +153,10 @@ const Home = () => {
           <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
             Our Rooms
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-            Exquisite Cottage <br /> Accommodations
+          <h2 className="text-4xl font-bold text-gray-900 leading-snug inline-block border-b-[3px] border-blue-600 text-center mb-[1px]">
+            modern and elegant <br /> Accommodations
           </h2>
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -173,9 +176,12 @@ const Home = () => {
                 free Wi-Fi.
               </p>
               <div className="mt-4 flex space-x-4">
-                <button className="border-2 border-blue-600 px-4 py-2 rounded-md hover:bg-white hover:text-black transition">
+                <Link
+                  to="/booking"
+                  className="border-2 border-blue-600 px-4 py-2 rounded-md hover:bg-white hover:text-black transition"
+                >
                   View Detail
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -196,15 +202,77 @@ const Home = () => {
                 free Wi-Fi.
               </p>
               <div className="mt-4 flex space-x-4">
-                <button className="border-2 border-blue-600 px-4 py-2 rounded-md hover:bg-white hover:text-black transition">
+                <Link
+                  to="/booking"
+                  className="border-2 border-blue-600 px-4 py-2 rounded-md hover:bg-white hover:text-black transition"
+                >
                   View Detail
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Our Rooms Section */}
+      {/* Our Rooms Section ends*/}
+
+      {/* Partner with section */}
+      <section id="social-media" className="mb-8">
+        <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
+          {/* location title */}
+          <div className="text-center mb-12">
+            <h2 className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
+              Partner Sites
+            </h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+              You can find us at popular booking sites
+            </h2>
+          </div>
+
+          {/* Sosmed Icons */}
+          <div className="social-media-icon h-auto flex justify-center items-center flex-wrap gap-10 px-5 md:gap-24">
+            <div className="transition-transform duration-200 hover:scale-125">
+              <a
+                href="https://www.booking.com/Share-DlyFsCQ"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="bookingcom.png"
+                  className="w-14 h-14 md:w-16 md:h-16"
+                  alt="bookingcom.png"
+                />
+              </a>
+            </div>
+            <div className="transition-transform duration-200 hover:scale-125">
+              <a
+                href="https://www.tiket.com/hotel/indonesia/sribudaya-resort-708001724122959169?checkin=2024-08-26&checkout=2024-08-27&adult=1&room=1&utm_external=organic&utm_medium=hotel_pdp%3Bshare_button"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="tiketcom.png"
+                  className="w-40 md:w-56 md:h-16"
+                  alt="bookingcom.png"
+                />
+              </a>
+            </div>
+            <div className="transition-transform duration-200 hover:scale-125">
+              <a
+                href="https://www.agoda.com/sribudaya-resort/hotel/aceh-id.html?checkin=2024-11-27&checkout=2024-11-28&los=1&rooms=1&adults=1&children=0&cid=1924241&searchrequestid=3609c674-949e-4cd3-a91a-8881b3b76029&tag=op7d38f94ba1cd458aa3f2c809cc92e169SG&ds=AQO4US3VCi%2FiSHag"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="agoda.png"
+                  className="w-auto h-16"
+                  alt="bookingcom.png"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Partner with section end */}
 
       {/* Amenities Section */}
       <section className="py-20 px-6 md:px-12 ">
@@ -217,6 +285,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
               Your All-Inclusive <br /> Experience
             </h2>
+            <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
             <p className="text-gray-600 leading-relaxed">
               Indulge in a world of luxury and comfort with our exclusive resort
               amenities, designed to create unforgettable experiences for you.
@@ -226,41 +295,37 @@ const Home = () => {
           {/* Bagian icon kanan */}
           <div className="grid grid-cols-2 gap-6">
             {/* Wifi */}
-            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-              <img
-                src="/images/icons/wifi.png"
-                alt="Free Wifi"
-                className="w-10 h-10 mb-3"
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <FontAwesomeIcon
+                icon="fa-solid fa-wifi"
+                className="w-10 h-10 mb-3 text-blue-600"
               />
               <p className="text-gray-700 font-medium">Free Wifi</p>
             </div>
 
             {/* Furnishing */}
-            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-              <img
-                src="/images/icons/furnishing.png"
-                alt="Fine Furnishing"
-                className="w-10 h-10 mb-3"
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <FontAwesomeIcon
+                icon="fa-solid fa-couch"
+                className="w-10 h-10 mb-3 text-blue-600"
               />
               <p className="text-gray-700 font-medium">Fine Furnishing</p>
             </div>
 
             {/* Parking */}
-            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-              <img
-                src="/images/icons/parking.png"
-                alt="Private Parking"
-                className="w-10 h-10 mb-3"
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <FontAwesomeIcon
+                icon="fa-solid fa-parking"
+                className="w-10 h-10 mb-3 text-blue-600"
               />
               <p className="text-gray-700 font-medium">Private Parking</p>
             </div>
 
             {/* AC */}
-            <div className="flex flex-col items-center justify-center border rounded-lg p-6 bg-white shadow-sm hover:shadow-md transition">
-              <img
-                src="/images/icons/ac.png"
-                alt="Air Conditioning"
-                className="w-10 h-10 mb-3"
+            <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <FontAwesomeIcon
+                icon="fa-solid fa-wind"
+                className="w-10 h-10 mb-3 text-blue-600"
               />
               <p className="text-gray-700 font-medium">Air Conditioning</p>
             </div>
@@ -269,7 +334,10 @@ const Home = () => {
       </section>
 
       {/* Location Section */}
-      <section id="location" className="py-20 px-20 h-[25rem] md:h-[40rem]">
+      <section
+        id="location"
+        className="py-20 px-5 md:px-20 h-[25rem] md:h-[40rem]"
+      >
         {/* location title */}
         <div className="text-center mb-12">
           <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
@@ -292,6 +360,61 @@ const Home = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+      </section>
+
+      {/* Social media section */}
+      <section id="social-media" className="my-44 bungkusanPutra">
+        <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
+          {/* location title */}
+          <div className="text-center mb-12">
+            <h2 className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
+              Social Media
+            </h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
+              Follow Our Social Media For More
+            </h2>
+          </div>
+
+          {/* Sosmed Icons */}
+          <div className="social-media-icon h-auto flex justify-center items-center text-6xl gap-14 md:gap-24">
+            <div className="">
+              <a
+                href="https://instagram.com/sribudaya_resortaceh"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className="transition-all duration-200 hover:scale-125 hover:text-blue-600 cursor-pointer"
+                  icon="fa-brands fa-instagram"
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.tiktok.com/@sribudayaresortaceh"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className="transition-all duration-200 hover:scale-125 hover:text-blue-600 cursor-pointer"
+                  icon="fa-brands fa-tiktok"
+                />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://wa.me/6282267878880"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className="transition-all duration-200 hover:scale-125 hover:text-blue-600 cursor-pointer"
+                  icon="fa-brands fa-whatsapp"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </section>

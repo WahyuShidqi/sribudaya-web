@@ -1,6 +1,9 @@
-import React from "react";
 import Testimonial from "./Testimonial";
+import React from "react";
+//import React, { useState, useEffect } from "react";
+//import { Link } from "react-router-dom";
 
+//import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
 const About = () => {
   return (
     <section>
@@ -19,13 +22,17 @@ const About = () => {
       </div>
       {/* end of hero section */}
       {/* testing section */}
-      <div className="w-full h-full mt-[30rem] lg:mt-[25rem]">
+      <div className="w-full h-full mt-[30rem] lg:mt-[15rem]">
         <div className="relative px-8 md:px-20 bg-[url(https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg)] w-full h-[100vh] bg-no-repeat bg-cover lg:px-40 ">
-          <div className="absolute text  bg-main w-auto h-auto  left-4 right-4 top-[-24rem]  p-8 lg:left-32 lg:right-32 lg:px-32 lg:py-24 lg:top-[-18rem]">
+          <div className="absolute text  bg-main w-auto h-auto  left-4 right-4 top-[-24rem]  p-8 lg:left-32 lg:right-32 lg:px-32 lg:py-24 lg:top-[-15rem]">
             <div className=" mb-12 about-title text-center  ">
               <h1 className="title relative">
                 About Sribudaya{" "}
-                <span className="absolute left-0 w-1/2 top-20 h-[2px] bg-blue-600"></span>
+                {/* <div className="flex mt-8 justify-center items-center flex-col gap-4 w-full">
+                  <div className=" w-1/2 max-h-[2px] bg-slate-600/40"></div>
+                  <div className=" w-1/4 max-h-[2px] bg-slate-600/40"></div>
+                  <div className=" w-1/6 max-h-[2px] bg-slate-600/40"></div>
+                </div> */}
               </h1>
             </div>
             <p>
@@ -65,5 +72,4 @@ const About = () => {
     </section>
   );
 };
-
 export default About;

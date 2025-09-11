@@ -6,20 +6,26 @@ import Booking from "./components/Booking";
 import Contact from "./components/Contact";
 import Facility from "./components/Facility";
 import Footer from "./components/Footer";
+import GalleryViewAll from "./components/GalleryViewAll";
+import ScrollToTop from "./components/misc/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/facility" element={<Facility />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/facility" element={<Facility />} />
+          <Route path="/gallery" element={<GalleryViewAll />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -25,3 +25,9 @@
 }
 
 /* * End of styles for booking slides */
+
+/* swiper putra slides */
+
+.swiperPutra .swiper-wrapper {
+ margin-bottom: 2rem !important;
+}
