@@ -972,7 +972,7 @@ const Booking = () => {
 
           {/* Item 2 */}
           <LazyDiv>
-            <div className="border mt-2 bg-main rounded-lg border-black animate-fade-right animate-delay-300">
+            <div className="border mt-2 bg-main rounded-lg border-black animate-fade-right animate-delay-200">
               <button
                 onClick={() => setOpenIndex(openIndex === 1 ? null : 1)}
                 className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100  gap-3"
@@ -1014,7 +1014,7 @@ const Booking = () => {
 
           {/* Item 3 */}
           <LazyDiv>
-            <div className="border mt-2 rounded-lg bg-main border-black animate-fade-left animate-delay-500">
+            <div className="border mt-2 rounded-lg bg-main border-black animate-fade-left animate-delay-300">
               <button
                 onClick={() => setOpenIndex(openIndex === 2 ? null : 2)}
                 className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100 hover:rounded-b-lg gap-3"
