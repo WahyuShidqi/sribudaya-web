@@ -196,7 +196,7 @@ const Booking = () => {
             </Swiper>
             <div className="absolute inset-0 z-10 bg-black bg-opacity-40"></div>
             {/* Description for Hero section */}
-            <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white  flex-col">
+            <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white flex-col animate-fade-up">
               <div className="header text-center w-[85%]">
                 <h1 className="title drop-shadow-lg">
                   We offer you a cozy room suitable for you and your loved one!

@@ -13,7 +13,7 @@ const About = () => {
         style={{ backgroundImage: "url('/images/contoh.jpg" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <div className="text-center text-white flex justify-center">
+          <div className="text-center text-white flex justify-center animate-fade-up">
             <h1 className="text-2xl text-center text-wrap w-2/3 md:text-6xl font-bold">
               About Sribudaya
             </h1>
