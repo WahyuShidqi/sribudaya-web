@@ -18,7 +18,7 @@ const Contact = () => {
         style={{ backgroundImage: "url('/images/contoh.jpg" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <div className="text-center text-white flex justify-center">
+          <div className="text-center text-white flex justify-center animate-fade-up">
             <h1 className="text-2xl text-center text-wrap w-2/3 md:text-6xl font-bold">
               Contact Information
             </h1>
@@ -26,7 +26,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="min-h-screen p-8 flex flex-col items-center">
-        <div className="max-w-4xl w-full">
+        <div className="max-w-4xl w-full animate-fade-up">
           {/* Header */}
           <div className="text-center mb-10 mt-12">
             <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-wide">

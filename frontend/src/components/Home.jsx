@@ -52,7 +52,7 @@ const Home = () => {
         style={{ backgroundImage: `url(${images[currentIndex]})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <div className="text-center text-white px-6">
+          <div className="text-center text-white px-6 animate-fade-up">
             <h1 className="title drop-shadow-lg">
               Selamat Datang di Sribudaya Resort & Homestay
             </h1>
