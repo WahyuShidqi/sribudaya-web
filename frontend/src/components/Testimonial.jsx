@@ -690,7 +690,7 @@ const Testimonial = () => {
                       }}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black transition-all duration-300 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                       <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
                         <p className="text-white text-xs font-semibold text-center px-2">

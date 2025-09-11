@@ -136,7 +136,6 @@ const Home = () => {
             {/* Border dekoratif di belakang */}
             <div className="absolute top-6 right-6 w-full h-full rounded-lg border-[3px] border-blue-600 "></div>
 
-
             {/* Gambar utama */}
             <img
               src="./images/villa.jpg"
@@ -153,10 +152,9 @@ const Home = () => {
           <p className="text-blue-600 font-semibold tracking-widest uppercase mb-2">
             Our Rooms
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 leading-snug inline-block border-b-[3px] border-blue-600 text-center mb-[1px]">
+          <h2 className="text-4xl font-bold text-gray-900 leading-snug inline-block text-center mb-[1px]">
             modern and elegant <br /> Accommodations
           </h2>
-          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

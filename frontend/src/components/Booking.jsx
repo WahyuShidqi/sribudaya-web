@@ -11,6 +11,8 @@ import "../swiper-styles.css";
 
 // import fancybox dependencies
 import useFancybox from "../fancybox";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 
@@ -63,54 +65,83 @@ const Booking = () => {
     },
   });
 
+  // useEffect for wedding package gallery
+  useEffect(() => {
+    // Bind Fancybox to all elements with data-fancybox attribute
+    Fancybox.bind("[data-fancybox]", {
+      Thumbs: { autoStart: true },
+      Toolbar: {
+        display: [
+          { id: "counter", position: "center" },
+          "zoom",
+          "slideshow",
+          "fullscreen",
+          "download",
+          "thumbs",
+          "close",
+        ],
+      },
+    });
+
+    return () => {
+      Fancybox.destroy();
+    };
+  }, []);
+
   // useState to handle accordion opening and closing
   const [openIndex, setOpenIndex] = useState(null);
 
   const galleryImages = [
     {
       id: 1,
-      thumb: "/images/gallery/thumb-1.jpg",
-      full: "/images/gallery/full-1.jpg",
+      thumb:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
       title: "Sunset Paradise",
       caption: "A breathtaking view of the golden sunset",
       alt: "Sunset view",
     },
     {
       id: 2,
-      thumb: "/images/gallery/thumb-2.jpg",
-      full: "/images/gallery/full-2.jpg",
+      thumb:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
       title: "Ocean Dreams",
       caption: "Crystal clear waters meet the horizon",
       alt: "Ocean view",
     },
     {
       id: 3,
-      thumb: "/images/gallery/thumb-3.jpg",
-      full: "/images/gallery/full-3.jpg",
+      thumb:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
       title: "Mountain Peak",
       caption: "Majestic mountains touching the clouds",
       alt: "Mountain landscape",
     },
     {
       id: 4,
-      thumb: "/images/gallery/thumb-4.jpg",
-      full: "/images/gallery/full-4.jpg",
+      thumb:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
       title: "City Lights",
       caption: "Urban landscape illuminated at night",
       alt: "City night view",
     },
     {
       id: 5,
-      thumb: "/images/gallery/thumb-5.jpg",
-      full: "/images/gallery/full-5.jpg",
+      thumb:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
       title: "Forest Path",
       caption: "A serene journey through nature",
       alt: "Forest pathway",
     },
     {
       id: 6,
-      thumb: "/images/gallery/thumb-6.jpg",
-      full: "/images/gallery/full-6.jpg",
+      thumb:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
       title: "Desert Dunes",
       caption: "Golden sands stretching to infinity",
       alt: "Desert landscape",
@@ -615,6 +646,140 @@ const Booking = () => {
 
         <PackageCard />
 
+        {/* Wedding package list section */}
+        <div className="wedding-package py-10 mt-12">
+          {/* Section Header */}
+          <div className="text-center mb-12 space-y-4">
+            <div className="inline-block">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight relative">
+                Our Wedding Package
+                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100"></span>
+              </h2>
+            </div>
+            <p className="text-lg  max-w-2xl mx-auto mt-6">
+              Explore our wedding package created for you
+            </p>
+            <div className="flex justify-center items-center gap-3 mt-4">
+              <div className="w-1/5 h-1 bg-blue-600 rounded-full"></div>
+            </div>
+          </div>
+          <div className="wrapper max-w-6xl mx-auto flex justify-center items-center gap-2">
+            <Swiper
+              pagination={{
+                dynamicBullets: true,
+              }}
+              spaceBetween={20}
+              breakpoints={{
+                320: { slidesPerView: 1 },
+                640: { slidesPerView: 2 },
+              }}
+              modules={[Pagination]}
+              className="myWeddingPackageSwiper"
+            >
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="silver-package.png"
+                    data-fancybox="wedding-gallery"
+                    data-caption="Silver Package"
+                  >
+                    <img
+                      src="silver-package.png"
+                      alt="silver package"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl  font-semibold mb-2">
+                      Silver Package
+                    </h3>
+                    <p className="  ">
+                      Perfect for intimate weddings with essential services
+                      included.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="platinum-package.png"
+                    data-fancybox="wedding-gallery"
+                    data-caption="Platinum Package"
+                  >
+                    <img
+                      src="platinum-package.png"
+                      alt="platinum package wedding"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl font-semibold mb-2">
+                      Platinum Package
+                    </h3>
+                    <p className=" ">
+                      A luxurious package for couples who want premium
+                      arrangements.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="gold-package.png"
+                    data-fancybox="wedding-gallery"
+                    data-caption="Gold Package"
+                  >
+                    <img
+                      src="gold-package.png"
+                      alt="gold package wedding"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl font-semibold mb-2">
+                      Gold Package
+                    </h3>
+                    <p className=" ">
+                      Balanced elegance and value, designed for medium-size
+                      weddings.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="royal-package.png"
+                    data-fancybox="wedding-gallery"
+                    data-caption="Royal Package"
+                  >
+                    <img
+                      src="royal-package.png"
+                      alt="royal package wedding"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl font-semibold mb-2">
+                      Royal Package
+                    </h3>
+                    <p className=" ">
+                      The ultimate fairy-tale experience with every luxury
+                      included.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        {/* End of Wedding package list section */}
+
         {/*Wedding Gallery Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8 bg-main">
           <div className="max-w-7xl mx-auto">
@@ -626,7 +791,7 @@ const Booking = () => {
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100"></span>
                 </h2>
               </div>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-6">
+              <p className="text-lg  max-w-2xl mx-auto mt-6">
                 Explore our stunning collection of moments captured in time
               </p>
               <div className="flex justify-center items-center gap-3 mt-4">
@@ -705,7 +870,7 @@ const Booking = () => {
             </div>
           </div>
         </div>
-        {/* End of wedding gallery section */}
+        {/* End of wedding gallery section */}
       </div>
 
       {/* Accordion section */}
