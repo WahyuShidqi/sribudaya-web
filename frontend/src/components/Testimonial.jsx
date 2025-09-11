@@ -35,7 +35,7 @@ const Testimonial = () => {
         "Customer Experience",
         "Business Strategy",
       ],
-      image: "/owners/orang1.jpg",
+      image: "/owners/owner3.jpg",
       contact: {
         phone: "+62 812-3456-7890",
         email: "budi@resortparadise.com",
@@ -60,7 +60,7 @@ const Testimonial = () => {
         "Sustainable Tourism",
         "Community Relations",
       ],
-      image: "/owners/orang2.jpg",
+      image: "/owners/owner2.jpg",
       contact: {
         phone: "+62 813-2345-6789",
         email: "sari@resortparadise.com",
@@ -951,33 +951,7 @@ const Testimonial = () => {
             ))}
           </div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                5000+
-              </div>
-              <div className="text-gray-600">Happy Guests</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                4.9
-              </div>
-              <div className="text-gray-600">Average Rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                95%
-              </div>
-              <div className="text-gray-600">Return Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                24/7
-              </div>
-              <div className="text-gray-600">Support</div>
-            </div>
-          </div>
+      
         </div>
       </section>
     </div>
