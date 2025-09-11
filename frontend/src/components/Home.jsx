@@ -116,7 +116,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
               Discover <br /> Our Story
             </h2>
-            <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
+            <div className="w-16 h-[3px] bg-blue-600 mb-6 "></div>
             <p className="text-gray-600 leading-relaxed mb-8">
               Sribudaya resort is designed to meet the requirements of modern
               day travelers. We understand each trip is different and have
@@ -285,7 +285,10 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
               Your All-Inclusive <br /> Experience
             </h2>
-            <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
+            {/* <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div> */}
+            <div className="flex items-center gap-3 mt-4">
+                <div className="w-1/3 h-[3px] bg-blue-600 rounded-full mb-4"></div>
+              </div>
             <p className="text-gray-600 leading-relaxed">
               Indulge in a world of luxury and comfort with our exclusive resort
               amenities, designed to create unforgettable experiences for you.

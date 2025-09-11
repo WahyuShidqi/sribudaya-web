@@ -25,7 +25,7 @@ const About = () => {
       <div className="w-full h-full mt-[30rem] lg:mt-[15rem]">
         <div className="relative px-8 md:px-20 bg-[url(https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg)] w-full h-[100vh] bg-no-repeat bg-bg-cover lg:px-40 ">
           <div className="absolute text  bg-main w-auto h-auto  left-4 right-4 top-[-24rem]  p-8 lg:left-32 lg:right-32 lg:px-32 lg:py-24 lg:top-[-15rem]">
-            <div className=" about-title text-center  ">
+            <div className="about-title text-center  ">
               <h1 className="title relative">
                Sribudaya <br /> Resort
                 {/* <div className="flex mt-8 justify-center items-center flex-col gap-4 w-full">
