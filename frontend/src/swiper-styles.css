@@ -29,5 +29,11 @@
 /* swiper putra slides */
 
 .swiperPutra .swiper-wrapper {
- margin-bottom: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Swiper style for wedding package */
+
+.myWeddingPackageSwiper .swiper-wrapper {
+  margin-bottom: 3rem !important;
 }

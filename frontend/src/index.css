@@ -33,6 +33,10 @@ html.smooth-scroll {
   align-items: center;
 }
 
+p {
+  @apply leading-relaxed;
+}
+
 /* ! DO NOT DELETE! BELOW ARE TAILWIND COMPONENTS */
 .bg-dark {
   @apply bg-[#423a3a];
@@ -64,8 +68,20 @@ html.smooth-scroll {
   @apply font-bold  text-4xl md:text-5xl mb-8 inline-block leading-snug;
 }
 
+.title-desc {
+  @apply font-semibold text-xl md:text-2xl;
+}
+
 .subtitle {
-  @apply text-blue-600 font-bold tracking-widest uppercase mb-2 text-lg font-sans;
+  @apply text-blue-600 font-semibold tracking-widest uppercase mb-2;
+}
+
+.page-title {
+  @apply text-4xl font-bold text-gray-900 mb-6 leading-snug;
+}
+
+.page-title-desc {
+  @apply text-lg;
 }
 
 .card-title {
