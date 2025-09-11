@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "tailwindcss-animated";
+
 body {
   background-color: #e9e4dc;
   margin: 0;
