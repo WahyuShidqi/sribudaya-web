@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sribudaya-resort/static/css/main.019af978.css",
+    "main.js": "/sribudaya-resort/static/js/main.d0760c5a.js",
+    "index.html": "/sribudaya-resort/index.html",
+    "main.019af978.css.map": "/sribudaya-resort/static/css/main.019af978.css.map",
+    "main.d0760c5a.js.map": "/sribudaya-resort/static/js/main.d0760c5a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.019af978.css",
+    "static/js/main.d0760c5a.js"
+  ]
+}
