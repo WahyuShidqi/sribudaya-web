@@ -374,7 +374,7 @@ const Home = () => {
       </LazyDiv>
 
       {/* Social media section */}
-      <section id="social-media" className="my-44 bungkusanPutra">
+      <section id="social-media" className="my-44 px-6">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
           {/* location title */}
           <LazyDiv>
