@@ -199,11 +199,9 @@ const Facility = () => {
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400"></div>
               </div> */}
 
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span className=" bg-clip-text ">Fasilitas Unggulan</span>
-              </h1>
+              <h1 className="title drop-shadow-lg">Fasilitas Unggulan</h1>
 
-              <p className="text-xl md:text-2xl mb-8 text-gray-100 leading-relaxed max-w-3xl mx-auto">
+              <p className="mb-8 title-desc">
                 Selamat datang di{" "}
                 <span className="font-semibold text-amber-200">
                   Sribudaya Resort & Homestay
@@ -246,13 +244,13 @@ const Facility = () => {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="page-title">
               <span className="bg-gradient-to-r from-gray-800 via-amber-600 to-emerald-600 bg-clip-text text-transparent">
                 Premium Facilities
               </span>
             </h2>
 
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed page-title-desc">
               Nikmati pengalaman menginap yang tak terlupakan dengan fasilitas
               kelas dunia yang dirancang khusus untuk kenyamanan dan kepuasan
               Anda
@@ -279,13 +277,13 @@ const Facility = () => {
                         <div className="h-px w-16 bg-gradient-to-l from-transparent to-rose-400"></div>
                       </div>
 
-                      <h3 className="text-4xl md:text-5xl font-bold mb-4">
+                      <h3 className="text-4xl md:text-5xl font-bold mb-4 ">
                         <span className="bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
                           Wedding Hall
                         </span>
                       </h3>
 
-                      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                      <p className="text-lg max-w-2xl mx-auto page-title-desc">
                         Ciptakan pernikahan impian dengan suasana yang magis dan
                         pelayanan white-glove service di venue paling prestisius
                         di Aceh
@@ -297,7 +295,7 @@ const Facility = () => {
                       <img
                         src={facility.image}
                         alt={facility.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 page-title-desc"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                       <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
@@ -313,10 +311,10 @@ const Facility = () => {
                             {facility.category}
                           </span>
                         </div>
-                        <h4 className="text-3xl font-bold mb-4">
+                        <h4 className="text-3xl font-bold mb-4 ">
                           {facility.title}
                         </h4>
-                        <p className="text-lg text-gray-200 leading-relaxed">
+                        <p className="text-lg text-whaite-200 leading-relaxed page-title-desc">
                           {facility.description}
                         </p>
                       </div>
@@ -362,11 +360,11 @@ const Facility = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                    <h3 className="text-3xl md:text-4xl font-bold page-title leading-tight">
                       {facility.title}
                     </h3>
 
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-lg page-title-desc leading-relaxed">
                       {facility.description}
                     </p>
                     {/* 
@@ -404,14 +402,12 @@ const Facility = () => {
           >
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg> */}
-          <h2 className="text-4xl md:text-5xl font-bold  mb-6">
-            Ready for an Unforgettable Experience?
-          </h2>
-          <p className="text-xl /90 mb-8 leading-relaxed">
+          <h2 className="page-title">Ready for an Unforgettable Experience?</h2>
+          <p className="page-title-desc mb-8">
             Rasakan kemewahan dan kenyamanan yang tak tertandingi di Sribudaya
             Resort & Homestay
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
             <a href="/booking" className="blue-btn  ">
               Book Your Stay Now
             </a>
