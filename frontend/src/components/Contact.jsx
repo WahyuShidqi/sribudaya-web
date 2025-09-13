@@ -6,6 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import LazyDiv from "./misc/LazyDiv";
 
 library.add(fas, far, fab);
 // end of font awesome import
@@ -26,110 +27,116 @@ const Contact = () => {
       <div className="min-h-screen p-8 flex flex-col items-center">
         <div className="max-w-4xl w-full animate-fade-up">
           {/* Header */}
-          <div className="text-center mb-10 mt-12">
-            <h2 className="subtitle">Contact Information</h2>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-wide">
-              Hubungi Kami
-            </h1>
-            <p className="text-lg md:text-xl text-white-700">
-              Kami siap menyambut Anda di Sribudaya Resto & Homestay. <br />{" "}
-              Silakan hubungi kami melalui informasi berikut.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 text-black border border-black rounded-2xl">
-            {/* Contact Information */}
-            <div className=" p-8 shadow-xl transition-all duration-400 hover:shadow-2xl md:border-r md:border-black">
-              <h2 className="text-3xl text-center font-epunda-slab text-black mb-6 border-b-2 border-black pb-4">
-                Informasi Kontak
+          <LazyDiv>
+            <div className="text-center mb-10 mt-12">
+              <h2 className="subtitle animate-fade-right">
+                Contact Information
               </h2>
-              <ul className="space-y-6 text-lg">
-                <li className="flex items-center space-x-4">
-                  <span className="text-2xl ">
-                    <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                  </span>
-                  <span className="font-semibold">
-                    Alamat : <br />
-                    <span className="font-normal">
-                      Jl. Soekarno Hatta, Lampeuneurut Ujong Blang, Darul
-                      Imarah, Aceh Besar.
-                    </span>
-                  </span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <span className="text-2xl ">
-                    <FontAwesomeIcon icon="fa-solid fa-phone" />
-                  </span>
-                  <span className="font-semibold">
-                    Telepon :
-                    <span className="font-normal pl-2">0822-6787-8880</span>
-                  </span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <span className="text-3xl ">
-                    <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
-                  </span>
-                  <span className="font-semibold">
-                    WhatsApp :
-                    <a
-                      href="https://wa.me/6282267878880"
-                      className="text-black font-normal pl-2 hover:underline"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      (+62)-822-6787-8880
-                    </a>
-                  </span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <span className="text-3xl ">
-                    <FontAwesomeIcon icon="fa-brands fa-instagram" />
-                  </span>
-                  <span className="font-semibold">
-                    Instagram :
-                    <a
-                      href="https://instagram.com/sribudaya_resortaceh"
-                      className="text-black font-normal pl-2 hover:underline"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      @sribudaya_resortaceh
-                    </a>
-                  </span>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <span className="text-3xl ">
-                    <FontAwesomeIcon icon="fa-brands fa-tiktok" />
-                  </span>
-                  <span className="font-semibold">
-                    TikTok :
-                    <a
-                      href="https://www.tiktok.com/@sribudayaresortaceh"
-                      className="text-black font-normal pl-2 hover:underline"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      @sribudayaresortaceh
-                    </a>
-                  </span>
-                </li>
-              </ul>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-wide animate-fade-left animate-delay-100">
+                Hubungi Kami
+              </h1>
+              <p className="text-lg md:text-xl text-white-700 animate-fade-right animate-delay-200">
+                Kami siap menyambut Anda di Sribudaya Resto & Homestay. <br />{" "}
+                Silakan hubungi kami melalui informasi berikut.
+              </p>
             </div>
+          </LazyDiv>
 
-            {/* Google Maps */}
-            <div className="w-full h-[24rem] md:h-full overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl rounded-r-2xl">
-              <iframe
-                title="google-map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3493821911425!2d95.32108227506707!3d5.5150531944649845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3040392caa277e19%3A0xd761fb6d5e2daf74!2sSribudaya%20resort%20%26%20homestay!5e0!3m2!1sen!2sid!4v1757240120401!5m2!1sen!2sid"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+          <LazyDiv>
+            <div className="grid md:grid-cols-2 text-black border border-black rounded-2xl animate-fade-up">
+              {/* Contact Information */}
+              <div className=" p-8 shadow-xl transition-all duration-400 hover:shadow-2xl md:border-r md:border-black">
+                <h2 className="text-3xl text-center font-epunda-slab text-black mb-6 border-b-2 border-black pb-4">
+                  Informasi Kontak
+                </h2>
+                <ul className="space-y-6 text-lg">
+                  <li className="flex items-center space-x-4">
+                    <span className="text-2xl ">
+                      <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+                    </span>
+                    <span className="font-semibold">
+                      Alamat : <br />
+                      <span className="font-normal">
+                        Jl. Soekarno Hatta, Lampeuneurut Ujong Blang, Darul
+                        Imarah, Aceh Besar.
+                      </span>
+                    </span>
+                  </li>
+                  <li className="flex items-center space-x-4">
+                    <span className="text-2xl ">
+                      <FontAwesomeIcon icon="fa-solid fa-phone" />
+                    </span>
+                    <span className="font-semibold">
+                      Telepon :
+                      <span className="font-normal pl-2">0822-6787-8880</span>
+                    </span>
+                  </li>
+                  <li className="flex items-center space-x-4">
+                    <span className="text-3xl ">
+                      <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                    </span>
+                    <span className="font-semibold">
+                      WhatsApp :
+                      <a
+                        href="https://wa.me/6282267878880"
+                        className="text-black font-normal pl-2 hover:underline"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        (+62)-822-6787-8880
+                      </a>
+                    </span>
+                  </li>
+                  <li className="flex items-center space-x-4">
+                    <span className="text-3xl ">
+                      <FontAwesomeIcon icon="fa-brands fa-instagram" />
+                    </span>
+                    <span className="font-semibold">
+                      Instagram :
+                      <a
+                        href="https://instagram.com/sribudaya_resortaceh"
+                        className="text-black font-normal pl-2 hover:underline"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        @sribudaya_resortaceh
+                      </a>
+                    </span>
+                  </li>
+                  <li className="flex items-center space-x-4">
+                    <span className="text-3xl ">
+                      <FontAwesomeIcon icon="fa-brands fa-tiktok" />
+                    </span>
+                    <span className="font-semibold">
+                      TikTok :
+                      <a
+                        href="https://www.tiktok.com/@sribudayaresortaceh"
+                        className="text-black font-normal pl-2 hover:underline"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        @sribudayaresortaceh
+                      </a>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Google Maps */}
+              <div className="w-full h-[24rem] md:h-full overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl rounded-r-2xl">
+                <iframe
+                  title="google-map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.3493821911425!2d95.32108227506707!3d5.5150531944649845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3040392caa277e19%3A0xd761fb6d5e2daf74!2sSribudaya%20resort%20%26%20homestay!5e0!3m2!1sen!2sid!4v1757240120401!5m2!1sen!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
-          </div>
+          </LazyDiv>
 
           {/* Footer Text */}
           <p className="text-center mt-12 text-gray-600 italic">
