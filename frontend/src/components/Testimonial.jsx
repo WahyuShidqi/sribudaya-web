@@ -35,7 +35,7 @@ const Testimonial = () => {
         "Customer Experience",
         "Business Strategy",
       ],
-      image: "/images/owners/budi-santoso.jpg",
+      image: "/owners/owner3.jpg",
       contact: {
         phone: "+62 812-3456-7890",
         email: "budi@resortparadise.com",
@@ -60,7 +60,7 @@ const Testimonial = () => {
         "Sustainable Tourism",
         "Community Relations",
       ],
-      image: "/images/owners/sari-wijaya.jpg",
+      image: "/owners/owner2.jpg",
       contact: {
         phone: "+62 813-2345-6789",
         email: "sari@resortparadise.com",
@@ -165,7 +165,7 @@ const Testimonial = () => {
       rating: 5,
       comment:
         "Pengalaman menginap yang luar biasa! Staff sangat ramah dan pemandangan resort yang memukau. Kamar sangat bersih dan nyaman. Pasti akan kembali lagi!",
-      image: "/images/testimonials/sarah-johnson.jpg",
+      image: "/testimonial/cewe1.png",
       stayType: "Resort Villa",
     },
     {
@@ -175,7 +175,7 @@ const Testimonial = () => {
       rating: 5,
       comment:
         "Perfect getaway destination! The homestay felt like a home away from home. Amazing hospitality and the breakfast was incredible. Highly recommended!",
-      image: "/images/testimonials/michael-chen.jpg",
+      image: "/testimonial/cowo1.png",
       stayType: "Homestay Deluxe",
     },
     {
@@ -185,7 +185,7 @@ const Testimonial = () => {
       rating: 5,
       comment:
         "Tempat yang sempurna untuk liburan keluarga. Anak-anak sangat senang dengan kolam renang dan taman bermain. Pelayanan sangat memuaskan!",
-      image: "/images/testimonials/rina-sari.jpg",
+      image: "/testimonial/cewe1.png",
       stayType: "Family Resort",
     },
     {
@@ -195,7 +195,7 @@ const Testimonial = () => {
       rating: 4,
       comment:
         "Beautiful location with stunning sunset views. The room was spacious and well-maintained. Great value for money and excellent service throughout our stay.",
-      image: "/images/testimonials/david-wilson.jpg",
+      image: "/testimonial/cowo1.png",
       stayType: "Ocean View Suite",
     },
     {
@@ -205,7 +205,7 @@ const Testimonial = () => {
       rating: 5,
       comment:
         "Homestay yang sangat cozy dan bersih. Lokasinya strategis dan mudah dijangkau. Host sangat baik dan membantu memberikan rekomendasi tempat wisata.",
-      image: "/images/testimonials/lisa-putri.jpg",
+      image: "/testimonial/cewe1.png",
       stayType: "Premium Homestay",
     },
     {
@@ -215,7 +215,7 @@ const Testimonial = () => {
       rating: 5,
       comment:
         "Outstanding experience! The resort exceeded all expectations. From the luxurious amenities to the breathtaking views, everything was perfect. Will definitely return!",
-      image: "/images/testimonials/james-rodriguez.jpg",
+      image: "/testimonial/cowo1.png",
       stayType: "Luxury Resort",
     },
   ];
@@ -951,33 +951,7 @@ const Testimonial = () => {
             ))}
           </div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                5000+
-              </div>
-              <div className="text-gray-600">Happy Guests</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                4.9
-              </div>
-              <div className="text-gray-600">Average Rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                95%
-              </div>
-              <div className="text-gray-600">Return Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                24/7
-              </div>
-              <div className="text-gray-600">Support</div>
-            </div>
-          </div>
+      
         </div>
       </section>
     </div>
