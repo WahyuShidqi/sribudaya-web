@@ -29,6 +29,7 @@ const Contact = () => {
         <div className="max-w-4xl w-full animate-fade-up">
           {/* Header */}
           <div className="text-center mb-10 mt-12">
+            <h2 className="subtitle">Contact Information</h2>
             <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-wide">
               Hubungi Kami
             </h1>
