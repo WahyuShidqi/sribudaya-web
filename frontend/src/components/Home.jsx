@@ -305,7 +305,7 @@ const Home = () => {
             <div className="grid grid-cols-2 gap-6 animate-fade-left">
               {/* Wifi */}
 
-              <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <div className="flex flex-col items-center justify-center  rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
                 <FontAwesomeIcon
                   icon="fa-solid fa-wifi"
                   className="w-10 h-10 mb-3 text-blue-600"
@@ -314,7 +314,7 @@ const Home = () => {
               </div>
 
               {/* Furnishing */}
-              <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <div className="flex flex-col items-center justify-center rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
                 <FontAwesomeIcon
                   icon="fa-solid fa-couch"
                   className="w-10 h-10 mb-3 text-blue-600"
@@ -323,7 +323,7 @@ const Home = () => {
               </div>
 
               {/* Parking */}
-              <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <div className="flex flex-col items-center justify-center  rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
                 <FontAwesomeIcon
                   icon="fa-solid fa-parking"
                   className="w-10 h-10 mb-3 text-blue-600"
@@ -332,7 +332,7 @@ const Home = () => {
               </div>
 
               {/* AC */}
-              <div className="flex flex-col items-center justify-center border rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
+              <div className="flex flex-col items-center justify-center  rounded-lg p-6 border-2 border-gray-400 shadow-sm hover:shadow-md transition">
                 <FontAwesomeIcon
                   icon="fa-solid fa-wind"
                   className="w-10 h-10 mb-3 text-blue-600"
@@ -374,7 +374,7 @@ const Home = () => {
       </LazyDiv>
 
       {/* Social media section */}
-      <section id="social-media" className="my-44 bungkusanPutra">
+      <section id="social-media" className="my-44 px-6">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
           {/* location title */}
           <LazyDiv>
