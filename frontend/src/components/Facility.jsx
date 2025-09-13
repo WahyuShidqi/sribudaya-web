@@ -1,6 +1,7 @@
 //
 
 import React, { useState, useEffect } from "react";
+import LazyDiv from "./misc/LazyDiv";
 
 const facilities = [
   {
@@ -231,10 +232,12 @@ const Facility = () => {
       </section>
 
       {/* Section Title */}
+
       <section id="facilities" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            {/* <div className="flex items-center justify-center mb-6">
+          <LazyDiv>
+            <div className="text-center mb-16 animate-fade-up">
+              {/* <div className="flex items-center justify-center mb-6">
               <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
               <svg
                 className="w-8 h-8 mx-6 text-amber-500"
@@ -245,27 +248,30 @@ const Facility = () => {
               </svg>
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
             </div> */}
-            <h2 className="subtitle">Facilities</h2>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="page-title">Premium Facilities</span>
-            </h1>
 
-            <p className="page-title-desc">
-              Nikmati pengalaman menginap yang tak terlupakan dengan fasilitas
-              kelas dunia yang dirancang khusus untuk kenyamanan dan kepuasan
-              Anda
-            </p>
-          </div>
+              <h2 className="subtitle">Facilities</h2>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="page-title">Premium Facilities</span>
+              </h1>
+
+              <p className="page-title-desc">
+                Nikmati pengalaman menginap yang tak terlupakan dengan fasilitas
+                kelas dunia yang dirancang khusus untuk kenyamanan dan kepuasan
+                Anda
+              </p>
+            </div>
+          </LazyDiv>
 
           {/* Facilities Grid */}
-          <div className="space-y-20">
+
+          <div className="space-y-20 ">
             {facilities.map((facility, index) => {
               if (facility.title === "Wedding Venue") {
                 return (
                   <div key={index} className="relative">
                     {/* Wedding Venue Title */}
                     <div className="text-center mb-12">
-                      <div className="flex items-center justify-center mb-6">
+                      <div className="flex items-center justify-center mb-6 aniamate-fade-down">
                         <div className="h-px w-16 bg-gradient-to-r from-transparent to-rose-400"></div>
                         <svg
                           className="w-8 h-8 mx-6 text-rose-500"
@@ -277,17 +283,21 @@ const Facility = () => {
                         <div className="h-px w-16 bg-gradient-to-l from-transparent to-rose-400"></div>
                       </div>
 
-                      <h3 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
-                          Wedding Hall
-                        </span>
-                      </h3>
+                      <LazyDiv>
+                        <h3 className="text-4xl font-bold mb-4 animate-fade-down">
+                          <span className="bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+                            Wedding Hall
+                          </span>
+                        </h3>
+                      </LazyDiv>
 
-                      <p className="text-lg max-w-2xl mx-auto page-title-desc">
-                        Ciptakan pernikahan impian dengan suasana yang magis dan
-                        pelayanan white-glove service di venue paling prestisius
-                        di Aceh
-                      </p>
+                      <LazyDiv>
+                        <p className="text-lg max-w-2xl mx-auto page-title-desc animate-fade-down">
+                          Ciptakan pernikahan impian dengan suasana yang magis
+                          dan pelayanan white-glove service di venue paling
+                          prestisius di Aceh
+                        </p>
+                      </LazyDiv>
                     </div>
 
                     {/* Wedding Venue Card */}
@@ -298,6 +308,7 @@ const Facility = () => {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 page-title-desc"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
                       <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                         <div className="flex items-center mb-4">
                           <svg
@@ -311,12 +322,14 @@ const Facility = () => {
                             {facility.category}
                           </span>
                         </div>
-                        <h4 className="text-3xl font-bold mb-4 ">
-                          {facility.title}
-                        </h4>
-                        <p className="text-lg text-whaite-200 leading-relaxed page-title-desc">
-                          {facility.description}
-                        </p>
+                        <LazyDiv>
+                          <h4 className="text-3xl font-bold mb-4 anamate-fade-down ">
+                            {facility.title}
+                          </h4>
+                          <p className="text-lg text-whaite-200 leading-relaxed page-title-desc animate-fade-down ">
+                            {facility.description}
+                          </p>
+                        </LazyDiv>
                       </div>
                     </div>
                   </div>
@@ -331,15 +344,18 @@ const Facility = () => {
                   }`}
                 >
                   {/* Image */}
+
                   <div className="lg:w-1/2 relative group">
-                    <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl">
-                      <img
-                        src={facility.image}
-                        alt={facility.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
+                    <LazyDiv>
+                      <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl animate-fade-up">
+                        <img
+                          src={facility.image}
+                          alt={facility.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 "
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                    </LazyDiv>
                     {/* Floating Badge */}
                     {/* <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-xl transform rotate-12 group-hover:rotate-0 transition-transform duration-300">
                       <svg
@@ -354,15 +370,21 @@ const Facility = () => {
 
                   {/* Content */}
                   <div className="lg:w-1/2 space-y-6">
-                    <div className="flex items-center gap-3">
-                      <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
-                        {facility.category}
-                      </span>
-                    </div>
+                    <LazyDiv>
+                      <div className="flex items-center gap-3 animate-fade-up">
+                        <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
+                          {facility.category}
+                        </span>
+                      </div>
 
-                    <h3 className="page-title">{facility.title}</h3>
+                      <h3 className="page-title animate-fade-up">
+                        {facility.title}
+                      </h3>
 
-                    <p className="page-title-desc">{facility.description}</p>
+                      <p className="page-title-desc animate-fade-up">
+                        {facility.description}
+                      </p>
+                    </LazyDiv>
                     {/* 
                     <div className="flex items-center text-blue-600 hover:text-blue-700 cursor-pointer font-medium group">
                       <span>Pelajari lebih lanjut</span>
@@ -389,30 +411,34 @@ const Facility = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="booking" className="py-36 bg-main">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          {/* <svg
+      <LazyDiv>
+        <section id="booking" className="py-36 bg-main animate-fade-up">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            {/* <svg
             className="w-16 h-16 mx-auto mb-8 text-blue-600"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg> */}
-          <h2 className="page-title">Ready for an Unforgettable Experience?</h2>
-          <p className="page-title-desc mb-8">
-            Rasakan kemewahan dan kenyamanan yang tak tertandingi di Sribudaya
-            Resort & Homestay
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
-            <a href="/booking" className="blue-btn  ">
-              Book Your Stay Now
-            </a>
-            {/* <a href="#contact" className="blue-btn">
+            <h2 className="page-title">
+              Ready for an Unforgettable Experience?
+            </h2>
+            <p className="page-title-desc mb-8">
+              Rasakan kemewahan dan kenyamanan yang tak tertandingi di Sribudaya
+              Resort & Homestay
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
+              <a href="/booking" className="blue-btn  ">
+                Book Your Stay Now
+              </a>
+              {/* <a href="#contact" className="blue-btn">
               Contact Us
             </a> */}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </LazyDiv>
 
       <style jsx>{`
         @keyframes fadeIn {
