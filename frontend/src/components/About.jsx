@@ -1,5 +1,6 @@
 import Testimonial from "./Testimonial";
 import React from "react";
+import LazyDiv from "./misc/LazyDiv";
 //import React, { useState, useEffect } from "react";
 //import { Link } from "react-router-dom";
 
@@ -14,14 +15,13 @@ const About = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center text-white flex justify-center animate-fade-up">
-            <h1 className="text-2xl text-center text-wrap w-2/3 md:text-6xl font-bold">
+            <h1 className="title drop-shadow-lg">
               Sribudaya Resort & Homestay
             </h1>
           </div>
         </div>
       </div>
       {/* end of hero section */}
-  
 
       <div className="w-full min-h-screen relative">
         {/* Clean Background */}
@@ -30,10 +30,10 @@ const About = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage:
-                "url(https://thumbs.dreamstime.com/b/idyllic-summer-landscape-clear-mountain-lake-alps-45054687.jpg)",
+                "url()",
             }}
           >
-            <div className="absolute inset-0 bg-white/85"></div>
+            <div className="absolute inset-0 bg-main"></div>
           </div>
         </div>
 
@@ -182,18 +182,16 @@ const About = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="inline-flex space-x-4">
-
                 <button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-full font-light text-sm tracking-wide uppercase transition-all duration-300 hover:scale-105">
                   Discover More
                 </button>
                 <button className="border border-gray-300 hover:border-gray-800 text-gray-800 px-8 py-3 rounded-full font-light text-sm tracking-wide uppercase transition-all duration-300 hover:bg-gray-50">
                   View Gallery
                 </button>
-
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

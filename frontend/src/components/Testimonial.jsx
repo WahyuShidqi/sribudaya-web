@@ -270,11 +270,11 @@ const Testimonial = () => {
   return (
     <div className="bg-main">
       {/* Owner Section */}
-      <section className="py-16 ">
+      <section className="py-1 ">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold  mb-4">
+            <h2 className="page-title mb-4">
               Meet Our Founders
             </h2>
             <p className="text-xl  max-w-3xl mx-auto">
@@ -732,12 +732,12 @@ const Testimonial = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
                   <Camera className="w-8 h-8 text-blue-600" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {galleryData.description.title}
-                </h2>
-                <h3 className="text-lg text-blue-600 font-semibold mb-6">
+                <h3 className="subtitle mb-6">
                   {galleryData.description.subtitle}
                 </h3>
+                <h2 className="page-title mb-4">
+                  {galleryData.description.title}
+                </h2>
                 <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
                   {galleryData.description.text}
                 </p>
@@ -842,7 +842,7 @@ const Testimonial = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
               <Quote className="w-8 h-8 text-blue-600" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="page-title">
               What Our Guests Say
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -867,7 +867,7 @@ const Testimonial = () => {
                       <div className="p-8 md:p-12">
                         {/* Quote Icon */}
                         <div className="mb-6">
-                          <Quote className="w-12 h-12 text-blue-200" />
+                          <Quote className="w-12 h-12 text-blue-400" />
                         </div>
 
                         {/* Rating */}

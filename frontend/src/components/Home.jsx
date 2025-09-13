@@ -152,7 +152,7 @@ const Home = () => {
         <LazyDiv>
           <div className="text-center mb-12 animate-fade-up">
             <p className="subtitle">Our Rooms</p>
-            <h2 className="text-4xl font-bold text-gray-900 leading-snug inline-block text-center mb-[1px]">
+            <h2 className="page-title mb-[1px]">
               modern and elegant <br /> Accommodations
             </h2>
           </div>
