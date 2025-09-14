@@ -887,7 +887,7 @@ const Testimonial = () => {
                 />
               ))}
             </div>
-          </div>
+      
         </section>
       </LazyDiv>
     </div>
