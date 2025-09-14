@@ -11,6 +11,10 @@ import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyDiv from "./misc/LazyDiv";
+import { Swiper } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "../swiper-styles.css";
 
 const Home = () => {
   const images = [
@@ -105,7 +109,6 @@ const Home = () => {
           ))}
         </div>
       </section>
-
       {/* About Section */}
       <LazyDiv>
         <section className="px-12 md:px-28 my-20">
@@ -146,7 +149,6 @@ const Home = () => {
           </div>
         </section>
       </LazyDiv>
-
       {/* Our Rooms Section */}
       <section className="px-10 py-20 ">
         <LazyDiv>
@@ -216,9 +218,7 @@ const Home = () => {
           </LazyDiv>
         </div>
       </section>
-
       {/* Our Rooms Section ends*/}
-
       {/* Partner with section */}
       <section id="social-media" className="mb-8">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
@@ -278,9 +278,7 @@ const Home = () => {
           </LazyDiv>
         </div>
       </section>
-
       {/* Partner with section end */}
-
       {/* Amenities Section */}
       <section className="py-20 px-6 md:px-12 ">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -343,7 +341,6 @@ const Home = () => {
           </LazyDiv>
         </div>
       </section>
-
       {/* Location Section */}
       <LazyDiv>
         <section
@@ -372,7 +369,293 @@ const Home = () => {
           </div>
         </section>
       </LazyDiv>
+      {/* location distance to important places */}
+      <section className="mt-32 px-6 hidden md:block md:px-12">
+        <h2 className="subtitle text-center">Info Lokasi</h2>
+        <h1 className="page-title text-center">Lokasi Strategis</h1>
+        <p className="page-title-desc text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+          distinctio cum, unde odit iure quibusdam adipisci delectus expedita
+          ipsa accusantium vero cupiditate. Ipsam omnis sint consectetur nisi,
+          iste eum corporis!
+        </p>
 
+        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
+          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
+            <h1 className="text-3xl font-bold mb-4">
+              Jarak dari sribudaya ke the pade (100 KM)
+            </h1>
+            <p className="page-title-desc !text-base  mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
+              earum reprehenderit accusamus molestiae provident, dolores impedit
+              consectetur quisquam natus.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+              className="blue-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit map
+            </a>
+          </div>
+          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
+            <h1 className="text-3xl font-bold mb-4">
+              Jarak dari sribudaya ke the pade (100 KM)
+            </h1>
+            <p className="page-title-desc !text-base  mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
+              earum reprehenderit accusamus molestiae provident, dolores impedit
+              consectetur quisquam natus.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+              className="blue-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit map
+            </a>
+          </div>
+        </div>
+        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
+          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
+            <h1 className="text-3xl font-bold mb-4">
+              Jarak dari sribudaya ke the pade (100 KM)
+            </h1>
+            <p className="page-title-desc !text-base  mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
+              earum reprehenderit accusamus molestiae provident, dolores impedit
+              consectetur quisquam natus.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+              className="blue-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit map
+            </a>
+          </div>
+          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
+            <h1 className="text-3xl font-bold mb-4">
+              Jarak dari sribudaya ke the pade (100 KM)
+            </h1>
+            <p className="page-title-desc !text-base  mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
+              earum reprehenderit accusamus molestiae provident, dolores impedit
+              consectetur quisquam natus.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+              className="blue-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit map
+            </a>
+          </div>
+        </div>
+        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
+          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
+            <h1 className="text-3xl font-bold mb-4">
+              Jarak dari sribudaya ke the pade (100 KM)
+            </h1>
+            <p className="page-title-desc !text-base  mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
+              earum reprehenderit accusamus molestiae provident, dolores impedit
+              consectetur quisquam natus.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+              className="blue-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit map
+            </a>
+          </div>
+          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
+            <h1 className="text-3xl font-bold mb-4">
+              Jarak dari sribudaya ke the pade (100 KM)
+            </h1>
+            <p className="page-title-desc !text-base  mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
+              earum reprehenderit accusamus molestiae provident, dolores impedit
+              consectetur quisquam natus.
+            </p>
+            <a
+              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+              className="blue-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit map
+            </a>
+          </div>
+        </div>
+      </section>
+      {/*  */}
+      {/* location distance to important places slides for mobile*/}
+      <section className="mt-32 px-6 md:px-12 md:hidden">
+        <h2 className="subtitle text-center">Info Lokasi</h2>
+        <h1 className="page-title text-center">Lokasi Strategis</h1>
+        <p className="page-title-desc text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+          distinctio cum, unde odit iure quibusdam adipisci delectus expedita
+          ipsa accusantium vero cupiditate. Ipsam omnis sint consectetur nisi,
+          iste eum corporis!
+        </p>
+
+        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
+          <Swiper
+            className="location-swiper"
+            pagination={{
+              dynamicBullets: true,
+            }}
+            autoplay={{ delay: 2500 }}
+            spaceBetween={20}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 1 },
+            }}
+            modules={[Pagination, Autoplay]}
+          >
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
       {/* Social media section */}
       <section id="social-media" className="my-44 px-6">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">

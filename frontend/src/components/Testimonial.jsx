@@ -326,7 +326,26 @@ const Testimonial = () => {
                             "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop";
                         }}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                      <img
+                        src={galleryData.images[0].src}
+                        alt={galleryData.images[0].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
+                          <p className="text-white text-lg font-semibold text-center">
+                            {galleryData.images[0].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                           <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
@@ -421,24 +440,24 @@ const Testimonial = () => {
                   className="absolute bottom-80 right-0 w-64 h-36 group cursor-pointer"
                   onClick={() => openModal(galleryData.images[5])}
                   >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
-                  <img
-                  src={galleryData.images[5].src}
-                  alt={galleryData.images[5].alt}
-                  onError={(e) => {
-                    e.target.src =
-                    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop";
-                    }}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
-                    <p className="text-white text-sm font-semibold text-center px-2">
-                    {galleryData.images[5].title}
-                    </p>
-                    </div>
-                    </div>
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
+                      <img
+                        src={galleryData.images[6].src}
+                        alt={galleryData.images[6].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
+                          <p className="text-white text-lg font-semibold text-center">
+                            {galleryData.images[6].title}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                     </div> */}
 
@@ -589,6 +608,23 @@ const Testimonial = () => {
                               "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=400&fit=crop";
                           }}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                {/* Mobile Gallery Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {galleryData.images.slice(0, 6).map((image) => (
+                    <div
+                      key={image.id}
+                      className="group cursor-pointer"
+                      onClick={() => openModal(image)}
+                    >
+                      <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          onError={(e) => {
+                            e.target.src =
+                              "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=400&fit=crop";
+                          }}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                           <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -602,7 +638,24 @@ const Testimonial = () => {
                     </div>
                   ))}
                 </div>
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                          <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
+                            <p className="text-white text-xs font-medium text-center px-2">
+                              {image.title}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
+                {/* View More Button */}
+                <div className="text-center mt-8">
+                  <button
+                    onClick={() => openModal(galleryData.images[0])}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center"
                 {/* View More Button */}
                 <div className="text-center mt-8">
                   <button
@@ -691,6 +744,14 @@ const Testimonial = () => {
                           <div className="mb-6">
                             <Quote className="w-12 h-12 text-blue-400" />
                           </div>
+                  {testimonials.map((testimonial) => (
+                    <div key={testimonial.id} className="w-full flex-shrink-0">
+                      <div className="bg-white mx-4 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                        <div className="p-8 md:p-12">
+                          {/* Quote Icon */}
+                          <div className="mb-6">
+                            <Quote className="w-12 h-12 text-blue-400" />
+                          </div>
 
                           {/* Rating */}
                           <div className="flex items-center mb-6">
@@ -701,7 +762,20 @@ const Testimonial = () => {
                               {testimonial.rating}/5 Stars
                             </span>
                           </div>
+                          {/* Rating */}
+                          <div className="flex items-center mb-6">
+                            <div className="flex space-x-1 mr-4">
+                              {renderStars(testimonial.rating)}
+                            </div>
+                            <span className="text-gray-600 text-sm">
+                              {testimonial.rating}/5 Stars
+                            </span>
+                          </div>
 
+                          {/* Testimonial Content */}
+                          <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic">
+                            "{testimonial.comment}"
+                          </blockquote>
                           {/* Testimonial Content */}
                           <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic">
                             "{testimonial.comment}"
@@ -718,7 +792,27 @@ const Testimonial = () => {
                                     "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face";
                                 }}
                                 className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
+                          {/* Customer Info */}
+                          <div className="flex items-center justify-between flex-wrap gap-4">
+                            <div className="flex items-center space-x-4">
+                              <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                onError={(e) => {
+                                  e.target.src =
+                                    "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face";
+                                }}
+                                className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
                               />
+                              <div>
+                                <h4 className="font-semibold text-gray-900 text-lg">
+                                  {testimonial.name}
+                                </h4>
+                                <p className="text-gray-600">
+                                  {testimonial.location}
+                                </p>
+                              </div>
+                            </div>
                               <div>
                                 <h4 className="font-semibold text-gray-900 text-lg">
                                   {testimonial.name}
@@ -741,7 +835,23 @@ const Testimonial = () => {
                   ))}
                 </div>
               </div>
+                            <div className="bg-blue-50 px-4 py-2 rounded-full">
+                              <span className="text-blue-700 font-medium text-sm">
+                                {testimonial.stayType}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
               {/* Navigation Arrows */}
               <button
                 onClick={prevSlide}
@@ -749,7 +859,12 @@ const Testimonial = () => {
               >
                 <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
               </button>
+                <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </button>
 
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
               <button
                 onClick={nextSlide}
                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
