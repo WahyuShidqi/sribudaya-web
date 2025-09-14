@@ -893,7 +893,7 @@ const Booking = () => {
           {/* End of Wedding package list section */}
 
           {/*Wedding Gallery Section */}
-          <div className="py-16 px-4 sm:px-6 lg:px-8 bg-main">
+          <div className="mt-10 px-4 sm:px-6 lg:px-8 bg-main">
             <div className="max-w-7xl mx-auto">
               {/* Section Header */}
               <LazyDiv>
@@ -987,13 +987,13 @@ const Booking = () => {
         </div>
 
         {/* Meeting Room Section */}
-        <div className="wedding-package py-10 mt-12">
+        <div className="wedding-package mt-10">
           {/* title for Meeting section */}
           <LazyDiv>
             <div className="booking-title relative my-8 w-fit animate-fade-up">
-              <h2 className="subtitle text-left">WEDDING HALL</h2>
+              <h2 className="subtitle text-left">Meeting Room</h2>
               <h1 className="page-title">
-                A Modern Wedding Hall Designed <br /> for Your Special Day
+                A Modern Meeting Room Designed <br /> for Your Special Day
               </h1>
               <span className="absolute left-0 w-1/2 -bottom-4 h-[2px] bg-blue-600"></span>
             </div>
@@ -1172,8 +1172,194 @@ const Booking = () => {
         </div>
         {/* End of meeting package list section */}
 
+        {/* Swimming pool Section */}
+        <div className="wedding-package mt-10">
+          {/* title for Swimming pool section */}
+          <LazyDiv>
+            <div className="booking-title relative my-8 w-fit animate-fade-up">
+              <h2 className="subtitle text-left">Swimming pool</h2>
+              <h1 className="page-title">
+                A Modern Swimming pool Designed <br /> for Your Special Day
+              </h1>
+              <span className="absolute left-0 w-1/2 -bottom-4 h-[2px] bg-blue-600"></span>
+            </div>
+          </LazyDiv>
+          {/* Swimming pool section description */}
+          <LazyDiv>
+            <div className="mb-8 w-fit animate-fade-right">
+              <p className="page-title-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                quidem quam est, exercitationem beatae, modi sequi porro
+                quibusdam debitis, minima veniam temporibus molestias similique
+                quae impedit et minus ipsa mollitia!
+              </p>
+            </div>
+          </LazyDiv>
+
+          {/* meeting package list */}
+          <div className="wrapper max-w-6xl mx-auto flex justify-center items-center gap-2">
+            <Swiper
+              pagination={{
+                dynamicBullets: true,
+              }}
+              spaceBetween={20}
+              breakpoints={{
+                320: { slidesPerView: 3 },
+                640: { slidesPerView: 3 },
+              }}
+              modules={[Pagination]}
+              className="myMeetingPackageSwiper"
+            >
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="silver-package.png"
+                    data-fancybox="meeting-gallery"
+                    data-caption="Silver Package"
+                  >
+                    <img
+                      src="silver-package.png"
+                      alt="silver package"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl  font-semibold mb-2">
+                      Silver Package
+                    </h3>
+                    <p className="  ">
+                      Perfect for intimate weddings with essential services
+                      included.
+                    </p>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="blue-btn mt-24 md:text-xl"
+                    >
+                      <span className="text-2xl pr-1">
+                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                      </span>
+                      Booking
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="platinum-package.png"
+                    data-fancybox="meeting-gallery"
+                    data-caption="Platinum Package"
+                  >
+                    <img
+                      src="platinum-package.png"
+                      alt="platinum package wedding"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl font-semibold mb-2">
+                      Platinum Package
+                    </h3>
+                    <p className=" ">
+                      A luxurious package for couples who want premium
+                      arrangements.
+                    </p>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="blue-btn mt-24 md:text-xl"
+                    >
+                      <span className="text-2xl pr-1">
+                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                      </span>
+                      Booking
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="gold-package.png"
+                    data-fancybox="meeting-gallery"
+                    data-caption="Gold Package"
+                  >
+                    <img
+                      src="gold-package.png"
+                      alt="gold package wedding"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl font-semibold mb-2">
+                      Gold Package
+                    </h3>
+                    <p className=" ">
+                      Balanced elegance and value, designed for medium-size
+                      weddings.
+                    </p>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="blue-btn mt-24 md:text-xl"
+                    >
+                      <span className="text-2xl pr-1">
+                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                      </span>
+                      Booking
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <a
+                    href="royal-package.png"
+                    data-fancybox="meeting-gallery"
+                    data-caption="Royal Package"
+                  >
+                    <img
+                      src="royal-package.png"
+                      alt="royal package wedding"
+                      className="w-full h-48 object-cover"
+                    />
+                  </a>
+                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
+                    <h3 className="text-3xl font-semibold mb-2">
+                      Royal Package
+                    </h3>
+                    <p className=" ">
+                      The ultimate fairy-tale experience with every luxury
+                      included.
+                    </p>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="blue-btn mt-24 md:text-xl"
+                    >
+                      <span className="text-2xl pr-1">
+                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                      </span>
+                      Booking
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        {/* End of meeting package list section */}
+
         {/* Accordion section */}
-        <div className="accordion-container pb-16">
+        <div className="accordion-container my-16">
           {/* title for FAQ section */}
           <LazyDiv>
             <div className="booking-title relative mt-8 w-fit animate-fade-right">
