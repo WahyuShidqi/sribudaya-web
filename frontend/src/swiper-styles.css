@@ -34,6 +34,13 @@
 
 /* Swiper style for wedding package */
 
-.myWeddingPackageSwiper .swiper-wrapper {
+.myWeddingPackageSwiper .swiper-wrapper,
+.myMeetingPackageSwiper .swiper-wrapper,
+.location-swiper .swiper-wrapper {
   margin-bottom: 3rem !important;
+}
+
+.location-swiper .swiper-wrapper .swiper-slide {
+  background-color: #e9e4dc !important;
+  text-align: left;
 }
