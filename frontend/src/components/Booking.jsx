@@ -1196,7 +1196,7 @@ const Booking = () => {
             </div>
           </LazyDiv>
 
-          {/* meeting package list */}
+          {/* swimmingpool package list */}
           <div className="wrapper max-w-6xl mx-auto flex justify-center items-center gap-2">
             <Swiper
               pagination={{
@@ -1214,7 +1214,7 @@ const Booking = () => {
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
                     href="silver-package.png"
-                    data-fancybox="meeting-gallery"
+                    data-fancybox="swimming-gallery"
                     data-caption="Silver Package"
                   >
                     <img
@@ -1250,7 +1250,7 @@ const Booking = () => {
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
                     href="platinum-package.png"
-                    data-fancybox="meeting-gallery"
+                    data-fancybox="swimming-gallery"
                     data-caption="Platinum Package"
                   >
                     <img
@@ -1286,7 +1286,7 @@ const Booking = () => {
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
                     href="gold-package.png"
-                    data-fancybox="meeting-gallery"
+                    data-fancybox="swimming-gallery"
                     data-caption="Gold Package"
                   >
                     <img
@@ -1322,7 +1322,7 @@ const Booking = () => {
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
                     href="royal-package.png"
-                    data-fancybox="meeting-gallery"
+                    data-fancybox="swimming-gallery"
                     data-caption="Royal Package"
                   >
                     <img
