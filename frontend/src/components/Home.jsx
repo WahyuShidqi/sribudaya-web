@@ -370,7 +370,7 @@ const Home = () => {
         </section>
       </LazyDiv>
       {/* location distance to important places */}
-      <section className="mt-32 px-6 hidden md:block md:px-12">
+      {/* <section className="mt-32 px-6 hidden md:block md:px-12">
         <h2 className="subtitle text-center">Info Lokasi</h2>
         <h1 className="page-title text-center">Lokasi Strategis</h1>
         <p className="page-title-desc text-center">
@@ -500,10 +500,10 @@ const Home = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*  */}
       {/* location distance to important places slides for mobile*/}
-      <section className="mt-32 px-6 md:px-12 md:hidden">
+      <section className="mt-32 px-6 md:px-12">
         <h2 className="subtitle text-center">Info Lokasi</h2>
         <h1 className="page-title text-center">Lokasi Strategis</h1>
         <p className="page-title-desc text-center">
@@ -523,7 +523,7 @@ const Home = () => {
             spaceBetween={20}
             breakpoints={{
               320: { slidesPerView: 1 },
-              640: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
             }}
             modules={[Pagination, Autoplay]}
           >
@@ -657,7 +657,7 @@ const Home = () => {
         </div>
       </section>
       {/* Social media section */}
-      <section id="social-media" className="my-44 px-6">
+      <section id="social-media" className="mb-44 mt-20 px-6">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
           {/* location title */}
           <LazyDiv>
