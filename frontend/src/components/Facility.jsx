@@ -13,7 +13,7 @@ const facilities = [
     category: "Recreation",
   },
   {
-    title: "Wi-Fi High Speed & Complimentary",
+    title: "Meeting room",
     description:
       "Tetap terhubung dengan dunia melalui koneksi internet fiber optic berkecepatan tinggi yang tersedia 24/7 di seluruh area resort. Streaming, video call, dan berbagi momen indah tanpa batas.",
     image:

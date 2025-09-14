@@ -275,7 +275,7 @@ const Testimonial = () => {
       <section className="py-20  overflow-hidden mt-16 animate-fade-up">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Gallery Layout */}
-          <div className="relative">
+          <div className="relative ">
             {/* Desktop Layout */}
             <LazyDiv
               className="hidden lg:block"
