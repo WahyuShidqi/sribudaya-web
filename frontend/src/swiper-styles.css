@@ -36,6 +36,7 @@
 
 .myWeddingPackageSwiper .swiper-wrapper,
 .myMeetingPackageSwiper .swiper-wrapper,
+.mySwimmingPackageSwiper .swiper-wrapper,
 .location-swiper .swiper-wrapper {
   margin-bottom: 3rem !important;
 }
