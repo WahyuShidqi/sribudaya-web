@@ -7,74 +7,66 @@ const facilities = [
   {
     title: "Kolam Renang Outdoor",
     description:
-      "Berendam dalam kemewahan kolam renang infinity yang menghadirkan panorama alam Aceh yang memukau. Rasakan sensasi berenang layaknya menyatu dengan cakrawala, dikelilingi taman tropis yang asri dan udara segar pegunungan.",
-    image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+      "Segarkan diri di kolam renang bergaya modern dengan suasana estetik. Cocok untuk relaksasi, olahraga ringan, atau sekadar bersantai bersama keluarga.",
+    image: "images/facility/kolam_renang.jpg",
     category: "Recreation",
-  },
-  {
-    title: "Wi-Fi High Speed & Complimentary",
-    description:
-      "Tetap terhubung dengan dunia melalui koneksi internet fiber optic berkecepatan tinggi yang tersedia 24/7 di seluruh area resort. Streaming, video call, dan berbagi momen indah tanpa batas.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
-    category: "Technology",
-  },
-  {
-    title: "Musholla",
-    description:
-      "Khusyukkan ibadah Anda di musholla berdesain modern dengan interior yang tenang dan fasilitas wudhu yang bersih. Dilengkapi AC, karpet berkualitas tinggi, dan arah kiblat yang tepat untuk kenyamanan spiritual Anda.",
-    image:
-      "https://desaingriyaku.com/wp-content/uploads/2023/06/mushola-al-hafizh.jpg",
-    category: "Spiritual",
-  },
-  {
-    title: "Parking Area",
-    description:
-      "Nikmati kenyamanan parkir pribadi gratis yang aman dan luas untuk kendaraan Anda selama menginap.",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-    category: "Convenience",
-  },
-  {
-    title: "Luxury Non-Smoking Rooms",
-    description:
-      "Nikmati udara segar dan bersih di kamar bebas rokok yang didesain dengan standar internasional. Setiap kamar dilengkapi air purifier dan aromaterapi alami untuk pengalaman menginap yang menyehatkan.",
-    image:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
-    category: "Accommodation",
-  },
-  {
-    title: "Layanan Kamar",
-    description:
-      "Nikmati kenyamanan dengan layanan kamar yang siap membantu kebutuhan Anda setiap saat.",
-    image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-    category: "Service",
   },
   {
     title: "Coffee Shop",
     description:
-      "Nikmati secangkir kopi hangat atau minuman segar di coffee shop kami, tempat sempurna untuk bersantai dan berbincang.",
-    image:
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop",
+      "Nikmati racikan Coffee dan aneka minuman segar, dan hidangan lainnya. Dengan suasana nyaman dan estetik tempat ideal untuk bersantai dan menikmati kebersamaan.",
+    image: "images/facility/coffee shop.jpeg",
     category: "Dining",
+  },
+  {
+    title: "Homestay & Kamar Nyaman",
+    description:
+      "Rasakan kenyamanan istirahat di kamar dengan desain modern dan fasilitas lengkap. Ideal untuk keluarga, pasangan, maupun perjalanan pribadi.",
+    image: "images/facility/kamar.jpg",
+    category: "Accommodation",
+  },
+  {
+    title: "Musholla",
+    description:
+      "Tempat ibadah yang bersih, tenang, dan nyaman, dengan ruang terpisah untuk laki-laki dan perempuan agar ibadah lebih khusyuk.",
+    image: "images/facility/musholla.jpg",
+    category: "Spiritual",
+  },
+  {
+    title: "Meeting room",
+    description:
+      "Ruang pertemuan modern untuk rapat, seminar, atau workshop. Suasana profesional yang mendukung kegiatan lebih efektif dan lancar.",
+    image: "images/facility/meetingroom.jpeg",
+    category: "Facilities",
+  },
+  {
+    title: "Parking Area",
+    description:
+      "Area parkir yang luas dan aman. Memberi kenyamanan sejak pertama kali Anda tiba.",
+    image: "images/facility/parkir.jpg",
+    category: "Convenience",
+  },
+  {
+    title: "Resepsionis 24 Jam",
+    description:
+      "Staf resepsionis selalu siap 24 jam untuk membantu kebutuhan Anda, dari check-in hingga layanan darurat, dengan ramah dan profesional.",
+    image: "images/facility/resepsionis.jpg",
+    category: "Service",
   },
   {
     title: "Wedding Venue",
     description:
-      "Raih momen sakral Anda di tempat yang indah dengan pemandangan mempesona dan pelayanan terbaik untuk pernikahan tak terlupakan.",
-    image:
-      "https://nibble-images.b-cdn.net/nibble/original_images/wedding-venue-bogor-5.jpg",
+      "Rayakan momen sakral dengan suasana magis dan layanan terbaik di venue mewah yang akan membuat pernikahan Anda tak terlupakan",
+    image: "images/facility/acara_nikah.jpeg",
     category: "Special Events",
   },
 ];
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop",
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&h=800&fit=crop",
-  "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&h=800&fit=crop",
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&h=800&fit=crop",
+  "images/facility/sribudaya.jpg",
+  "images/facility/swimming.jpg",
+  "images/facility/ruanggan.jpeg",
+  "images/facility/caffe.jpeg",
 ];
 
 const Facility = () => {
@@ -209,7 +201,8 @@ const Facility = () => {
                 <span className="font-semibold text-amber-200">
                   Sribudaya Resort & Homestay
                 </span>
-                , tempat di mana kenyamanan bertemu dengan kehangatan Aceh
+                , tempat nyaman untuk beristirahat dan menikmati suasana yang
+                tenang.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -236,7 +229,7 @@ const Facility = () => {
       <section id="facilities" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <LazyDiv>
-            <div className="text-center mb-16 animate-fade-up">
+            <div className="text-center mb-16 animate-fade-right">
               {/* <div className="flex items-center justify-center mb-6">
               <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
               <svg
@@ -250,14 +243,14 @@ const Facility = () => {
             </div> */}
 
               <h2 className="subtitle">Facilities</h2>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="page-title">Premium Facilities</span>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-left animate-delay-100">
+                <span className="page-title">Signature Facilities</span>
               </h1>
 
-              <p className="page-title-desc">
-                Nikmati pengalaman menginap yang tak terlupakan dengan fasilitas
-                kelas dunia yang dirancang khusus untuk kenyamanan dan kepuasan
-                Anda
+              <p className="page-title-desc animate-fade-left animate-delay-200">
+                Setiap fasilitas di Sribudaya Resort kami hadirkan agar Anda
+                merasakan pengalaman menginap yang menyenangkan dan penuh
+                cerita.
               </p>
             </div>
           </LazyDiv>
@@ -271,7 +264,7 @@ const Facility = () => {
                   <div key={index} className="relative">
                     {/* Wedding Venue Title */}
                     <div className="text-center mb-12">
-                      <div className="flex items-center justify-center mb-6 aniamate-fade-down">
+                      <div className="flex items-center justify-center mb-6 aniamate-fade-down animate-delay-100">
                         <div className="h-px w-16 bg-gradient-to-r from-transparent to-rose-400"></div>
                         <svg
                           className="w-8 h-8 mx-6 text-rose-500"
@@ -292,16 +285,15 @@ const Facility = () => {
                       </LazyDiv>
 
                       <LazyDiv>
-                        <p className="text-lg max-w-2xl mx-auto page-title-desc animate-fade-down">
-                          Ciptakan pernikahan impian dengan suasana yang magis
-                          dan pelayanan white-glove service di venue paling
-                          prestisius di Aceh
+                        <p className="text-lg max-w-2xl mx-auto page-title-desc animate-fade-down animate-delay-100">
+                          Rayakan momen sakral di tempat pernikahan istimewa
+                          yang membuat hari Anda tak terlupakan
                         </p>
                       </LazyDiv>
                     </div>
 
                     {/* Wedding Venue Card */}
-                    <div className="relative h-96 rounded-3xl overflow-hidden group shadow-2xl transform transition-all duration-700 hover:scale-[1.02]">
+                    <div className="relative h-96 md:h-[36rem] rounded-3xl overflow-hidden group shadow-2xl transform transition-all duration-700 hover:scale-[1.02]">
                       <img
                         src={facility.image}
                         alt={facility.title}
@@ -326,7 +318,7 @@ const Facility = () => {
                           <h4 className="text-3xl font-bold mb-4 anamate-fade-down ">
                             {facility.title}
                           </h4>
-                          <p className="text-lg text-whaite-200 leading-relaxed page-title-desc animate-fade-down ">
+                          <p className="text-lg text-whaite-200 leading-relaxed page-title-desc animate-fade-down animate-delay-100 ">
                             {facility.description}
                           </p>
                         </LazyDiv>
@@ -347,7 +339,7 @@ const Facility = () => {
 
                   <div className="lg:w-1/2 relative group">
                     <LazyDiv>
-                      <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl animate-fade-up">
+                      <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl animate-fade-right">
                         <img
                           src={facility.image}
                           alt={facility.title}
@@ -371,7 +363,7 @@ const Facility = () => {
                   {/* Content */}
                   <div className="lg:w-1/2 space-y-6">
                     <LazyDiv>
-                      <div className="flex items-center gap-3 animate-fade-up">
+                      <div className="flex items-center gap-3 animate-fade-right">
                         <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
                           {facility.category}
                         </span>
