@@ -4,12 +4,12 @@ import {
   ChevronRight,
   Star,
   Quote,
-  Phone,
-  Mail,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
+  // Phone,
+  // Mail,
+  // Facebook,
+  // Instagram,
+  // Twitter,
+  // Linkedin,
   Camera,
   Eye,
   X,
@@ -23,58 +23,58 @@ const Testimonial = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Data Owner Resort
-  const owners = [
-    {
-      id: 1,
-      name: "Budi Santoso",
-      title: "Co-Founder & CEO",
-      experience: "15+ Years in Hospitality",
-      description:
-        "Passionate about creating unforgettable experiences for guests. Started this journey with a vision to provide authentic Indonesian hospitality combined with modern comfort.",
-      specialties: [
-        "Resort Management",
-        "Customer Experience",
-        "Business Strategy",
-      ],
-      image: "/owners/owner3.jpg",
-      contact: {
-        phone: "+62 812-3456-7890",
-        email: "budi@resortparadise.com",
-        whatsapp: "+62 812-3456-7890",
-      },
-      socialMedia: {
-        facebook: "https://facebook.com/budisantoso",
-        instagram: "https://instagram.com/budisantoso_resort",
-        linkedin: "https://linkedin.com/in/budisantoso",
-        twitter: "https://twitter.com/budisantoso",
-      },
-    },
-    {
-      id: 2,
-      name: "Sari Wijaya",
-      title: "Co-Founder & Operations Director",
-      experience: "12+ Years in Tourism",
-      description:
-        "Dedicated to sustainable tourism and community development. Believes in creating positive impact for both guests and local communities through responsible hospitality.",
-      specialties: [
-        "Operations Management",
-        "Sustainable Tourism",
-        "Community Relations",
-      ],
-      image: "/owners/owner2.jpg",
-      contact: {
-        phone: "+62 813-2345-6789",
-        email: "sari@resortparadise.com",
-        whatsapp: "+62 813-2345-6789",
-      },
-      socialMedia: {
-        facebook: "https://facebook.com/sariwijaya",
-        instagram: "https://instagram.com/sariwijaya_hospitality",
-        linkedin: "https://linkedin.com/in/sariwijaya",
-        twitter: "https://twitter.com/sariwijaya",
-      },
-    },
-  ];
+  // const owners = [
+  //   {
+  //     id: 1,
+  //     name: "Budi Santoso",
+  //     title: "Co-Founder & CEO",
+  //     experience: "15+ Years in Hospitality",
+  //     description:
+  //       "Passionate about creating unforgettable experiences for guests. Started this journey with a vision to provide authentic Indonesian hospitality combined with modern comfort.",
+  //     specialties: [
+  //       "Resort Management",
+  //       "Customer Experience",
+  //       "Business Strategy",
+  //     ],
+  //     image: "/owners/owner3.jpg",
+  //     contact: {
+  //       phone: "+62 812-3456-7890",
+  //       email: "budi@resortparadise.com",
+  //       whatsapp: "+62 812-3456-7890",
+  //     },
+  //     socialMedia: {
+  //       facebook: "https://facebook.com/budisantoso",
+  //       instagram: "https://instagram.com/budisantoso_resort",
+  //       linkedin: "https://linkedin.com/in/budisantoso",
+  //       twitter: "https://twitter.com/budisantoso",
+  //     },
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Sari Wijaya",
+  //     title: "Co-Founder & Operations Director",
+  //     experience: "12+ Years in Tourism",
+  //     description:
+  //       "Dedicated to sustainable tourism and community development. Believes in creating positive impact for both guests and local communities through responsible hospitality.",
+  //     specialties: [
+  //       "Operations Management",
+  //       "Sustainable Tourism",
+  //       "Community Relations",
+  //     ],
+  //     image: "/owners/owner2.jpg",
+  //     contact: {
+  //       phone: "+62 813-2345-6789",
+  //       email: "sari@resortparadise.com",
+  //       whatsapp: "+62 813-2345-6789",
+  //     },
+  //     socialMedia: {
+  //       facebook: "https://facebook.com/sariwijaya",
+  //       instagram: "https://instagram.com/sariwijaya_hospitality",
+  //       linkedin: "https://linkedin.com/in/sariwijaya",
+  //       twitter: "https://twitter.com/sariwijaya",
+  //     },
+  //   },
+  // ];
 
   // Data Gallery Resort
   const galleryData = {
@@ -92,15 +92,15 @@ const Testimonial = () => {
     images: [
       {
         id: 1,
-        src: "/images/gallery/rooms/villa-oceanview.jpg",
+        src: "/images/about/coffeshop.jpg",
         alt: "Ocean View Villa",
         category: "Accommodations",
-        title: "Luxury Ocean View Villa",
+        title: "coffeshop",
         position: "top-left",
       },
       {
         id: 2,
-        src: "/images/gallery/facilities/infinity-pool.jpg",
+        src: "/images.jpg",
         alt: "Infinity Pool",
         category: "Facilities",
         title: "Infinity Pool with Ocean View",
@@ -108,31 +108,31 @@ const Testimonial = () => {
       },
       {
         id: 3,
-        src: "/images/gallery/staff/reception-team.jpg",
+        src: "/images/about/resepsionis.jpg",
         alt: "Reception Team",
         category: "Staff",
-        title: "Our Friendly Reception Team",
+        title: "Pelayanan resepsionis yang ramah",
         position: "left",
       },
       {
         id: 4,
-        src: "/images/gallery/facilities/spa-treatment.jpg",
-        alt: "Spa Treatment",
-        category: "Wellness",
-        title: "Relaxing Spa Experience",
+        src: "/images/about/kolam.jpg",
+        alt: "kolam renang",
+        category: "swimming pool",
+        title: "Kolam renang",
         position: "right-top",
       },
       {
         id: 5,
-        src: "/images/gallery/dining/restaurant-view.jpg",
+        src: "/images/about/indoor.jpeg",
         alt: "Restaurant",
         category: "Dining",
-        title: "Beachfront Restaurant",
+        title: "indoor coffeshop",
         position: "bottom-left",
       },
       {
         id: 6,
-        src: "/images/gallery/activities/beach-activities.jpg",
+        src: "/images/about/about2.jpg",
         alt: "Beach Activities",
         category: "Activities",
         title: "Fun Beach Activities",
@@ -148,10 +148,10 @@ const Testimonial = () => {
       },
       {
         id: 8,
-        src: "/images/gallery/facilities/gym-fitness.jpg",
-        alt: "Fitness Center",
+        src: "/images/about/homestay.jpg",
+        alt: "homestay",
         category: "Facilities",
-        title: "Modern Fitness Center",
+        title: "Homestay",
         position: "left-bottom",
       },
     ],

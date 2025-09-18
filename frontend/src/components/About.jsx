@@ -11,7 +11,7 @@ const About = () => {
       {/* Hero section */}
       <div
         className="relative h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/contoh.jpg" }}
+        style={{ backgroundImage: "url('/images/about/about1.jpg" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center text-white flex justify-center animate-fade-up">

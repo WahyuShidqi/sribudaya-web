@@ -9,7 +9,7 @@ const facilities = [
     description:
       "Berendam dalam kemewahan kolam renang infinity yang menghadirkan panorama alam Aceh yang memukau. Rasakan sensasi berenang layaknya menyatu dengan cakrawala, dikelilingi taman tropis yang asri dan udara segar pegunungan.",
     image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+      "/images/contoh.jpg",
     category: "Recreation",
   },
   {

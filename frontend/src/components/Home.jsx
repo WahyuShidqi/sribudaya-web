@@ -18,11 +18,12 @@ import "../swiper-styles.css";
 
 const Home = () => {
   const images = [
-    "/images/contoh.jpg",
-    "/images/hall1.jpg",
-    "/images/hotel.jpg",
-    "/images/pool.jpg",
-    "/images/wedding.jpg",
+    "/images/home/home4.jpg",
+    "/images/home/home1.jpg",
+    "/images/home/home2.jpg",
+    "/images/home/home3.jpg",
+    "/images/home/home5.jpeg",
+    "/images/home/home6.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -141,7 +142,7 @@ const Home = () => {
 
               {/* Gambar utama */}
               <img
-                src="./images/villa.jpg"
+                src="./images/home/villa.jpg"
                 alt="resort"
                 className="relative z-10 rounded-lg shadow-lg w-full object-cover"
               />
@@ -289,7 +290,7 @@ const Home = () => {
               <h2 className="page-title">
                 Your All-Inclusive <br /> Experience
               </h2>
-              <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
+              <div className="absoulute left-0 w-1/4 h-[3px] bg-blue-600 mb-4"></div>
               <p className="page-title-desc">
                 Indulge in a world of luxury and comfort with our exclusive
                 resort amenities, designed to create unforgettable experiences
@@ -507,10 +508,8 @@ const Home = () => {
         <h2 className="subtitle text-center">Info Lokasi</h2>
         <h1 className="page-title text-center">Lokasi Strategis</h1>
         <p className="page-title-desc text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-          distinctio cum, unde odit iure quibusdam adipisci delectus expedita
-          ipsa accusantium vero cupiditate. Ipsam omnis sint consectetur nisi,
-          iste eum corporis!
+          Sribudaya Resort & Homestay - Akses Mudah ke Berbagai Destinasi
+          Penting
         </p>
 
         <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
@@ -519,7 +518,7 @@ const Home = () => {
             pagination={{
               dynamicBullets: true,
             }}
-            autoplay={{ delay: 2500 }}
+            autoplay={{ delay: 8000 }}
             spaceBetween={20}
             breakpoints={{
               320: { slidesPerView: 1 },
@@ -529,17 +528,16 @@ const Home = () => {
           >
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pusat kota Banda Aceh, 5 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Pusat kota dengan berbagai fasilitas perdagangan, perkantoran,
+                  dan pusat kuliner khas Aceh. Mudah diakses melalui jalan utama
+                  dengan waktu tempuh sekitar 10 menit berkendara.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/RABqKz5fBiXkG8s58"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -550,17 +548,37 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Mesjid Raya Baiturrahman, 5 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Masjid bersejarah dan ikonik Banda Aceh dengan arsitektur yang
+                  memukau. Simbol spiritual dan budaya Aceh yang wajib
+                  dikunjungi, mudah dijangkau dalam 13 menit perjalanan.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/UL6635rYHt7oUsgz7"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-2xl font-bold mb-2">
+                  Bandara Sultan Iskandar Muda, 12 KM
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Bandara internasional utama Aceh yang melayani penerbangan
+                  domestik dan internasional. Perjalanan dari resort memakan
+                  waktu sekitar 20 menit melalui jalur lingkar kota.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/1q9f7TL25Eypazoy9"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -571,17 +589,16 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pusat Wisata Tsunami Museum, 5 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Museum Tsunami Aceh dan kawasan wisata sejarah terdekat.
+                  Lokasi strategis untuk mengunjungi destinasi wisata edukasi
+                  dan sejarah yang menawan di Banda Aceh.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/s3sP1AsGQC6nWFKv6"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -592,17 +609,16 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pelabuhan Malahayati, 34 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Pelabuhan utama Banda Aceh yang menghubungkan dengan berbagai
+                  destinasi di Sumatera dan luar pulau. Akses transportasi laut
+                  untuk perjalanan wisata dan bisnis.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/7K6R87m3EZfnM9Tq9"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -613,17 +629,17 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pelabuhan Ulee Lheue, 10 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Pelabuhan wisata dan ferry menuju Pulau Weh (Sabang). Gerbang
+                  utama untuk menjelajahi keindahan bawah laut dan pantai
+                  eksotis Sabang dengan fasilitas transportasi laut yang
+                  lengkap.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/4NLvzB7jvFwFwYa97"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -634,17 +650,16 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  RSUD dr. Zainoel Abidin, 7 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Rumah sakit rujukan utama Provinsi Aceh dengan fasilitas medis
+                  lengkap dan pelayanan 24 jam. Menjadi jaminan keamanan
+                  kesehatan selama menginap.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/PmzqPoZGvWPUK5y8A"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
