@@ -87,7 +87,7 @@ p {
 }
 
 .card-title {
-  @apply font-normal text-5xl md:text-6xl font-beau-rivage mb-4;
+  @apply font-normal text-4xl md:text-5xl font-epunda-slab mb-4;
 }
 
 .rivage-title {
@@ -101,7 +101,6 @@ p {
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
   gap: 2px; /* spacing between images */
   width: 35rem;
-  height: 18.75rem; /* makes the whole block a square */
 }
 
 .grid-images img {
@@ -124,5 +123,10 @@ p {
   .grid-images {
     width: auto;
     height: auto;
+  }
+
+  button.is-prev,
+  button.is-next {
+    display: none !important;
   }
 }

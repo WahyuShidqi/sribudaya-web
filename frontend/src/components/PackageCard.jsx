@@ -10,178 +10,80 @@ import "../swiper-styles.css";
 import { Autoplay, Pagination, Parallax } from "swiper/modules";
 
 const PackageCard = () => {
+  const weddingSlide = [
+    {
+      id: 1,
+      src: "/images/booking/wedding-slide1.jpg",
+      alt: "wedding-slide1.jpg",
+      title: "Momen Romantis yang Abadi",
+      desc: "Rayakan awal kisah cinta Anda di tempat yang elegan dengan dekorasi menawan dan suasana penuh kehangatan.",
+    },
+    {
+      id: 2,
+      src: "/images/booking/wedding-slide2.jpg",
+      alt: "wedding-slide2.jpg",
+      title: "Venue Eksklusif",
+      desc: "Ruang yang luas dan indah, sempurna untuk berbagi kebahagiaan bersama keluarga dan sahabat.",
+    },
+    {
+      id: 3,
+      src: "/images/booking/wedding-slide3.jpg",
+      alt: "wedding-slide3.jpg",
+      title: "Pelayanan Profesional",
+      desc: "Tim berpengalaman siap membantu setiap detail agar hari istimewa Anda berjalan sempurna.",
+    },
+    {
+      id: 4,
+      src: "/images/booking/wedding-slide4.jpg",
+      alt: "wedding-slide4.jpg",
+      title: "Kenangan Tak Terlupakan",
+      desc: "Ciptakan momen indah yang akan dikenang sepanjang masa dengan paket pernikahan terbaik kami.",
+    },
+  ];
+
   return (
     <div className="w-full overflow-hidden rounded-lg">
       <div className="wrapper ">
-        <div className="hero-slides h-[80vh] relative">
+        <div className="hero-slides h-[36rem] relative">
           <Swiper
             pagination={{
               dynamicBullets: true,
             }}
             autoplay={{
               delay: 5000,
+              pauseOnMouseEnter: true,
             }}
             parallax={true}
-            lazy={true}
             speed={1800}
             loop="true"
             modules={[Pagination, Autoplay, Parallax]}
             className="mySwiper "
           >
-            <SwiperSlide>
-              <img className="" src="/images/hotel.jpg" loading="lazy" alt="" />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 z-10 bg-black bg-opacity-60">
-                <div className="p-8">
+            {weddingSlide.map((slide, idx) => (
+              <SwiperSlide key={idx} className="group">
+                <img
+                  className="w-full h-full object-cover transition-transform transform duration-700 group-hover:scale-110"
+                  src={slide.src}
+                  alt={slide.alt}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute left-0 bottom-0  text-left p-8">
                   <h1
-                    className="w-full card-title text-center  text-white"
+                    className="page-title !text-white !mb-2"
                     data-swiper-parallax="-1200"
                   >
-                    Halo Dunia
+                    {slide.title}
                   </h1>
-                  <p className="text-white" data-swiper-parallax="-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    incidunt fuga minima consequuntur, vero unde, amet veritatis
-                    rem quibusdam cupiditate totam delectus. Quaerat esse velit
-                    eaque necessitatibus aliquam natus atque?
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className=""
-                src="/images/contoh.jpg"
-                loading="lazy"
-                alt=""
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 z-10 bg-black bg-opacity-60">
-                <div className="p-8">
-                  <h1
-                    className="w-full card-title text-center  text-white"
-                    data-swiper-parallax="-1200"
+                  <p
+                    className="page-title-desc w-2/3 text-white "
+                    data-swiper-parallax="-600"
                   >
-                    Halo Dunia
-                  </h1>
-                  <p className="text-white" data-swiper-parallax="-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    incidunt fuga minima consequuntur, vero unde, amet veritatis
-                    rem quibusdam cupiditate totam delectus. Quaerat esse velit
-                    eaque necessitatibus aliquam natus atque?
+                    {slide.desc}
                   </p>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className=""
-                src="/images/wedding.jpg"
-                loading="lazy"
-                alt=""
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 z-10 bg-black bg-opacity-60">
-                <div className="p-8">
-                  <h1
-                    className="w-full card-title text-center  text-white"
-                    data-swiper-parallax="-1200"
-                  >
-                    Halo Dunia
-                  </h1>
-                  <p className="text-white" data-swiper-parallax="-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    incidunt fuga minima consequuntur, vero unde, amet veritatis
-                    rem quibusdam cupiditate totam delectus. Quaerat esse velit
-                    eaque necessitatibus aliquam natus atque?
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="" src="/images/hotel.jpg" loading="lazy" alt="" />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 z-10 bg-black bg-opacity-60">
-                <div className="p-8">
-                  <h1
-                    className="w-full card-title text-center  text-white"
-                    data-swiper-parallax="-1200"
-                  >
-                    Halo Dunia
-                  </h1>
-                  <p className="text-white" data-swiper-parallax="-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    incidunt fuga minima consequuntur, vero unde, amet veritatis
-                    rem quibusdam cupiditate totam delectus. Quaerat esse velit
-                    eaque necessitatibus aliquam natus atque?
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className=""
-                src="/images/wedding.jpg"
-                loading="lazy"
-                alt=""
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 z-10 bg-black bg-opacity-60">
-                <div className="p-8">
-                  <h1
-                    className="w-full card-title text-center  text-white"
-                    data-swiper-parallax="-1200"
-                  >
-                    Halo Dunia
-                  </h1>
-                  <p className="text-white" data-swiper-parallax="-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    incidunt fuga minima consequuntur, vero unde, amet veritatis
-                    rem quibusdam cupiditate totam delectus. Quaerat esse velit
-                    eaque necessitatibus aliquam natus atque?
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className=""
-                src="/images/contoh.jpg"
-                loading="lazy"
-                alt=""
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 z-10 bg-black bg-opacity-60">
-                <div className="p-8">
-                  <h1
-                    className="w-full card-title text-center  text-white"
-                    data-swiper-parallax="-1200"
-                  >
-                    Halo Dunia
-                  </h1>
-                  <p className="text-white" data-swiper-parallax="-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    incidunt fuga minima consequuntur, vero unde, amet veritatis
-                    rem quibusdam cupiditate totam delectus. Quaerat esse velit
-                    eaque necessitatibus aliquam natus atque?
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
-
-          {/* Description for Hero section */}
-          {/* <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white  flex-col">
-            <div className="header text-center w-[85%]">
-              <h1 className="text-3xl md:text-5xl font-bold p-5">
-                We offer you a cozy room suitable for you and your loved one!
-              </h1>
-            </div>
-            <div className="subheader text-center px-4">
-              <h2 className="font-semibold text-xl md:text-2xl">
-                Order your room right here and right now before it's too late!
-              </h2>
-              <div className=" mt-12">
-                <a href="#order-section" className="blue-btn">
-                  Book Now!
-                </a>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

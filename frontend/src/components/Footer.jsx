@@ -41,16 +41,15 @@ const Footer = () => {
             </a>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-deep-purple-50">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+                Resort indah, dan natural untuk liburan keluarga anda
               </p>
               <p className="mt-4 text-sm text-deep-purple-50">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
+                Sribudaya Resort telah berdiri selama n tahun dan berkomitmen
+                untuk memberikan pelayan terbaik bagi anda dan keluarga
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-3 md:grid-cols-2">
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
                 Category
@@ -61,165 +60,62 @@ const Footer = () => {
                     href="/"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    News
+                    Home
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/about"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    World
+                    About
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/booking"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Games
+                    Booking
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/facility"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    References
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Cherry
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Web
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    eCommerce
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Entertainment
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Portfolio
+                    facility
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <p className="font-semibold tracking-wide text-teal-accent-400">
-                Apples
+                Contact Information
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a
-                    href="/"
+                    href="https://wa.me/6282267878880"
+                    target="_blank"
+                    rel="noreferrer"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Media
+                    WhatsApp
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="tel:+6282267878880"
                     className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                   >
-                    Brochure
+                    Phone : 0822-6787-8880
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Nonprofit
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Educational
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Projects
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Business
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Infopreneur
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Personal
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Wiki
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Forum
-                  </a>
+                  Address: <br />
+                  Jl. Soekarno Hatta, Lampeuneurut Ujong Blang, Darul Imarah,
+                  Aceh Besar.
                 </li>
               </ul>
             </div>
@@ -227,11 +123,14 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
           <p className="text-sm text-gray-100">
-            © Copyright 2020 Lorem Inc. All rights reserved.
+            © Copyright {new Date().getFullYear()} Lorem Inc. All rights
+            reserved.
           </p>
-          <div className="flex items-center mt-4 space-x-4 sm:mt-0">
+          {/* <div className="flex items-center mt-4 space-x-4 sm:mt-0">
             <a
-              href="/"
+              href="https://instagram.com/sribudaya_resortaceh"
+              target="_blank"
+              rel="noreferrer"
               className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -239,7 +138,9 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="/"
+              href="https://instagram.com/sribudaya_resortaceh"
+              target="_blank"
+              rel="noreferrer"
               className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
             >
               <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -247,15 +148,7 @@ const Footer = () => {
                 <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
               </svg>
             </a>
-            <a
-              href="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-              </svg>
-            </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

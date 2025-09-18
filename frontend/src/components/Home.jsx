@@ -11,6 +11,10 @@ import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyDiv from "./misc/LazyDiv";
+import { Swiper } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "../swiper-styles.css";
 
 const Home = () => {
   const images = [
@@ -33,17 +37,17 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  // const goToPrevious = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //   );
+  // };
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // const goToNext = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //   );
+  // };
 
   return (
     <section id="homepage" className="mb-36">
@@ -69,40 +73,6 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Tombol navigasi kiri */}
-        <button
-          onClick={goToPrevious}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 
-             w-8 h-12 flex items-center justify-center
-             bg-black bg-opacity-30 hover:bg-opacity-50 transition"
-        >
-          <FaChevronLeft className="text-white text-2xl md:text-4xl" />
-        </button>
-
-        {/* Tombol navigasi kanan */}
-        <button
-          onClick={goToNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 
-          w-8 h-12 flex items-center justify-center
-          bg-black bg-opacity-30 hover:bg-opacity-50 transition"
-        >
-          <FaChevronRight className="text-white text-2xl md:text-4xl" />
-        </button>
-        {/* Indicator dots */}
-        <div className="absolute bottom-6 w-full flex justify-center space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentIndex === index
-                  ? "bg-blue-600 scale-110"
-                  : "bg-white bg-opacity-50 hover:bg-opacity-80"
-              }`}
-            ></button>
-          ))}
         </div>
       </section>
 
@@ -146,7 +116,6 @@ const Home = () => {
           </div>
         </section>
       </LazyDiv>
-
       {/* Our Rooms Section */}
       <section className="px-10 py-20 ">
         <LazyDiv>
@@ -216,9 +185,7 @@ const Home = () => {
           </LazyDiv>
         </div>
       </section>
-
       {/* Our Rooms Section ends*/}
-
       {/* Partner with section */}
       <section id="social-media" className="mb-8">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
@@ -278,9 +245,7 @@ const Home = () => {
           </LazyDiv>
         </div>
       </section>
-
       {/* Partner with section end */}
-
       {/* Amenities Section */}
       <section className="py-20 px-6 md:px-12 ">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -291,7 +256,7 @@ const Home = () => {
               <h2 className="page-title">
                 Your All-Inclusive <br /> Experience
               </h2>
-              <div className="absoulute left-0 w-1/2 h-[3px] bg-blue-600 mb-4"></div>
+              <div className="absoulute left-0 w-1/4 h-[3px] bg-blue-600 mb-4"></div>
               <p className="page-title-desc">
                 Indulge in a world of luxury and comfort with our exclusive
                 resort amenities, designed to create unforgettable experiences
@@ -343,7 +308,6 @@ const Home = () => {
           </LazyDiv>
         </div>
       </section>
-
       {/* Location Section */}
       <LazyDiv>
         <section
@@ -373,8 +337,173 @@ const Home = () => {
         </section>
       </LazyDiv>
 
+      {/* location distance to important places slides*/}
+      <section className="mt-32 px-6 md:px-12">
+        <LazyDiv>
+          <div className="wrapper">
+            <h2 className="subtitle text-center animate-fade-right">
+              Info Lokasi
+            </h2>
+            <h1 className="page-title text-center animate-fade-left">
+              Lokasi Strategis
+            </h1>
+            <p className="page-title-desc text-center animate-fade-right">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis, distinctio cum, unde odit iure quibusdam adipisci
+              delectus expedita ipsa accusantium vero cupiditate. Ipsam omnis
+              sint consectetur nisi, iste eum corporis!
+            </p>
+          </div>
+        </LazyDiv>
+
+        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
+          <Swiper
+            className="location-swiper"
+            pagination={{
+              dynamicBullets: true,
+            }}
+            autoplay={{ delay: 2000 }}
+            loop={true}
+            speed={3000}
+            spaceBetween={20}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+            }}
+            modules={[Pagination, Autoplay]}
+          >
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-3xl font-bold mb-4">
+                  Jarak dari sribudaya ke the pade (100 KM)
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
+                  saepe earum reprehenderit accusamus molestiae provident,
+                  dolores impedit consectetur quisquam natus.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
       {/* Social media section */}
-      <section id="social-media" className="my-44 px-6">
+      <section id="social-media" className="mb-44 mt-20 px-6">
         <div className="sosmed-container flex justify-center items-center flex-col py-10 h-auto">
           {/* location title */}
           <LazyDiv>

@@ -14,6 +14,7 @@ import {
   Eye,
   X,
 } from "lucide-react";
+import LazyDiv from "./misc/LazyDiv";
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -269,532 +270,332 @@ const Testimonial = () => {
 
   return (
     <div className="bg-main">
-      {/* Owner Section */}
-      <section className="py-1 ">
-        <div className="container mx-auto px-4 max-w-7xl">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="page-title mb-4">
-              Meet Our Founders
-            </h2>
-            <p className="text-xl  max-w-3xl mx-auto">
-              The passionate minds behind your perfect getaway experience
-            </p>
-          </div>
-
-          {/* Owners Grid */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {owners.map((owner) => (
-              <div key={owner.id} className="group">
-                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
-                  {/* Image Section */}
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={owner.image}
-                      alt={owner.name}
-                      onError={(e) => {
-                        e.target.src = "/images/placeholder-owner.jpg";
-                      }}
-                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-6 text-white">
-                      <h3 className="text-2xl font-bold mb-1">{owner.name}</h3>
-                      <p className="text-blue-200">{owner.title}</p>
-                    </div>
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="p-8">
-                    {/* Experience Badge */}
-                    <div className="inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                      {owner.experience}
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {owner.description}
-                    </p>
-
-                    {/* Specialties */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">
-                        Specialties:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {owner.specialties.map((specialty, index) => (
-                          <span
-                            key={index}
-                            className="bg-gradient-to-r from-blue-100 to-teal-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                          >
-                            {specialty}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Contact Information */}
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center text-gray-600">
-                        <Phone className="w-4 h-4 mr-3 text-blue-600" />
-                        <a
-                          href={`tel:${owner.contact.phone}`}
-                          className="hover:text-blue-600 transition-colors"
-                        >
-                          {owner.contact.phone}
-                        </a>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <Mail className="w-4 h-4 mr-3 text-blue-600" />
-                        <a
-                          href={`mailto:${owner.contact.email}`}
-                          className="hover:text-blue-600 transition-colors"
-                        >
-                          {owner.contact.email}
-                        </a>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <svg
-                          className="w-4 h-4 mr-3 text-green-600"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.688z" />
-                        </svg>
-                        <a
-                          href={`https://wa.me/${owner.contact.whatsapp.replace(
-                            /\D/g,
-                            ""
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-green-600 transition-colors"
-                        >
-                          WhatsApp: {owner.contact.whatsapp}
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Social Media */}
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">
-                        Connect With Me:
-                      </h4>
-                      <div className="flex space-x-4">
-                        <a
-                          href={owner.socialMedia.facebook}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 group/social"
-                        >
-                          <Facebook className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
-                        </a>
-                        <a
-                          href={owner.socialMedia.instagram}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-pink-50 text-pink-600 rounded-lg hover:bg-pink-600 hover:text-white transition-all duration-300 group/social"
-                        >
-                          <Instagram className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
-                        </a>
-                        <a
-                          href={owner.socialMedia.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-300 group/social"
-                        >
-                          <Linkedin className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
-                        </a>
-                        <a
-                          href={owner.socialMedia.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-sky-50 text-sky-600 rounded-lg hover:bg-sky-600 hover:text-white transition-all duration-300 group/social"
-                        >
-                          <Twitter className="w-5 h-5 group-hover/social:scale-110 transition-transform" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          {/* <div className="text-center mt-16">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-white/20">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Ready to Experience Paradise?
-              </h3>
-              <p className="text-blue-100 mb-6 text-lg">
-                Our team is here to help you plan the perfect getaway. Contact
-                us directly or follow our journey on social media.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+62812-3456-7890"
-                  className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300 inline-flex items-center justify-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </a>
-                <a
-                  href="mailto:info@resortparadise.com"
-                  className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 inline-flex items-center justify-center"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Send Email
-                </a>
-              </div>
-            </div>
-          </div> */}
-        </div>
-      </section>
-
       {/* Gallery Section */}
-      <section className="py-20  overflow-hidden mt-16">
+
+      <section className="py-20  overflow-hidden mt-16 animate-fade-up">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Gallery Layout */}
-          <div className="relative">
+          <div className="relative ">
             {/* Desktop Layout */}
-            <div className="hidden lg:block">
-              <div className="relative min-h-[900px]">
-                {/* Center Description - Fixed Position */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-12 max-w-2xl text-center border border-gray-200">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-8">
-                      <Camera className="w-10 h-10 text-blue-600" />
-                    </div>
-                    <h2 className="text-5xl font-bold text-gray-900 mb-4">
-                      {galleryData.description.title}
-                    </h2>
-                    <h3 className="text-2xl text-blue-600 font-semibold mb-6">
-                      {galleryData.description.subtitle}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-8 text-lg">
-                      {galleryData.description.text}
-                    </p>
-                    <div className="grid grid-cols-2 gap-6">
-                      {galleryData.description.highlights.map(
-                        (highlight, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center text-base"
-                          >
-                            <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
-                            <span className="text-gray-700 font-medium">
-                              {highlight}
-                            </span>
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Top Left - Large */}
-                <div
-                  className="absolute top-0 left-0 w-80 h-60 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[0])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <img
-                      src={galleryData.images[0].src}
-                      alt={galleryData.images[0].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
-                        <p className="text-white text-lg font-semibold text-center">
-                          {galleryData.images[0].title}
-                        </p>
+            <LazyDiv
+              className="hidden lg:block"
+              placeholderHeight="1000px"
+              threshold={0.5}
+            >
+              <div className="hidden lg:block">
+                <div className="relative min-h-[900px]">
+                  {/* Center Description - Fixed Position */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-12 max-w-2xl text-center border border-gray-200">
+                      <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-8 animate-jump-in">
+                        <Camera className="w-10 h-10 text-blue-600" />
+                      </div>
+                      <h3 className="text-2xl text-blue-600 font-semibold mb-6 animate-fade-right">
+                        {galleryData.description.subtitle}
+                      </h3>
+                      <h2 className="text-5xl font-bold text-gray-900 mb-4 animate-fade-left">
+                        {galleryData.description.title}
+                      </h2>
+                      <p className="text-gray-600 leading-relaxed mb-8 text-lg animate-fade-right">
+                        {galleryData.description.text}
+                      </p>
+                      <div className="grid grid-cols-2 gap-6">
+                        {galleryData.description.highlights.map(
+                          (highlight, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center text-base animate-jump-in"
+                            >
+                              <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                              <span className="text-gray-700 font-medium">
+                                {highlight}
+                              </span>
+                            </div>
+                          )
+                        )}
                       </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Top Right - Large */}
-                <div
-                  className="absolute top-0 right-0 w-80 h-60 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[1])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <img
-                      src={galleryData.images[2].src}
-                      alt={galleryData.images[2].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
-                        <p className="text-white text-lg font-semibold text-center">
-                          {galleryData.images[2].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Left Side - Tall */}
-                <div
-                  className="absolute top-72 left-0 w-64 h-80 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[3])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
-                    <img
-                      src={galleryData.images[3].src}
-                      alt={galleryData.images[3].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
-                        <p className="text-white text-sm font-semibold text-center px-2">
-                          {galleryData.images[3].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Side Top - tall */}
-                <div
-                  className="absolute top-72 right-0 w-64 h-80 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[3])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
-                    <img
-                      src={galleryData.images[3].src}
-                      alt={galleryData.images[3].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
-                        <p className="text-white text-sm font-semibold text-center px-2">
-                          {galleryData.images[3].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Side Bottom - Medium */}
-                {/* <div
-                  className="absolute bottom-80 right-0 w-64 h-36 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[5])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
-                    <img
-                      src={galleryData.images[5].src}
-                      alt={galleryData.images[5].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
-                        <p className="text-white text-sm font-semibold text-center px-2">
-                          {galleryData.images[5].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-
-                {/* Bottom Left - Large */}
-                <div
-                  className="absolute bottom-0 left-0 w-80 h-60 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[4])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
-                    <img
-                      src={galleryData.images[4].src}
-                      alt={galleryData.images[4].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
-                        <p className="text-white text-lg font-semibold text-center">
-                          {galleryData.images[4].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Right - Large */}
-                <div
-                  className="absolute bottom-0 right-0 w-80 h-60 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[6])}
-                >
-                  <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
-                    <img
-                      src={galleryData.images[6].src}
-                      alt={galleryData.images[6].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
-                        <p className="text-white text-lg font-semibold text-center">
-                          {galleryData.images[6].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Top Center wide - Optional */}
-                <div
-                  className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[7])}
-                >
-                  <div className="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                    <img
-                      src={galleryData.images[7].src}
-                      alt={galleryData.images[7].alt}
-                      onError={(e) => {
-                        e.target.src =
-                          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop";
-                      }}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
-                        <p className="text-white text-xs font-semibold text-center px-2">
-                          {galleryData.images[7].title}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Center wide - Optional */}
-                <div
-                  className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer"
-                  onClick={() => openModal(galleryData.images[0])}
-                >
-                  <div className="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:translate-y-1">
-                    <img
-                      src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&h=300&fit=crop"
-                      alt="Resort View"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                      <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
-                        <p className="text-white text-xs font-semibold text-center px-2">
-                          Resort Overview
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile & Tablet Layout */}
-            <div className="lg:hidden">
-              {/* Description Section */}
-              <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
-                  <Camera className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="subtitle mb-6">
-                  {galleryData.description.subtitle}
-                </h3>
-                <h2 className="page-title mb-4">
-                  {galleryData.description.title}
-                </h2>
-                <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-                  {galleryData.description.text}
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-                  {galleryData.description.highlights.map(
-                    (highlight, index) => (
-                      <div key={index} className="flex items-center text-sm">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                        <span className="text-gray-700">{highlight}</span>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-
-              {/* Mobile Gallery Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {galleryData.images.slice(0, 6).map((image) => (
+                  {/* Top Left - Large 0*/}
                   <div
-                    key={image.id}
-                    className="group cursor-pointer"
-                    onClick={() => openModal(image)}
+                    className="absolute top-0 left-0 w-80 h-60 group cursor-pointer animate-jump-in"
+                    onClick={() => openModal(galleryData.images[0])}
                   >
-                    <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                       <img
-                        src={image.src}
-                        alt={image.alt}
+                        src={galleryData.images[0].src}
+                        alt={galleryData.images[0].alt}
                         onError={(e) => {
                           e.target.src =
-                            "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=400&fit=crop";
+                            "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop";
                         }}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                          <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
-                          <p className="text-white text-xs font-medium text-center px-2">
-                            {image.title}
+                          <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
+                          <p className="text-white text-lg font-semibold text-center">
+                            {galleryData.images[0].title}
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
 
-              {/* View More Button */}
-              <div className="text-center mt-8">
-                <button
-                  onClick={() => openModal(galleryData.images[0])}
-                  className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center"
-                >
-                  <Camera className="w-5 h-5 mr-2" />
-                  View All Photos
-                </button>
+                  {/* Top Center wide - Optional 100*/}
+                  <div
+                    className="absolute -top-16 left-1/3 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer animate-jump-in animate-delay-100"
+                    onClick={() => openModal(galleryData.images[7])}
+                  >
+                    <div className="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                      <img
+                        src={galleryData.images[7].src}
+                        alt={galleryData.images[7].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
+                          <p className="text-white text-xs font-semibold text-center px-2">
+                            {galleryData.images[7].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Top Right - Large 200*/}
+                  <div
+                    className="absolute top-0 right-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-200"
+                    onClick={() => openModal(galleryData.images[1])}
+                  >
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                      <img
+                        src={galleryData.images[2].src}
+                        alt={galleryData.images[2].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
+                          <p className="text-white text-lg font-semibold text-center">
+                            {galleryData.images[2].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - tall 300*/}
+                  <div
+                    className="absolute top-72 right-0 w-64 h-80 group cursor-pointer animate-jump-in animate-delay-300"
+                    onClick={() => openModal(galleryData.images[3])}
+                  >
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
+                      <img
+                        src={galleryData.images[3].src}
+                        alt={galleryData.images[3].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
+                          <p className="text-white text-sm font-semibold text-center px-2">
+                            {galleryData.images[3].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Right - Large 400*/}
+                  <div
+                    className="absolute bottom-0 right-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-[400ms]"
+                    onClick={() => openModal(galleryData.images[6])}
+                  >
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
+                      <img
+                        src={galleryData.images[6].src}
+                        alt={galleryData.images[6].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
+                          <p className="text-white text-lg font-semibold text-center">
+                            {galleryData.images[6].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Center wide - Optional 500*/}
+                  <div
+                    className="absolute -bottom-16 left-1/3 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer animate-jump-in animate-delay-[500ms]"
+                    onClick={() => openModal(galleryData.images[0])}
+                  >
+                    <div className="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:translate-y-1">
+                      <img
+                        src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&h=300&fit=crop"
+                        alt="Resort View"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
+                          <p className="text-white text-xs font-semibold text-center px-2">
+                            Resort Overview
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Left - Large 600*/}
+                  <div
+                    className="absolute bottom-0 left-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-[600ms]"
+                    onClick={() => openModal(galleryData.images[4])}
+                  >
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
+                      <img
+                        src={galleryData.images[4].src}
+                        alt={galleryData.images[4].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-10 h-10 text-white mb-3 mx-auto" />
+                          <p className="text-white text-lg font-semibold text-center">
+                            {galleryData.images[4].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Left Side - Tall 700*/}
+                  <div
+                    className="absolute top-72 left-0 w-64 h-80 group cursor-pointer animate-jump-in animate-delay-[700ms]"
+                    onClick={() => openModal(galleryData.images[3])}
+                  >
+                    <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
+                      <img
+                        src={galleryData.images[3].src}
+                        alt={galleryData.images[3].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop";
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
+                          <p className="text-white text-sm font-semibold text-center px-2">
+                            {galleryData.images[3].title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </LazyDiv>
+
+            {/* Mobile & Tablet Layout */}
+            <LazyDiv>
+              <div className="lg:hidden animate-fade-up">
+                {/* Description Section */}
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+                    <Camera className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="subtitle mb-6">
+                    {galleryData.description.subtitle}
+                  </h3>
+                  <h2 className="page-title mb-4">
+                    {galleryData.description.title}
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+                    {galleryData.description.text}
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    {galleryData.description.highlights.map(
+                      (highlight, index) => (
+                        <div key={index} className="flex items-center text-sm">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                          <span className="text-gray-700">{highlight}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+
+                {/* Mobile Gallery Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {galleryData.images.slice(0, 6).map((image) => (
+                    <div
+                      key={image.id}
+                      className="group cursor-pointer"
+                      onClick={() => openModal(image)}
+                    >
+                      <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          onError={(e) => {
+                            e.target.src =
+                              "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=400&fit=crop";
+                          }}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                          <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
+                            <p className="text-white text-xs font-medium text-center px-2">
+                              {image.title}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* View More Button */}
+                <div className="text-center mt-8">
+                  <button
+                    onClick={() => openModal(galleryData.images[0])}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center"
+                  >
+                    <Camera className="w-5 h-5 mr-2" />
+                    View All Photos
+                  </button>
+                </div>
+              </div>
+            </LazyDiv>
           </div>
         </div>
 
@@ -835,106 +636,111 @@ const Testimonial = () => {
       </section>
 
       {/* Testimonial Section */}
+
       <section className="py-16 bg-gradient-to-br  overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header Section */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
-              <Quote className="w-8 h-8 text-blue-600" />
+          <LazyDiv>
+            <div className="text-center mb-16 animate-fade-up">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+                <Quote className="w-8 h-8 text-blue-600" />
+              </div>
+              <h2 className="page-title animate-fade-up">
+                What Our Guests Say
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-up">
+                Discover why thousands of travelers choose our resorts and
+                homestays for their perfect getaway
+              </p>
             </div>
-            <h2 className="page-title">
-              What Our Guests Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover why thousands of travelers choose our resorts and
-              homestays for their perfect getaway
-            </p>
-          </div>
+          </LazyDiv>
 
           {/* Testimonial Slider */}
-          <div className="relative">
-            {/* Main Slider Container */}
-            <div className="relative overflow-hidden rounded-2xl">
-              <div
-                className="flex transition-transform duration-700 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                onMouseEnter={() => setIsAutoPlay(false)}
-                onMouseLeave={() => setIsAutoPlay(true)}
-              >
-                {testimonials.map((testimonial) => (
-                  <div key={testimonial.id} className="w-full flex-shrink-0">
-                    <div className="bg-white mx-4 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                      <div className="p-8 md:p-12">
-                        {/* Quote Icon */}
-                        <div className="mb-6">
-                          <Quote className="w-12 h-12 text-blue-400" />
-                        </div>
-
-                        {/* Rating */}
-                        <div className="flex items-center mb-6">
-                          <div className="flex space-x-1 mr-4">
-                            {renderStars(testimonial.rating)}
+          <LazyDiv>
+            <div className="relative animate-fade-up">
+              {/* Main Slider Container */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <div
+                  className="flex transition-transform duration-700 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  onMouseEnter={() => setIsAutoPlay(false)}
+                  onMouseLeave={() => setIsAutoPlay(true)}
+                >
+                  {testimonials.map((testimonial) => (
+                    <div key={testimonial.id} className="w-full flex-shrink-0">
+                      <div className="bg-white mx-4 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                        <div className="p-8 md:p-12">
+                          {/* Quote Icon */}
+                          <div className="mb-6">
+                            <Quote className="w-12 h-12 text-blue-400" />
                           </div>
-                          <span className="text-gray-600 text-sm">
-                            {testimonial.rating}/5 Stars
-                          </span>
-                        </div>
 
-                        {/* Testimonial Content */}
-                        <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic">
-                          "{testimonial.comment}"
-                        </blockquote>
-
-                        {/* Customer Info */}
-                        <div className="flex items-center justify-between flex-wrap gap-4">
-                          <div className="flex items-center space-x-4">
-                            <img
-                              src={testimonial.image}
-                              alt={testimonial.name}
-                              onError={(e) => {
-                                e.target.src =
-                                  "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face";
-                              }}
-                              className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
-                            />
-                            <div>
-                              <h4 className="font-semibold text-gray-900 text-lg">
-                                {testimonial.name}
-                              </h4>
-                              <p className="text-gray-600">
-                                {testimonial.location}
-                              </p>
+                          {/* Rating */}
+                          <div className="flex items-center mb-6">
+                            <div className="flex space-x-1 mr-4">
+                              {renderStars(testimonial.rating)}
                             </div>
+                            <span className="text-gray-600 text-sm">
+                              {testimonial.rating}/5 Stars
+                            </span>
                           </div>
 
-                          <div className="bg-blue-50 px-4 py-2 rounded-full">
-                            <span className="text-blue-700 font-medium text-sm">
-                              {testimonial.stayType}
-                            </span>
+                          {/* Testimonial Content */}
+                          <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 italic">
+                            "{testimonial.comment}"
+                          </blockquote>
+
+                          {/* Customer Info */}
+                          <div className="flex items-center justify-between flex-wrap gap-4">
+                            <div className="flex items-center space-x-4">
+                              <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                onError={(e) => {
+                                  e.target.src =
+                                    "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face";
+                                }}
+                                className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
+                              />
+                              <div>
+                                <h4 className="font-semibold text-gray-900 text-lg">
+                                  {testimonial.name}
+                                </h4>
+                                <p className="text-gray-600">
+                                  {testimonial.location}
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="bg-blue-50 px-4 py-2 rounded-full">
+                              <span className="text-blue-700 font-medium text-sm">
+                                {testimonial.stayType}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
+              >
+                <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </button>
+
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
+              >
+                <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              </button>
             </div>
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
-            >
-              <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white hover:bg-blue-50 text-gray-700 hover:text-blue-600 p-3 rounded-full shadow-lg border border-gray-200 transition-all duration-300 z-10 group"
-            >
-              <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
-            </button>
-          </div>
+          </LazyDiv>
 
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-3 mt-8">
@@ -950,8 +756,6 @@ const Testimonial = () => {
               />
             ))}
           </div>
-
-      
         </div>
       </section>
     </div>
