@@ -25,7 +25,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import PackageCard from "./PackageCard";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import LazyDiv from "./misc/LazyDiv";
 
 library.add(fas, far, fab);
@@ -44,27 +44,27 @@ const Booking = () => {
     groupAll: false,
   });
 
-  const [fancyboxRefGallery] = useFancybox({
-    groupAll: true,
-    // Additional custom options for gallery
-    loop: true,
-    buttons: [
-      "zoom",
-      "share",
-      "slideShow",
-      "fullScreen",
-      "download",
-      "thumbs",
-      "close",
-    ],
-    animationEffect: "zoom-in-out",
-    transitionEffect: "slide",
-    protect: true,
-    keyboard: true,
-    thumbs: {
-      autoStart: true,
-    },
-  });
+  // const [fancyboxRefGallery] = useFancybox({
+  //   groupAll: true,
+  //   // Additional custom options for gallery
+  //   loop: true,
+  //   buttons: [
+  //     "zoom",
+  //     "share",
+  //     "slideShow",
+  //     "fullScreen",
+  //     "download",
+  //     "thumbs",
+  //     "close",
+  //   ],
+  //   animationEffect: "zoom-in-out",
+  //   transitionEffect: "slide",
+  //   protect: true,
+  //   keyboard: true,
+  //   thumbs: {
+  //     autoStart: true,
+  //   },
+  // });
 
   // useEffect for wedding package gallery
   useEffect(() => {
@@ -94,62 +94,62 @@ const Booking = () => {
   // useState to handle accordion opening and closing
   const [openIndex, setOpenIndex] = useState(null);
 
-  const galleryImages = [
-    {
-      id: 1,
-      thumb:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      title: "Sunset Paradise",
-      caption: "A breathtaking view of the golden sunset",
-      alt: "Sunset view",
-    },
-    {
-      id: 2,
-      thumb:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      title: "Ocean Dreams",
-      caption: "Crystal clear waters meet the horizon",
-      alt: "Ocean view",
-    },
-    {
-      id: 3,
-      thumb:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      title: "Mountain Peak",
-      caption: "Majestic mountains touching the clouds",
-      alt: "Mountain landscape",
-    },
-    {
-      id: 4,
-      thumb:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      title: "City Lights",
-      caption: "Urban landscape illuminated at night",
-      alt: "City night view",
-    },
-    {
-      id: 5,
-      thumb:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      title: "Forest Path",
-      caption: "A serene journey through nature",
-      alt: "Forest pathway",
-    },
-    {
-      id: 6,
-      thumb:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-      title: "Desert Dunes",
-      caption: "Golden sands stretching to infinity",
-      alt: "Desert landscape",
-    },
-  ];
+  // const galleryImages = [
+  //   {
+  //     id: 1,
+  //     thumb:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     title: "Sunset Paradise",
+  //     caption: "A breathtaking view of the golden sunset",
+  //     alt: "Sunset view",
+  //   },
+  //   {
+  //     id: 2,
+  //     thumb:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     title: "Ocean Dreams",
+  //     caption: "Crystal clear waters meet the horizon",
+  //     alt: "Ocean view",
+  //   },
+  //   {
+  //     id: 3,
+  //     thumb:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     title: "Mountain Peak",
+  //     caption: "Majestic mountains touching the clouds",
+  //     alt: "Mountain landscape",
+  //   },
+  //   {
+  //     id: 4,
+  //     thumb:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     title: "City Lights",
+  //     caption: "Urban landscape illuminated at night",
+  //     alt: "City night view",
+  //   },
+  //   {
+  //     id: 5,
+  //     thumb:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     title: "Forest Path",
+  //     caption: "A serene journey through nature",
+  //     alt: "Forest pathway",
+  //   },
+  //   {
+  //     id: 6,
+  //     thumb:
+  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
+  //     title: "Desert Dunes",
+  //     caption: "Golden sands stretching to infinity",
+  //     alt: "Desert landscape",
+  //   },
+  // ];
 
   // for smooth scrolling specific page
   useEffect(() => {
@@ -179,22 +179,46 @@ const Booking = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img className="" src="/images/hotel.jpg" alt="" />
+                <img
+                  className=""
+                  src="/images/booking/family-deluxe01_compressed.jpg"
+                  alt="family-deluxe01_compressed.jpg"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="" src="/images/contoh.jpg" alt="" />
+                <img
+                  className=""
+                  src="/images/booking/family-studio01_compressed.jpg"
+                  alt="family-studio01_compressed.jpg"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="" src="/images/wedding.jpg" alt="" />
+                <img
+                  className=""
+                  src="/images/booking/family-suite01_compressed.jpg"
+                  alt="family-suite01_compressed.jpg"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="" src="/images/hotel.jpg" alt="" />
+                <img
+                  className=""
+                  src="/images/booking/resort-room-front_compressed.jpg"
+                  alt="resort-room-front_compressed.jpg"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="" src="/images/wedding.jpg" alt="" />
+                <img
+                  className=""
+                  src="/images/booking/family-suite02_compressed.jpg"
+                  alt="family-suite02_compressed.jpg"
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="" src="/images/contoh.jpg" alt="" />
+                <img
+                  className=""
+                  src="/images/booking/family-studio02_compressed.jpg"
+                  alt="family-studio02_compressed.jpg"
+                />
               </SwiperSlide>
             </Swiper>
             <div className="absolute inset-0 z-10 bg-black bg-opacity-40"></div>
@@ -202,12 +226,17 @@ const Booking = () => {
             <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white flex-col animate-fade-up">
               <div className="header text-center w-[85%]">
                 <h1 className="title drop-shadow-lg">
-                  We offer you a cozy room suitable for you and your loved one!
+                  Liburan nyaman bersama keluarga di Sribudaya Resort
                 </h1>
               </div>
               <div className="subheader text-center px-4">
                 <h2 className="title-desc">
-                  Order your room right here and right now before it's too late!
+                  {/* Nikmati resort yang tenang dan nyaman, sempurna untuk
+                  bersantai bersama orang terdekat. Pesan sekarang dan buat
+                  liburanmu tak terlupakan */}
+                  Nikmati resort indah dengan suasana tenang, dan momen
+                  kebersamaan yang penuh kehangatan. Booking sekarang dan
+                  nikmati liburan tak terlupakan untuk keluarga Anda
                 </h2>
                 <div className=" mt-12">
                   <a href="#order-section" className="blue-btn">
@@ -229,17 +258,16 @@ const Booking = () => {
               <LazyDiv>
                 <div className="booking-title relative mt-8 w-fit animate-fade-up">
                   <h2 className="subtitle text-left">ROOM LIST</h2>
-                  <h1 className="page-title">Our Room For You</h1>
-                  <span className="absolute left-0 w-1/2  bottom-0 h-[2px] bg-blue-600"></span>
+                  <h1 className="page-title">Pilihan Tipe Kamar</h1>
+                  <span className="absolute left-0 w-1/2  -bottom-4 h-[2px] bg-blue-600"></span>
                 </div>
 
                 {/* booking section description */}
                 <div className="mb-8 w-fit animate-fade-right">
                   <p className="page-title-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    quidem quam est, exercitationem beatae, modi sequi porro
-                    quibusdam debitis, minima veniam temporibus molestias
-                    similique quae impedit et minus ipsa mollitia!
+                    Nikmati pilihan kamar dengan suasana tenang dan fasilitas
+                    lengkap, dirancang untuk memberikan kenyamanan terbaik bagi
+                    Anda dan keluarga
                   </p>
                 </div>
               </LazyDiv>
@@ -253,33 +281,28 @@ const Booking = () => {
                   <div ref={fancyboxRefRoom1} className="grid-images ">
                     <img
                       data-fancybox="gallery"
-                      src="/images/contoh.jpg"
-                      alt=""
+                      src="/images/booking/family-suite01_compressed.jpg"
+                      alt="family-suite01_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/hotel.jpg"
-                      alt=""
+                      src="/images/booking/family-suite02_compressed.jpg"
+                      alt="family-suite02_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/wedding.jpg"
-                      alt=""
+                      src="/images/booking/family-suite03_compressed.jpg"
+                      alt="family-suite03_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/hotel.jpg"
-                      alt=""
+                      src="/images/booking/family-suite04_compressed.jpg"
+                      alt="family-suite04_compressed.jpg"
                     />
                   </div>
                   <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
                     <div className="family-suite-desc-text">
                       <h1 className="card-title">Family Suite</h1>
-                      <p className="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Neque fugit excepturi cumque qui optio, iste odit
-                        atque
-                      </p>
                     </div>
                     <div className="benefit-icon flex flex-col mt-4 gap-2">
                       {/* icon description 1*/}
@@ -343,8 +366,7 @@ const Booking = () => {
                         </div>
                         <div>
                           <p className="booking-icon-desc">
-                            Bathtub, living room, 2 bathroom, dan fasilitas
-                            pendukung lainnya
+                            Bathtub, living room, 2 bathroom, dan amenities
                           </p>
                         </div>
                       </div>
@@ -369,7 +391,7 @@ const Booking = () => {
                   <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
                     <h1 className="text-3xl font-semibold">Harga :</h1>
                     <h2 className="text-2xl font-semibold mt-6">
-                      Rp.1300,000/malam
+                      Rp. 1.500.000/malam
                     </h2>
                     {/* <p className="mt-6">1 Kamar/malam</p> */}
                     <p className="mt-2">4 Dewasa, 2 Anak</p>
@@ -395,36 +417,31 @@ const Booking = () => {
                   id="booking-room2"
                   className="w-full border-2 border-black  rounded-lg flex justify-center items-center flex-col p-8 md:mb-8 lg:mb-12 md:gap-5 lg:flex-row animate-fade-left"
                 >
-                  <div ref={fancyboxRefRoom2} className="grid-images ">
+                  <div ref={fancyboxRefRoom2} className="grid-images">
                     <img
                       data-fancybox="gallery"
-                      src="/images/contoh.jpg"
-                      alt=""
+                      src="/images/booking/family-studio01_compressed.jpg"
+                      alt="family-studio01_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/hotel.jpg"
-                      alt=""
+                      src="/images/booking/family-studio02_compressed.jpg"
+                      alt="family-studio02_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/wedding.jpg"
-                      alt=""
+                      src="/images/booking/family-studio03_compressed.jpg"
+                      alt="family-studio03_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/hotel.jpg"
-                      alt=""
+                      src="/images/booking/family-studio04_compressed.jpg"
+                      alt="family-studio04_compressed.jpg"
                     />
                   </div>
                   <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
                     <div className="family-suite-desc-text">
                       <h1 className="card-title">Family Studio</h1>
-                      <p className="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Neque fugit excepturi cumque qui optio, iste odit
-                        atque
-                      </p>
                     </div>
                     <div className="benefit-icon flex flex-col mt-4 gap-2">
                       {/* icon description 1*/}
@@ -488,8 +505,7 @@ const Booking = () => {
                         </div>
                         <div>
                           <p className="booking-icon-desc">
-                            Bathtub, living room, 2 bathroom, dan fasilitas
-                            pendukung lainnya
+                            Dapur, Living Room, 1 Bathroom, dan Amenities
                           </p>
                         </div>
                       </div>
@@ -514,7 +530,7 @@ const Booking = () => {
                   <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
                     <h1 className="text-3xl font-semibold">Harga :</h1>
                     <h2 className="text-2xl font-semibold mt-6">
-                      Rp.1300,000/malam
+                      Rp. 1.300.000/malam
                     </h2>
                     {/* <p className="mt-6">1 Kamar/malam</p> */}
                     <p className="mt-2">2 Dewasa, 2 Anak</p>
@@ -543,33 +559,28 @@ const Booking = () => {
                   <div ref={fancyboxRefRoom3} className="grid-images ">
                     <img
                       data-fancybox="gallery"
-                      src="/images/contoh.jpg"
-                      alt=""
+                      src="/images/booking/family-deluxe01_compressed.jpg"
+                      alt="family-deluxe01_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/hotel.jpg"
-                      alt=""
+                      src="/images/booking/family-deluxe02_compressed.jpg"
+                      alt="family-deluxe02_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/wedding.jpg"
-                      alt=""
+                      src="/images/booking/family-deluxe03_compressed.jpg"
+                      alt="family-deluxe03_compressed.jpg"
                     />
                     <img
                       data-fancybox="gallery"
-                      src="/images/hotel.jpg"
-                      alt=""
+                      src="/images/booking/family-deluxe04_compressed.jpg"
+                      alt="family-deluxe04_compressed.jpg"
                     />
                   </div>
                   <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
                     <div className="family-suite-desc-text">
                       <h1 className="card-title">Family Deluxe</h1>
-                      <p className="">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Neque fugit excepturi cumque qui optio, iste odit
-                        atque
-                      </p>
                     </div>
                     <div className="benefit-icon flex flex-col mt-4 gap-2">
                       {/* icon description 1*/}
@@ -584,7 +595,7 @@ const Booking = () => {
                         </div>
                         <div>
                           <p className="booking-icon-desc">
-                            Kapasitas 4 dewasa + 2 anak. 1 king bed dan 1 single
+                            Kapasitas 5 dewasa + 2 anak. 1 king bed dan 1 single
                             large
                           </p>
                         </div>
@@ -617,7 +628,7 @@ const Booking = () => {
                         </div>
                         <div>
                           <p className="booking-icon-desc">
-                            Free berenang untuk 4 dewasa & 2 anak
+                            Free berenang untuk 5 dewasa & 2 anak
                           </p>
                         </div>
                       </div>
@@ -633,8 +644,7 @@ const Booking = () => {
                         </div>
                         <div>
                           <p className="booking-icon-desc">
-                            Bathtub, living room, 2 bathroom, dan fasilitas
-                            pendukung lainnya
+                            Wide Room, 1 Bathroom, dan Amenities
                           </p>
                         </div>
                       </div>
@@ -659,7 +669,7 @@ const Booking = () => {
                   <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
                     <h1 className="text-3xl font-semibold">Harga :</h1>
                     <h2 className="text-2xl font-semibold mt-6">
-                      Rp. 1.300,000/malam
+                      Rp. 1.300.000/malam
                     </h2>
                     {/* <p className="mt-6">1 Kamar/malam</p> */}
                     <p className="mt-2">2 Dewasa, 2 Anak</p>
@@ -683,13 +693,13 @@ const Booking = () => {
         </div>
 
         {/* Wedding Section */}
-        <div className="wedding-container py-16">
+        <div className="wedding-container my-8">
           {/* title for Wedding section */}
           <LazyDiv>
             <div className="booking-title relative my-8 w-fit animate-fade-up">
               <h2 className="subtitle text-left">WEDDING HALL</h2>
               <h1 className="page-title">
-                A Modern Wedding Hall Designed <br /> for Your Special Day
+                Wedding Hall Modern <br /> Untuk Hari Special Anda
               </h1>
               <span className="absolute left-0 w-1/2 -bottom-4 h-[2px] bg-blue-600"></span>
             </div>
@@ -699,10 +709,10 @@ const Booking = () => {
           <LazyDiv>
             <div className="mb-8 w-fit animate-fade-right">
               <p className="page-title-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                quidem quam est, exercitationem beatae, modi sequi porro
-                quibusdam debitis, minima veniam temporibus molestias similique
-                quae impedit et minus ipsa mollitia!
+                Wedding hall kami dilengkapi dengan fasilitas modern dan tata
+                ruang yang fleksibel, cocok untuk resepsi kecil hingga besar.
+                Kami menyediakan ruang yang nyaman dan tertata untuk mendukung
+                hari spesial Anda.
               </p>
             </div>
           </LazyDiv>
@@ -725,9 +735,6 @@ const Booking = () => {
                 <p className="page-title-desc max-w-2xl mx-auto animate-fade-left animate-delay-300 !mb-12">
                   Explore our wedding package created for you
                 </p>
-                {/* <div className="flex justify-center items-center gap-3 mt-4">
-              <div className="w-1/5 h-1 bg-blue-600 rounded-full"></div>
-            </div> */}
               </div>
             </LazyDiv>
 
@@ -747,26 +754,26 @@ const Booking = () => {
                 <SwiperSlide>
                   <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                     <a
-                      href="silver-package.png"
+                      href="/images/booking/silver-package.png"
                       data-fancybox="wedding-gallery"
                       data-caption="Silver Package"
                     >
                       <img
-                        src="silver-package.png"
+                        src="/images/booking/silver-package.png"
                         alt="silver package"
                         className="w-full h-48 object-cover"
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                       <h3 className="text-3xl  font-semibold mb-2">
-                        Silver Package
+                        Silver Wedding Package
                       </h3>
-                      <p className="  ">
+                      {/* <p className="  ">
                         Perfect for intimate weddings with essential services
                         included.
-                      </p>
+                      </p> */}
                       <a
-                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20wedding%20silver"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="blue-btn mt-24 md:text-xl"
@@ -783,26 +790,26 @@ const Booking = () => {
                 <SwiperSlide>
                   <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                     <a
-                      href="platinum-package.png"
+                      href="/images/booking/platinum-package.png"
                       data-fancybox="wedding-gallery"
                       data-caption="Platinum Package"
                     >
                       <img
-                        src="platinum-package.png"
+                        src="/images/booking/platinum-package.png"
                         alt="platinum package wedding"
                         className="w-full h-48 object-cover"
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                       <h3 className="text-3xl font-semibold mb-2">
-                        Platinum Package
+                        Platinum Wedding Package
                       </h3>
-                      <p className=" ">
+                      {/* <p className=" ">
                         A luxurious package for couples who want premium
                         arrangements.
-                      </p>
+                      </p> */}
                       <a
-                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20wedding%20platinum"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="blue-btn mt-24 md:text-xl"
@@ -819,26 +826,26 @@ const Booking = () => {
                 <SwiperSlide>
                   <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                     <a
-                      href="gold-package.png"
+                      href="/images/booking/gold-package.png"
                       data-fancybox="wedding-gallery"
                       data-caption="Gold Package"
                     >
                       <img
-                        src="gold-package.png"
+                        src="/images/booking/gold-package.png"
                         alt="gold package wedding"
                         className="w-full h-48 object-cover"
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                       <h3 className="text-3xl font-semibold mb-2">
-                        Gold Package
+                        Gold Wedding Package
                       </h3>
-                      <p className=" ">
+                      {/* <p className=" ">
                         Balanced elegance and value, designed for medium-size
                         weddings.
-                      </p>
+                      </p> */}
                       <a
-                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20wedding%20gold"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="blue-btn mt-24 md:text-xl"
@@ -855,26 +862,26 @@ const Booking = () => {
                 <SwiperSlide>
                   <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                     <a
-                      href="royal-package.png"
+                      href="/images/booking/royal-package.png"
                       data-fancybox="wedding-gallery"
                       data-caption="Royal Package"
                     >
                       <img
-                        src="royal-package.png"
+                        src="/images/booking/royal-package.png"
                         alt="royal package wedding"
                         className="w-full h-48 object-cover"
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                       <h3 className="text-3xl font-semibold mb-2">
-                        Royal Package
+                        Royal Wedding Package
                       </h3>
-                      <p className=" ">
+                      {/* <p className=" ">
                         The ultimate fairy-tale experience with every luxury
                         included.
-                      </p>
+                      </p> */}
                       <a
-                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                        href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20wedding%20royal"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="blue-btn mt-24 md:text-xl"
@@ -889,101 +896,27 @@ const Booking = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
+
+            <LazyDiv>
+              <div className="w-full flex justify-center items-center mt-12 animate-fade-up">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://instagram.com/sribudaya_resortaceh"
+                  className="blue-btn flex items-center"
+                >
+                  <span>
+                    <FontAwesomeIcon
+                      icon="fa-brands fa-instagram"
+                      className="text-3xl"
+                    ></FontAwesomeIcon>
+                  </span>
+                  Lihat foto wedding lainnya di Instagram
+                </a>
+              </div>
+            </LazyDiv>
           </div>
           {/* End of Wedding package list section */}
-
-          {/*Wedding Gallery Section */}
-          <div className="mt-10 px-4 sm:px-6 lg:px-8 bg-main">
-            <div className="max-w-7xl mx-auto">
-              {/* Section Header */}
-              <LazyDiv>
-                <div className="text-center mb-12">
-                  <div className="inline-block">
-                    <h2 className="subtitle animate-fade-left animate-delay-100">
-                      wedding gallery
-                    </h2>
-                    <h1 className="page-title !mb-4 animate-fade-right animate-delay-200">
-                      Our Gallery Showcasing the wedding
-                    </h1>
-                  </div>
-                  <p className="page-title-desc !mb-12 animate-fade-left animate-delay-300">
-                    Explore our stunning collection of moments captured in time
-                  </p>
-                </div>
-              </LazyDiv>
-
-              {/* Gallery Grid with Fancybox */}
-              <div
-                ref={fancyboxRefGallery}
-                className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6"
-              >
-                {galleryImages.map((image) => (
-                  <a
-                    key={image.id}
-                    href={image.full}
-                    data-fancybox="gallery"
-                    data-caption={image.caption}
-                    className="group relative block overflow-hidden rounded-xl lg:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gray-100"
-                  >
-                    {/* Image Container with Aspect Ratio */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
-                      <img
-                        src={image.thumb}
-                        alt={image.alt}
-                        className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
-                        loading="lazy"
-                      />
-
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                      {/* Content Overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 className="text-white text-lg font-semibold mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                          {image.title}
-                        </h3>
-                        <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 line-clamp-2">
-                          {image.caption}
-                        </p>
-                      </div>
-
-                      {/* Corner Icon with FontAwesome */}
-                      <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
-                        <FontAwesomeIcon
-                          icon={["fas", "magnifying-glass-plus"]}
-                          className="text-white text-sm"
-                        />
-                      </div>
-
-                      {/* Side Badge (optional) */}
-                      <div className="absolute top-4 left-4 px-3 py-1 bg-black/30 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-2 group-hover:translate-x-0">
-                        <span className="text-white text-xs font-medium">
-                          View
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-
-              {/* Optional: Load More / View All Button */}
-              <div className="text-center mt-12">
-                <Link
-                  to="/gallery"
-                  className="relative inline-flex items-center gap-2 px-8 py-3 overflow-hidden font-semibold text-white rounded-full group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  <span className="relative z-10">View All Photos</span>
-                  <FontAwesomeIcon
-                    icon={["fas", "arrow-right"]}
-                    className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                  />
-                  {/* Animated background */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </Link>
-              </div>
-            </div>
-          </div>
-          {/* End of wedding gallery section */}
         </div>
 
         {/* Meeting Room Section */}
@@ -993,7 +926,7 @@ const Booking = () => {
             <div className="booking-title relative my-8 w-fit animate-fade-up">
               <h2 className="subtitle text-left">Meeting Room</h2>
               <h1 className="page-title">
-                A Modern Meeting Room Designed <br /> for Your Special Day
+                Fasilitas Ruang Meeting <br /> Nyaman dan Profesional
               </h1>
               <span className="absolute left-0 w-1/2 -bottom-4 h-[2px] bg-blue-600"></span>
             </div>
@@ -1002,10 +935,9 @@ const Booking = () => {
           <LazyDiv>
             <div className="mb-8 w-fit animate-fade-right">
               <p className="page-title-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                quidem quam est, exercitationem beatae, modi sequi porro
-                quibusdam debitis, minima veniam temporibus molestias similique
-                quae impedit et minus ipsa mollitia!
+                Ruang meeting yang dilengkapi dengan alat presentasi, tata ruang
+                yang fleksibel, serta suasana kondusif untuk mendukung
+                kelancaran rapat, seminar, atau acara perusahaan.
               </p>
             </div>
           </LazyDiv>
@@ -1018,8 +950,8 @@ const Booking = () => {
               }}
               spaceBetween={20}
               breakpoints={{
-                320: { slidesPerView: 3 },
-                640: { slidesPerView: 3 },
+                320: { slidesPerView: 1 },
+                640: { slidesPerView: 2 },
               }}
               modules={[Pagination]}
               className="myMeetingPackageSwiper"
@@ -1027,26 +959,26 @@ const Booking = () => {
               <SwiperSlide>
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
-                    href="silver-package.png"
+                    href="/images/booking/half-day-meetingA.png"
                     data-fancybox="meeting-gallery"
-                    data-caption="Silver Package"
+                    data-caption="Half Day Meeting A Package"
                   >
                     <img
-                      src="silver-package.png"
+                      src="/images/booking/half-day-meetingA.png"
                       alt="silver package"
                       className="w-full h-48 object-cover"
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                     <h3 className="text-3xl  font-semibold mb-2">
-                      Silver Package
+                      Halfday Meeting A Package
                     </h3>
-                    <p className="  ">
+                    {/* <p className="  ">
                       Perfect for intimate weddings with essential services
                       included.
-                    </p>
+                    </p> */}
                     <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20meeting%20halfday%20A"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="blue-btn mt-24 md:text-xl"
@@ -1063,26 +995,26 @@ const Booking = () => {
               <SwiperSlide>
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
-                    href="platinum-package.png"
+                    href="/images/booking/half-day-meetingB.png"
                     data-fancybox="meeting-gallery"
-                    data-caption="Platinum Package"
+                    data-caption="Half Day Meeting B Package"
                   >
                     <img
-                      src="platinum-package.png"
-                      alt="platinum package wedding"
+                      src="/images/booking/half-day-meetingB.png"
+                      alt="half-day-meetingB.png"
                       className="w-full h-48 object-cover"
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                     <h3 className="text-3xl font-semibold mb-2">
-                      Platinum Package
+                      Half Day Meeting B Package
                     </h3>
-                    <p className=" ">
+                    {/* <p className=" ">
                       A luxurious package for couples who want premium
                       arrangements.
-                    </p>
+                    </p> */}
                     <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20meeting%20halfday%20B"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="blue-btn mt-24 md:text-xl"
@@ -1099,26 +1031,26 @@ const Booking = () => {
               <SwiperSlide>
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
-                    href="gold-package.png"
+                    href="/images/booking/half-day-meetingC.png"
                     data-fancybox="meeting-gallery"
-                    data-caption="Gold Package"
+                    data-caption="Half Day Meeting C Package"
                   >
                     <img
-                      src="gold-package.png"
-                      alt="gold package wedding"
+                      src="/images/booking/half-day-meetingC.png"
+                      alt="half-day-meetingC.png"
                       className="w-full h-48 object-cover"
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                     <h3 className="text-3xl font-semibold mb-2">
-                      Gold Package
+                      Half Day Meeting C Package
                     </h3>
-                    <p className=" ">
+                    {/* <p className=" ">
                       Balanced elegance and value, designed for medium-size
                       weddings.
-                    </p>
+                    </p> */}
                     <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20meeting%20halfday%20C"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="blue-btn mt-24 md:text-xl"
@@ -1135,26 +1067,26 @@ const Booking = () => {
               <SwiperSlide>
                 <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   <a
-                    href="royal-package.png"
+                    href="/images/booking/one-day-meeting.png"
                     data-fancybox="meeting-gallery"
-                    data-caption="Royal Package"
+                    data-caption="One Day Meeting Package"
                   >
                     <img
-                      src="royal-package.png"
-                      alt="royal package wedding"
+                      src="/images/booking/one-day-meeting.png"
+                      alt="one-day-meeting.png"
                       className="w-full h-48 object-cover"
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
                     <h3 className="text-3xl font-semibold mb-2">
-                      Royal Package
+                      One Day Meeting Package
                     </h3>
-                    <p className=" ">
+                    {/* <p className=" ">
                       The ultimate fairy-tale experience with every luxury
                       included.
-                    </p>
+                    </p> */}
                     <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
+                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20meeting%20one%20day"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="blue-btn mt-24 md:text-xl"
@@ -1179,7 +1111,7 @@ const Booking = () => {
             <div className="booking-title relative my-8 w-fit animate-fade-up">
               <h2 className="subtitle text-left">Swimming pool</h2>
               <h1 className="page-title">
-                A Modern Swimming pool Designed <br /> for Your Special Day
+                Kolam Renang Nyaman <br /> Cocok Untuk Keluarga
               </h1>
               <span className="absolute left-0 w-1/2 -bottom-4 h-[2px] bg-blue-600"></span>
             </div>
@@ -1188,10 +1120,8 @@ const Booking = () => {
           <LazyDiv>
             <div className="mb-8 w-fit animate-fade-right">
               <p className="page-title-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                quidem quam est, exercitationem beatae, modi sequi porro
-                quibusdam debitis, minima veniam temporibus molestias similique
-                quae impedit et minus ipsa mollitia!
+                Nikmati kolam renang dengan ukuran luas, air yang selalu terjaga
+                kebersihannya, dan area aman dan nyaman bagi anda dan keluarga.
               </p>
             </div>
           </LazyDiv>
@@ -1204,159 +1134,90 @@ const Booking = () => {
               }}
               spaceBetween={20}
               breakpoints={{
-                320: { slidesPerView: 3 },
-                640: { slidesPerView: 3 },
+                320: { slidesPerView: 1 },
+                650: { slidesPerView: 2 },
+                1000: { slidesPerView: 3 },
               }}
               modules={[Pagination]}
-              className="myMeetingPackageSwiper"
+              className="mySwimmingPackageSwiper"
             >
               <SwiperSlide>
-                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
+                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                    Pool Package
+                  </h3>
+                  <h4 className="text-2xl">Rp. 100.000/person</h4>
+                  <ul className="mt-4 px-5">
+                    <li className="list-disc">Berenang selama 3 jam</li>
+                    <li className="list-disc">Free 1 handuk</li>
+                    <li className="list-disc">
+                      Makan (Nasi goreng/Indomie telur/Burger) *Pilih salah satu
+                    </li>
+                    <li className="list-disc">Minum (Teh dingin)</li>
+                  </ul>
                   <a
-                    href="silver-package.png"
-                    data-fancybox="swimming-gallery"
-                    data-caption="Silver Package"
+                    href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kolam%20renang%20dengan%20paket%20pool%20package"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="blue-btn mt-12 md:text-xl"
                   >
-                    <img
-                      src="silver-package.png"
-                      alt="silver package"
-                      className="w-full h-48 object-cover"
-                    />
+                    <span className="text-2xl pr-1">
+                      <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                    </span>
+                    Booking
                   </a>
-                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl  font-semibold mb-2">
-                      Silver Package
-                    </h3>
-                    <p className="  ">
-                      Perfect for intimate weddings with essential services
-                      included.
-                    </p>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="blue-btn mt-24 md:text-xl"
-                    >
-                      <span className="text-2xl pr-1">
-                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
-                      </span>
-                      Booking
-                    </a>
-                  </div>
                 </div>
               </SwiperSlide>
-
               <SwiperSlide>
-                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
+                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                    Pool Regular
+                  </h3>
+                  <h4 className="text-2xl">Rp. 70.000/person</h4>
+                  <ul className="mt-4 px-5">
+                    <li className="list-disc">Berenang saja selama 3 jam</li>
+                  </ul>
                   <a
-                    href="platinum-package.png"
-                    data-fancybox="swimming-gallery"
-                    data-caption="Platinum Package"
+                    href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kolam%20renang%20dengan%20paket%20pool%20regular"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="blue-btn mt-12 md:text-xl"
                   >
-                    <img
-                      src="platinum-package.png"
-                      alt="platinum package wedding"
-                      className="w-full h-48 object-cover"
-                    />
+                    <span className="text-2xl pr-1">
+                      <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                    </span>
+                    Booking
                   </a>
-                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl font-semibold mb-2">
-                      Platinum Package
-                    </h3>
-                    <p className=" ">
-                      A luxurious package for couples who want premium
-                      arrangements.
-                    </p>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="blue-btn mt-24 md:text-xl"
-                    >
-                      <span className="text-2xl pr-1">
-                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
-                      </span>
-                      Booking
-                    </a>
-                  </div>
                 </div>
               </SwiperSlide>
-
               <SwiperSlide>
-                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
+                <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
+                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                    Pendamping
+                  </h3>
+                  <h4 className="text-2xl">Rp. 50.000/person</h4>
+                  <ul className="mt-4 px-5">
+                    <li className="list-disc">
+                      Mendampingi saja di area kolam. Tidak boleh berenang
+                    </li>
+                  </ul>
                   <a
-                    href="gold-package.png"
-                    data-fancybox="swimming-gallery"
-                    data-caption="Gold Package"
+                    href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kolam%20renang%20sebagai%20pendamping"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="blue-btn mt-12 md:text-xl"
                   >
-                    <img
-                      src="gold-package.png"
-                      alt="gold package wedding"
-                      className="w-full h-48 object-cover"
-                    />
+                    <span className="text-2xl pr-1">
+                      <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
+                    </span>
+                    Booking
                   </a>
-                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl font-semibold mb-2">
-                      Gold Package
-                    </h3>
-                    <p className=" ">
-                      Balanced elegance and value, designed for medium-size
-                      weddings.
-                    </p>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="blue-btn mt-24 md:text-xl"
-                    >
-                      <span className="text-2xl pr-1">
-                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
-                      </span>
-                      Booking
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="card bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
-                  <a
-                    href="royal-package.png"
-                    data-fancybox="swimming-gallery"
-                    data-caption="Royal Package"
-                  >
-                    <img
-                      src="royal-package.png"
-                      alt="royal package wedding"
-                      className="w-full h-48 object-cover"
-                    />
-                  </a>
-                  <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl font-semibold mb-2">
-                      Royal Package
-                    </h3>
-                    <p className=" ">
-                      The ultimate fairy-tale experience with every luxury
-                      included.
-                    </p>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20suite"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="blue-btn mt-24 md:text-xl"
-                    >
-                      <span className="text-2xl pr-1">
-                        <FontAwesomeIcon icon="fa-brands fa-whatsapp" />
-                      </span>
-                      Booking
-                    </a>
-                  </div>
                 </div>
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
-        {/* End of meeting package list section */}
+        {/* End of swimming package list section */}
 
         {/* Accordion section */}
         <div className="accordion-container my-16">
@@ -1377,7 +1238,9 @@ const Booking = () => {
                   onClick={() => setOpenIndex(openIndex === 0 ? null : 0)}
                   className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100 hover:rounded-t-lg gap-3"
                 >
-                  <span>What is Flowbite?</span>
+                  <span className="text-left font-semibold">
+                    Bagaimana cara booking kamar?
+                  </span>
                   <svg
                     className={`w-3 h-3 shrink-0 transition-transform duration-300 ${
                       openIndex === 0 ? "rotate-180" : ""
@@ -1403,9 +1266,9 @@ const Booking = () => {
                 >
                   <div className="p-5 border-t border-black ">
                     <p className="mb-2 ">
-                      Flowbite is an open-source library of interactive
-                      components built on top of Tailwind CSS including buttons,
-                      dropdowns, modals, navbars, and more.
+                      Anda bisa langsung klik tombol booking di paket yang anda
+                      inginkan dan anda akan langsung diarahkan ke admin kami
+                      melalui WhatsApp
                     </p>
                   </div>
                 </div>
@@ -1419,7 +1282,9 @@ const Booking = () => {
                   onClick={() => setOpenIndex(openIndex === 1 ? null : 1)}
                   className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100  gap-3"
                 >
-                  <span>Is there a Figma file available?</span>
+                  <span className="text-left font-semibold">
+                    Apakah tersedia extra bed?
+                  </span>
                   <svg
                     className={`w-3 h-3 shrink-0 transition-transform duration-300 ${
                       openIndex === 1 ? "rotate-180" : ""
@@ -1445,9 +1310,9 @@ const Booking = () => {
                 >
                   <div className="p-5 border-t border-black ">
                     <p className="mb-2 ">
-                      Flowbite is first conceptualized and designed using the
-                      Figma software so everything you see in the library has a
-                      design equivalent in our Figma file.
+                      Extra bed tersedia dengan biaya tambahan per malam.
+                      Silakan hubungi resepsionis untuk informasi harga dan
+                      ketersediaan.
                     </p>
                   </div>
                 </div>
@@ -1461,8 +1326,8 @@ const Booking = () => {
                   onClick={() => setOpenIndex(openIndex === 2 ? null : 2)}
                   className="flex items-center justify-between w-full p-5 font-medium  hover:bg-gray-100 hover:rounded-b-lg gap-3"
                 >
-                  <span>
-                    What are the differences between Flowbite and Tailwind UI?
+                  <span className="text-left font-semibold">
+                    Apakah tersedia parkir untuk tamu?
                   </span>
                   <svg
                     className={`w-3 h-3 shrink-0 transition-transform duration-300 ${
@@ -1489,11 +1354,9 @@ const Booking = () => {
                 >
                   <div className="p-5 border-t border-black ">
                     <p className="mb-2 ">
-                      The main difference is that the core components from
-                      Flowbite are open source under the MIT license, whereas
-                      Tailwind UI is a paid product. Another difference is that
-                      Flowbite relies on smaller and standalone components,
-                      whereas Tailwind UI offers sections of pages.
+                      Ya, kami menyediakan area parkir luas dan gratis untuk
+                      tamu yang menginap, termasuk parkir motor dan mobil.
+                      beserta fasilitas lainnya
                     </p>
                   </div>
                 </div>
@@ -1508,7 +1371,7 @@ const Booking = () => {
 
 export default Booking;
 
-// * Contoh integrasi fancybox dengan fancybox
+// * Contoh integrasi swiper dengan fancybox
 
 //  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-main">
 //       <div className="max-w-7xl mx-auto">
