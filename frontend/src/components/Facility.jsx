@@ -339,7 +339,7 @@ const Facility = () => {
 
                   <div className="lg:w-1/2 relative group">
                     <LazyDiv>
-                      <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl animate-fade-right">
+                      <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl animate-fade-right">
                         <img
                           src={facility.image}
                           alt={facility.title}
