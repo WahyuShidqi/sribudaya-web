@@ -300,7 +300,7 @@ const Booking = () => {
                       alt="family-suite04_compressed.jpg"
                     />
                   </div>
-                  <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
+                  <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-8 lg:mt-0 lg:pt-0 lg:text-wrap">
                     <div className="family-suite-desc-text">
                       <h1 className="card-title">Family Suite</h1>
                     </div>
@@ -389,7 +389,7 @@ const Booking = () => {
                     </div>
                   </div>
                   <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
-                    <h1 className="text-3xl font-semibold">Harga :</h1>
+                    <h1 className="card-normal-title">Harga :</h1>
                     <h2 className="text-2xl font-semibold mt-6">
                       Rp. 1.500.000/malam
                     </h2>
@@ -439,7 +439,7 @@ const Booking = () => {
                       alt="family-studio04_compressed.jpg"
                     />
                   </div>
-                  <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
+                  <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-8 lg:mt-0 lg:pt-0 lg:text-wrap">
                     <div className="family-suite-desc-text">
                       <h1 className="card-title">Family Studio</h1>
                     </div>
@@ -528,7 +528,7 @@ const Booking = () => {
                     </div>
                   </div>
                   <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
-                    <h1 className="text-3xl font-semibold">Harga :</h1>
+                    <h1 className="card-normal-title">Harga :</h1>
                     <h2 className="text-2xl font-semibold mt-6">
                       Rp. 1.300.000/malam
                     </h2>
@@ -578,7 +578,7 @@ const Booking = () => {
                       alt="family-deluxe04_compressed.jpg"
                     />
                   </div>
-                  <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-10 lg:mt-0 lg:pt-0 lg:text-wrap">
+                  <div className="family-suite-desc mt-6 w-auto lg:border-x-2 lg:border-black  text-left md:p-8 lg:mt-0 lg:pt-0 lg:text-wrap">
                     <div className="family-suite-desc-text">
                       <h1 className="card-title">Family Deluxe</h1>
                     </div>
@@ -667,7 +667,7 @@ const Booking = () => {
                     </div>
                   </div>
                   <div className="pricing flex flex-col   lg:w-[24rem] h-full w-full py-6 px-4 ">
-                    <h1 className="text-3xl font-semibold">Harga :</h1>
+                    <h1 className="card-normal-title">Harga :</h1>
                     <h2 className="text-2xl font-semibold mt-6">
                       Rp. 1.300.000/malam
                     </h2>
@@ -765,7 +765,7 @@ const Booking = () => {
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                      <h3 className="text-3xl  font-semibold mb-2">
+                      <h3 className="card-normal-title font-semibold mb-2 !text-white">
                         Silver Wedding Package
                       </h3>
                       {/* <p className="  ">
@@ -801,7 +801,7 @@ const Booking = () => {
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                      <h3 className="text-3xl font-semibold mb-2">
+                      <h3 className="card-normal-title mb-2">
                         Platinum Wedding Package
                       </h3>
                       {/* <p className=" ">
@@ -837,7 +837,7 @@ const Booking = () => {
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                      <h3 className="text-3xl font-semibold mb-2">
+                      <h3 className="card-normal-title mb-2">
                         Gold Wedding Package
                       </h3>
                       {/* <p className=" ">
@@ -873,7 +873,7 @@ const Booking = () => {
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                      <h3 className="text-3xl font-semibold mb-2">
+                      <h3 className="card-normal-title mb-2">
                         Royal Wedding Package
                       </h3>
                       {/* <p className=" ">
@@ -970,13 +970,10 @@ const Booking = () => {
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl  font-semibold mb-2">
+                    <h3 className="card-normal-title font-semibold mb-2 !text-white">
                       Halfday Meeting A Package
                     </h3>
-                    {/* <p className="  ">
-                      Perfect for intimate weddings with essential services
-                      included.
-                    </p> */}
+
                     <a
                       href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20meeting%20halfday%20A"
                       target="_blank"
@@ -1006,7 +1003,7 @@ const Booking = () => {
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl font-semibold mb-2">
+                    <h3 className="card-normal-title mb-2">
                       Half Day Meeting B Package
                     </h3>
                     {/* <p className=" ">
@@ -1042,7 +1039,7 @@ const Booking = () => {
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl font-semibold mb-2">
+                    <h3 className="card-normal-title mb-2">
                       Half Day Meeting C Package
                     </h3>
                     {/* <p className=" ">
@@ -1078,7 +1075,7 @@ const Booking = () => {
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl font-semibold mb-2">
+                    <h3 className="card-normal-title mb-2">
                       One Day Meeting Package
                     </h3>
                     {/* <p className=" ">
@@ -1143,7 +1140,7 @@ const Booking = () => {
             >
               <SwiperSlide>
                 <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                  <h3 className="card-normal-title font-semibold mb-2 !text-white pb-4 border-b-2 border-white text-center">
                     Pool Package
                   </h3>
                   <h4 className="text-2xl">Rp. 100.000/person</h4>
@@ -1170,7 +1167,7 @@ const Booking = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                  <h3 className="card-normal-title font-semibold mb-2 !text-white pb-4 border-b-2 border-white text-center">
                     Pool Regular
                   </h3>
                   <h4 className="text-2xl">Rp. 70.000/person</h4>
@@ -1192,7 +1189,7 @@ const Booking = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                  <h3 className="card-normal-title font-semibold mb-2 !text-white pb-4 border-b-2 border-white text-center">
                     Pendamping
                   </h3>
                   <h4 className="text-2xl">Rp. 50.000/person</h4>
