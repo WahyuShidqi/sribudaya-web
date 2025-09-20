@@ -48,7 +48,8 @@ const About = () => {
                 </h1>
                 <div className="w-12 h-px bg-gray-400 mx-auto mb-6"></div>
                 <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto animate-fade-left">
-                  Tempat tenang dan damai yang dikeliliingi dengan pepohonan dan bangunan yang elegan
+                  Tempat tenang dan damai yang dikeliliingi dengan pepohonan dan
+                  bangunan yang elegan
                 </p>
               </div>
             </LazyDiv>
@@ -188,18 +189,6 @@ const About = () => {
                 </div>
               </div>
             </LazyDiv>
-
-            {/* Call to Action */}
-            {/* <div className="text-center">
-              <div className="inline-flex space-x-4">
-                <button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-full font-light text-sm tracking-wide uppercase transition-all duration-300 hover:scale-105">
-                  Discover More
-                </button>
-                <button className="border border-gray-300 hover:border-gray-800 text-gray-800 px-8 py-3 rounded-full font-light text-sm tracking-wide uppercase transition-all duration-300 hover:bg-gray-50">
-                  View Gallery
-                </button>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
