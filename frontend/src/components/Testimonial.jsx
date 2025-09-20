@@ -4,12 +4,6 @@ import {
   ChevronRight,
   Star,
   Quote,
-  Phone,
-  Mail,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
   Camera,
   Eye,
   X,
@@ -21,60 +15,6 @@ const Testimonial = () => {
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Data Owner Resort
-  const owners = [
-    {
-      id: 1,
-      name: "Budi Santoso",
-      title: "Co-Founder & CEO",
-      experience: "15+ Years in Hospitality",
-      description:
-        "Passionate about creating unforgettable experiences for guests. Started this journey with a vision to provide authentic Indonesian hospitality combined with modern comfort.",
-      specialties: [
-        "Resort Management",
-        "Customer Experience",
-        "Business Strategy",
-      ],
-      image: "/owners/owner3.jpg",
-      contact: {
-        phone: "+62 812-3456-7890",
-        email: "budi@resortparadise.com",
-        whatsapp: "+62 812-3456-7890",
-      },
-      socialMedia: {
-        facebook: "https://facebook.com/budisantoso",
-        instagram: "https://instagram.com/budisantoso_resort",
-        linkedin: "https://linkedin.com/in/budisantoso",
-        twitter: "https://twitter.com/budisantoso",
-      },
-    },
-    {
-      id: 2,
-      name: "Sari Wijaya",
-      title: "Co-Founder & Operations Director",
-      experience: "12+ Years in Tourism",
-      description:
-        "Dedicated to sustainable tourism and community development. Believes in creating positive impact for both guests and local communities through responsible hospitality.",
-      specialties: [
-        "Operations Management",
-        "Sustainable Tourism",
-        "Community Relations",
-      ],
-      image: "/owners/owner2.jpg",
-      contact: {
-        phone: "+62 813-2345-6789",
-        email: "sari@resortparadise.com",
-        whatsapp: "+62 813-2345-6789",
-      },
-      socialMedia: {
-        facebook: "https://facebook.com/sariwijaya",
-        instagram: "https://instagram.com/sariwijaya_hospitality",
-        linkedin: "https://linkedin.com/in/sariwijaya",
-        twitter: "https://twitter.com/sariwijaya",
-      },
-    },
-  ];
 
   // Data Gallery Resort
   const galleryData = {
