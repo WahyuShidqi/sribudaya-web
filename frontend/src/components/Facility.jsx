@@ -121,7 +121,7 @@ const Facility = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <button
+        {/* <button
           onClick={prevSlide}
           className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-all duration-300"
         >
@@ -156,7 +156,7 @@ const Facility = () => {
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </button>
+        </button> */}
 
         {/* Slide Indicators */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
@@ -339,7 +339,7 @@ const Facility = () => {
 
                   <div className="lg:w-1/2 relative group">
                     <LazyDiv>
-                      <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl animate-fade-right">
+                      <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl animate-fade-right">
                         <img
                           src={facility.image}
                           alt={facility.title}
