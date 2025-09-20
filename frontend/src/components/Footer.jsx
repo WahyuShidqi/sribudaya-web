@@ -20,7 +20,7 @@ const Footer = () => {
               title="Company"
               className="inline-flex items-center"
             >
-              <svg
+              {/* <svg
                 className="w-8 text-teal-accent-400"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
@@ -34,9 +34,9 @@ const Footer = () => {
                 <rect x="3" y="17" width="7" height="6" />
                 <rect x="14" y="1" width="7" height="6" />
                 <rect x="14" y="11" width="7" height="12" />
-              </svg>
+              </svg> */}
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Sribudaya Resort
+                Sribudaya Resort.
               </span>
             </a>
             <div className="mt-4 lg:max-w-sm">
