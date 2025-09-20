@@ -1,14 +1,5 @@
-// // import React from "react";
-
-// // const Home = () => {
-// //   return <div>home</div>;
-// // };
-
-// // export default Home;
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyDiv from "./misc/LazyDiv";
 import { Swiper } from "swiper/react";
