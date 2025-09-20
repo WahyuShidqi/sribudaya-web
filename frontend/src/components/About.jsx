@@ -33,6 +33,7 @@ const About = () => {
             }}
           >
             <div className="absolute inset-0 bg-main opacity-90"></div>
+            <div className="absolute inset-0 bg-main opacity-90"></div>
           </div>
         </div>
 

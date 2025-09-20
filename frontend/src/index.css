@@ -79,7 +79,7 @@ p {
 }
 
 .page-title {
-  @apply text-4xl font-bold text-gray-900 mb-6 leading-snug;
+  @apply text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug;
 }
 
 .page-title-desc {
@@ -88,6 +88,10 @@ p {
 
 .card-title {
   @apply font-normal text-4xl md:text-5xl font-epunda-slab mb-4;
+}
+
+.card-normal-title {
+  @apply text-3xl font-semibold;
 }
 
 .rivage-title {

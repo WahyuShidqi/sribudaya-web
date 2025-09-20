@@ -16,7 +16,7 @@ const Contact = () => {
     <section>
       <div
         className="relative h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/contoh.jpg" }}
+        style={{ backgroundImage: "url('/images/facility/sribudaya.jpg" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center text-white flex justify-center animate-fade-up">
@@ -36,8 +36,8 @@ const Contact = () => {
                 Hubungi Kami
               </h1>
               <p className="text-lg md:text-xl text-white-700 animate-fade-right animate-delay-200">
-                Kami siap menyambut Anda di Sribudaya Resto & Homestay. <br />{" "}
-                Silakan hubungi kami melalui informasi berikut.
+                Kami siap menyambut Anda di Sribudaya Resort <br /> Silakan
+                hubungi kami melalui informasi berikut.
               </p>
             </div>
           </LazyDiv>
