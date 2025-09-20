@@ -333,10 +333,10 @@ const Home = () => {
         <LazyDiv>
           <div className="wrapper">
             <h2 className="subtitle text-center animate-fade-right">
-              Info Lokasi
+              Strategic Location
             </h2>
             <h1 className="page-title text-center animate-fade-left">
-              Lokasi Strategis
+              Lokasi Populer Terdekat
             </h1>
             <p className="page-title-desc text-center animate-fade-right">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
