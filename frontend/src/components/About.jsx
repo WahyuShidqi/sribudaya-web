@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex items-center justify-center min-h-screen py-20 px-6">
+        <div className="relative z-10 flex items-center justify-center min-h-screen pt-16 pb-8 md:py-20 px-6">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <LazyDiv>

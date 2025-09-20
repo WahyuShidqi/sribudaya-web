@@ -248,7 +248,7 @@ const Testimonial = () => {
     <div className="bg-main">
       {/* Gallery Section */}
 
-      <section className="py-20  overflow-hidden mt-16 animate-fade-up">
+      <section className=" md:py-20  overflow-hidden mt-16 animate-fade-up">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Gallery Layout */}
           <div className="relative ">
@@ -671,7 +671,10 @@ const Testimonial = () => {
                   onMouseLeave={() => setIsAutoPlay(true)}
                 >
                   {testimonials.map((testimonial) => (
-                    <div key={testimonial.id} className="w-full flex-shrink-0">
+                    <div
+                      key={testimonial.id}
+                      className="w-full flex items-center flex-shrink-0"
+                    >
                       <div className="bg-white mx-4 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                         <div className="p-8 md:p-12">
                           {/* Quote Icon */}
@@ -747,7 +750,7 @@ const Testimonial = () => {
           </LazyDiv>
 
           {/* Slide Indicators */}
-          <div className="flex justify-center space-x-3 mt-8">
+          <div className="flex justify-center space-x-3 mt-4 md:mt-8">
             {testimonials.map((_, index) => (
               <button
                 key={index}
