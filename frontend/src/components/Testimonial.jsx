@@ -4,17 +4,12 @@ import {
   ChevronRight,
   Star,
   Quote,
-  Phone,
-  Mail,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
   Camera,
   Eye,
   X,
 } from "lucide-react";
 import LazyDiv from "./misc/LazyDiv";
+import { Fancybox } from "@fancyapps/ui";
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,59 +17,30 @@ const Testimonial = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Data Owner Resort
-  const owners = [
-    {
-      id: 1,
-      name: "Budi Santoso",
-      title: "Co-Founder & CEO",
-      experience: "15+ Years in Hospitality",
-      description:
-        "Passionate about creating unforgettable experiences for guests. Started this journey with a vision to provide authentic Indonesian hospitality combined with modern comfort.",
-      specialties: [
-        "Resort Management",
-        "Customer Experience",
-        "Business Strategy",
-      ],
-      image: "/owners/owner3.jpg",
-      contact: {
-        phone: "+62 812-3456-7890",
-        email: "budi@resortparadise.com",
-        whatsapp: "+62 812-3456-7890",
+  // useEffect for wedding package gallery
+  useEffect(() => {
+    // Bind Fancybox to all elements with data-fancybox attribute
+    Fancybox.bind("[data-fancybox]", {
+      Thumbs: { autoStart: true },
+      Navigation: false,
+      arrows: false,
+      Toolbar: {
+        display: [
+          { id: "counter", position: "center" },
+          "zoom",
+          "slideshow",
+          "fullscreen",
+          "download",
+          "thumbs",
+          "close",
+        ],
       },
-      socialMedia: {
-        facebook: "https://facebook.com/budisantoso",
-        instagram: "https://instagram.com/budisantoso_resort",
-        linkedin: "https://linkedin.com/in/budisantoso",
-        twitter: "https://twitter.com/budisantoso",
-      },
-    },
-    {
-      id: 2,
-      name: "Sari Wijaya",
-      title: "Co-Founder & Operations Director",
-      experience: "12+ Years in Tourism",
-      description:
-        "Dedicated to sustainable tourism and community development. Believes in creating positive impact for both guests and local communities through responsible hospitality.",
-      specialties: [
-        "Operations Management",
-        "Sustainable Tourism",
-        "Community Relations",
-      ],
-      image: "/owners/owner2.jpg",
-      contact: {
-        phone: "+62 813-2345-6789",
-        email: "sari@resortparadise.com",
-        whatsapp: "+62 813-2345-6789",
-      },
-      socialMedia: {
-        facebook: "https://facebook.com/sariwijaya",
-        instagram: "https://instagram.com/sariwijaya_hospitality",
-        linkedin: "https://linkedin.com/in/sariwijaya",
-        twitter: "https://twitter.com/sariwijaya",
-      },
-    },
-  ];
+    });
+
+    return () => {
+      Fancybox.destroy();
+    };
+  }, []);
 
   // Data Gallery Resort
   const galleryData = {
@@ -92,66 +58,66 @@ const Testimonial = () => {
     images: [
       {
         id: 1,
-        src: "/images/gallery/rooms/villa-oceanview.jpg",
-        alt: "Ocean View Villa",
+        src: "/images/about/coffeshop.jpg",
+        alt: "coffe shop sribudaya yang Instagramable",
         category: "Accommodations",
-        title: "Luxury Ocean View Villa",
+        title: "Coffee Shop",
         position: "top-left",
       },
       {
         id: 2,
-        src: "/images/gallery/facilities/infinity-pool.jpg",
-        alt: "Infinity Pool",
+        src: "/images/about/hall.jpeg",
+        alt: "Aula serbaguna. Bisa dipakai untuk meeting atau untuk acara pernikahan",
         category: "Facilities",
-        title: "Infinity Pool with Ocean View",
-        position: "top-right",
+        title: "Hall",
+        position: "bottom-center-wide",
       },
       {
         id: 3,
-        src: "/images/gallery/staff/reception-team.jpg",
-        alt: "Reception Team",
+        src: "/images/about/resepsionis.jpg",
+        alt: "Pelayanan resepsionis profesional dan ramah",
         category: "Staff",
-        title: "Our Friendly Reception Team",
+        title: "Receptionist",
         position: "left",
       },
       {
         id: 4,
-        src: "/images/gallery/facilities/spa-treatment.jpg",
-        alt: "Spa Treatment",
-        category: "Wellness",
-        title: "Relaxing Spa Experience",
+        src: "/images/about/kolam.jpg",
+        alt: "Kolam renang bersih dan nyaman di sribudaya resort. Cocok untuk anak-anak dan dewasa",
+        category: "swimming pool",
+        title: "Kolam renang",
         position: "right-top",
       },
       {
         id: 5,
-        src: "/images/gallery/dining/restaurant-view.jpg",
-        alt: "Restaurant",
+        src: "/images/about/indoor.jpeg",
+        alt: "Foto bagian dalam Sribudaya coffee shop",
         category: "Dining",
-        title: "Beachfront Restaurant",
+        title: "indoor coffeshop",
         position: "bottom-left",
       },
       {
         id: 6,
-        src: "/images/gallery/activities/beach-activities.jpg",
-        alt: "Beach Activities",
-        category: "Activities",
-        title: "Fun Beach Activities",
+        src: "/images/about/about2.jpg",
+        alt: "Pemandangan indah dari Sribudaya Resort",
+        category: "View",
+        title: "Amazing View",
         position: "right-bottom",
       },
       {
         id: 7,
-        src: "/images/gallery/rooms/presidential-suite.jpg",
-        alt: "Presidential Suite",
+        src: "/images/booking/wedding-slide3.jpg",
+        alt: "Wedding hall mewah untuk hari spesial pengantin",
         category: "Accommodations",
-        title: "Presidential Suite Interior",
+        title: "Wedding Hall",
         position: "bottom-right",
       },
       {
         id: 8,
-        src: "/images/gallery/facilities/gym-fitness.jpg",
-        alt: "Fitness Center",
+        src: "/images/about/homestay.jpg",
+        alt: "Sribudaya homestay. Cocok untuk staycation anda dan keluarga",
         category: "Facilities",
-        title: "Modern Fitness Center",
+        title: "Homestay",
         position: "left-bottom",
       },
     ],
@@ -318,9 +284,12 @@ const Testimonial = () => {
                   </div>
 
                   {/* Top Left - Large 0*/}
-                  <div
+                  <a
                     className="absolute top-0 left-0 w-80 h-60 group cursor-pointer animate-jump-in"
-                    onClick={() => openModal(galleryData.images[0])}
+                    // onClick={() => openModal(galleryData.images[0])}
+                    href={galleryData.images[0].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[0].alt}
                   >
                     <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                       <img
@@ -341,12 +310,15 @@ const Testimonial = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Top Center wide - Optional 100*/}
-                  <div
+                  <a
                     className="absolute -top-16 left-1/3 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer animate-jump-in animate-delay-100"
-                    onClick={() => openModal(galleryData.images[7])}
+                    // onClick={() => openModal(galleryData.images[7])}
+                    href={galleryData.images[7].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[7].alt}
                   >
                     <div className="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                       <img
@@ -361,18 +333,21 @@ const Testimonial = () => {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                           <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
-                          <p className="text-white text-xs font-semibold text-center px-2">
+                          <p className="text-white text-lg font-semibold text-center px-2">
                             {galleryData.images[7].title}
                           </p>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Top Right - Large 200*/}
-                  <div
+                  <a
                     className="absolute top-0 right-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-200"
-                    onClick={() => openModal(galleryData.images[1])}
+                    // onClick={() => openModal(galleryData.images[2])}
+                    href={galleryData.images[2].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[2].alt}
                   >
                     <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                       <img
@@ -393,17 +368,20 @@ const Testimonial = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Right Side - tall 300*/}
-                  <div
+                  <a
                     className="absolute top-72 right-0 w-64 h-80 group cursor-pointer animate-jump-in animate-delay-300"
-                    onClick={() => openModal(galleryData.images[3])}
+                    // onClick={() => openModal(galleryData.images[5])}
+                    href={galleryData.images[5].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[5].alt}
                   >
                     <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
                       <img
-                        src={galleryData.images[3].src}
-                        alt={galleryData.images[3].alt}
+                        src={galleryData.images[5].src}
+                        alt={galleryData.images[5].alt}
                         onError={(e) => {
                           e.target.src =
                             "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop";
@@ -413,18 +391,21 @@ const Testimonial = () => {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                           <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
-                          <p className="text-white text-sm font-semibold text-center px-2">
-                            {galleryData.images[3].title}
+                          <p className="text-white text-lg font-semibold text-center px-2">
+                            {galleryData.images[5].title}
                           </p>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Bottom Right - Large 400*/}
-                  <div
+                  <a
                     className="absolute bottom-0 right-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-[400ms]"
-                    onClick={() => openModal(galleryData.images[6])}
+                    // onClick={() => openModal(galleryData.images[6])}
+                    href={galleryData.images[6].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[6].alt}
                   >
                     <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
                       <img
@@ -445,34 +426,44 @@ const Testimonial = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Bottom Center wide - Optional 500*/}
-                  <div
+                  <a
                     className="absolute -bottom-16 left-1/3 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer animate-jump-in animate-delay-[500ms]"
-                    onClick={() => openModal(galleryData.images[0])}
+                    // onClick={() => openModal(galleryData.images[1])}
+                    href={galleryData.images[1].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[1].alt}
                   >
                     <div className="relative h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:translate-y-1">
                       <img
-                        src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&h=300&fit=crop"
-                        alt="Resort View"
+                        src={galleryData.images[1].src}
+                        alt={galleryData.images[1].alt}
+                        onError={(e) => {
+                          e.target.src =
+                            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop";
+                        }}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <div className="transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                           <Eye className="w-6 h-6 text-white mb-1 mx-auto" />
-                          <p className="text-white text-xs font-semibold text-center px-2">
-                            Resort Overview
+                          <p className="text-white text-lg font-semibold text-center px-2">
+                            {galleryData.images[1].title}
                           </p>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Bottom Left - Large 600*/}
-                  <div
+                  <a
                     className="absolute bottom-0 left-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-[600ms]"
-                    onClick={() => openModal(galleryData.images[4])}
+                    // onClick={() => openModal(galleryData.images[4])}
+                    href={galleryData.images[4].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[4].alt}
                   >
                     <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-y-2">
                       <img
@@ -493,12 +484,15 @@ const Testimonial = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                   {/* Left Side - Tall 700*/}
-                  <div
+                  <a
                     className="absolute top-72 left-0 w-64 h-80 group cursor-pointer animate-jump-in animate-delay-[700ms]"
-                    onClick={() => openModal(galleryData.images[3])}
+                    // onClick={() => openModal(galleryData.images[3])}
+                    href={galleryData.images[3].src}
+                    data-fancybox="about-gallery"
+                    data-caption={galleryData.images[3].alt}
                   >
                     <div className="relative h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:translate-x-2">
                       <img
@@ -513,13 +507,13 @@ const Testimonial = () => {
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                         <div className="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                           <Eye className="w-7 h-7 text-white mb-2 mx-auto" />
-                          <p className="text-white text-sm font-semibold text-center px-2">
+                          <p className="text-white text-lg font-semibold text-center px-2">
                             {galleryData.images[3].title}
                           </p>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </LazyDiv>

@@ -1,14 +1,5 @@
-// // import React from "react";
-
-// // const Home = () => {
-// //   return <div>home</div>;
-// // };
-
-// // export default Home;
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icon panah
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LazyDiv from "./misc/LazyDiv";
 import { Swiper } from "swiper/react";
@@ -18,11 +9,12 @@ import "../swiper-styles.css";
 
 const Home = () => {
   const images = [
-    "/images/contoh.jpg",
-    "/images/hall1.jpg",
-    "/images/hotel.jpg",
-    "/images/pool.jpg",
-    "/images/wedding.jpg",
+    "/images/home/home4.jpg",
+    "/images/home/home1.jpg",
+    "/images/home/home2.jpg",
+    "/images/home/home3.jpg",
+    "/images/home/home5.jpeg",
+    "/images/home/home6.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,8 +53,9 @@ const Home = () => {
             <h1 className="title drop-shadow-lg">
               Selamat Datang di Sribudaya Resort & Homestay
             </h1>
-            <p className="mt-4 title-desc text-white drop-shadow-md">
-              Nikmati keindahan alam & kenyamanan terbaik untuk liburan Anda
+            <p className="mt-1 title-desc text-white drop-shadow-md">
+              Perpaduan alam dan desain bangunan yang menarik <br /> membuat
+              Sribudaya resort jadi pilihan liburan anda
             </p>
             <div className="mt-8">
               <Link
@@ -84,13 +77,14 @@ const Home = () => {
             <div className="text-left animate-fade-right">
               <p className="subtitle">About</p>
               <h2 className="page-title">
-                Discover <br /> Our Story
+                Sribudaya <br /> Resort
               </h2>
               <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
               <p className="mb-8 page-title-desc">
-                Sribudaya resort is designed to meet the requirements of modern
-                day travelers. We understand each trip is different and have
-                thoughtfully balanced the scapes of a peaceful home and a luxury
+                Sribudaya Resort dirancang untuk memenuhi kebutuhan para
+                wisatawan masa kini. Kami memahami bahwa setiap perjalanan
+                memiliki keunikan tersendiri, dan telah dengan cermat
+                menggabungkan kehangatan rumah yang tenang dengan kemewahan
                 hotel.
               </p>
               <Link
@@ -108,7 +102,7 @@ const Home = () => {
 
               {/* Gambar utama */}
               <img
-                src="./images/villa.jpg"
+                src="./images/home/villa.jpg"
                 alt="resort"
                 className="relative z-10 rounded-lg shadow-lg w-full object-cover"
               />
@@ -122,7 +116,7 @@ const Home = () => {
           <div className="text-center mb-12 animate-fade-up">
             <p className="subtitle">Our Rooms</p>
             <h2 className="page-title mb-[1px]">
-              modern and elegant <br /> Accommodations
+              Penginapan yang <br /> Modern dan Elegan
             </h2>
           </div>
         </LazyDiv>
@@ -132,17 +126,16 @@ const Home = () => {
           <LazyDiv>
             <div className="relative rounded-lg overflow-hidden shadow-lg animate-fade-right">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                alt="Luxury Cottage Room"
+                src="/images/booking/family-suite01_compressed.jpg"
+                alt="Family Suite"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
               <div className="absolute bottom-0 p-6 text-white">
-                <h3 className="text-xl font-semibold">Luxury Cottage Room</h3>
+                <h3 className="text-xl font-semibold">Family Suite</h3>
                 <p className="mt-2">
-                  Our spacious suites embody luxury and sophistication and enjoy
-                  the experience with a spacious sitting area, luxury bedding
-                  and free Wi-Fi.
+                  Suite luas kami menghadirkan kemewahan dan kenyamanan dengan
+                  tempat tidur mewah serta Wi-Fi gratis.
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <Link
@@ -160,17 +153,16 @@ const Home = () => {
           <LazyDiv>
             <div className="relative rounded-lg overflow-hidden shadow-lg animate-fade-left">
               <img
-                src="/images/hotel.jpg"
-                alt="Heritage Cottage Room"
+                src="/images/booking/family-studio02_compressed.jpg"
+                alt="Family Studio"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
               <div className="absolute bottom-0 p-6 text-white">
-                <h3 className="text-xl font-semibold">Heritage Cottage Room</h3>
+                <h3 className="text-xl font-semibold">Family Studio</h3>
                 <p className="mt-2">
-                  Our spacious suites embody luxury and sophistication and enjoy
-                  the experience with a spacious sitting area, luxury bedding
-                  and free Wi-Fi.
+                  Suite luas kami menghadirkan kemewahan dan kenyamanan dengan
+                  tempat tidur mewah serta Wi-Fi gratis.
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <Link
@@ -194,7 +186,7 @@ const Home = () => {
             <div className="text-center mb-12 animate-fade-up">
               <h2 className="subtitle">Partner Sites</h2>
               <h2 className="page-title">
-                You can find us at popular booking sites
+                Anda dapat menemukan kami di situs pemesanan populer.
               </h2>
             </div>
           </LazyDiv>
@@ -254,13 +246,14 @@ const Home = () => {
             <div className="animate-fade-right">
               <p className="subtitle">Amenities</p>
               <h2 className="page-title">
-                Your All-Inclusive <br /> Experience
+                Pengalaman Lengkap
+                <br /> untuk Anda
               </h2>
               <div className="absoulute left-0 w-1/4 h-[3px] bg-blue-600 mb-4"></div>
               <p className="page-title-desc">
-                Indulge in a world of luxury and comfort with our exclusive
-                resort amenities, designed to create unforgettable experiences
-                for you.
+                Nikmati keindahan dan kenyamanan dengan fasilitas resor
+                eksklusif kami, yang dirancang untuk menciptakan pengalaman tak
+                terlupakan bagi Anda.
               </p>
             </div>
           </LazyDiv>
@@ -318,7 +311,7 @@ const Home = () => {
 
           <div className="text-center mb-12 animate-fade-up">
             <p className="subtitle">Location</p>
-            <h2 className="page-title">Our Resort's Location</h2>
+            <h2 className="page-title">Lokasi Resort Kami</h2>
           </div>
 
           {/* Google Maps */}
@@ -342,16 +335,14 @@ const Home = () => {
         <LazyDiv>
           <div className="wrapper">
             <h2 className="subtitle text-center animate-fade-right">
-              Info Lokasi
+              Strategic Location
             </h2>
             <h1 className="page-title text-center animate-fade-left">
-              Lokasi Strategis
+              Lokasi Populer Terdekat
             </h1>
             <p className="page-title-desc text-center animate-fade-right">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis, distinctio cum, unde odit iure quibusdam adipisci
-              delectus expedita ipsa accusantium vero cupiditate. Ipsam omnis
-              sint consectetur nisi, iste eum corporis!
+              Sribudaya Resort & Homestay - Akses Mudah ke Berbagai Destinasi
+              Penting
             </p>
           </div>
         </LazyDiv>
@@ -364,7 +355,7 @@ const Home = () => {
             }}
             autoplay={{ delay: 2000 }}
             loop={true}
-            speed={3000}
+            speed={5000}
             spaceBetween={20}
             breakpoints={{
               320: { slidesPerView: 1 },
@@ -374,17 +365,16 @@ const Home = () => {
           >
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pusat kota Banda Aceh, 5 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Pusat kota dengan berbagai fasilitas perdagangan, perkantoran,
+                  dan pusat kuliner khas Aceh. Mudah diakses melalui jalan utama
+                  dengan waktu tempuh sekitar 10 menit berkendara.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/RABqKz5fBiXkG8s58"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -395,17 +385,37 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Mesjid Raya Baiturrahman, 5 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Masjid bersejarah dan ikonik Banda Aceh dengan arsitektur yang
+                  memukau. Simbol spiritual dan budaya Aceh yang wajib
+                  dikunjungi, mudah dijangkau dalam 13 menit perjalanan.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/UL6635rYHt7oUsgz7"
+                  className="blue-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit map
+                </a>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="bg-main">
+              <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
+                <h1 className="text-2xl font-bold mb-2">
+                  Bandara Sultan Iskandar Muda, 12 KM
+                </h1>
+                <p className="page-title-desc !text-base  mb-5">
+                  Bandara internasional utama Aceh yang melayani penerbangan
+                  domestik dan internasional. Perjalanan dari resort memakan
+                  waktu sekitar 20 menit melalui jalur lingkar kota.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/1q9f7TL25Eypazoy9"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -416,17 +426,16 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pusat Wisata Tsunami Museum, 5 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Museum Tsunami Aceh dan kawasan wisata sejarah terdekat.
+                  Lokasi strategis untuk mengunjungi destinasi wisata edukasi
+                  dan sejarah yang menawan di Banda Aceh.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/s3sP1AsGQC6nWFKv6"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -437,17 +446,16 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pelabuhan Malahayati, 34 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Pelabuhan utama Banda Aceh yang menghubungkan dengan berbagai
+                  destinasi di Sumatera dan luar pulau. Akses transportasi laut
+                  untuk perjalanan wisata dan bisnis.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/7K6R87m3EZfnM9Tq9"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -458,17 +466,17 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  Pelabuhan Ulee Lheue, 10 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Pelabuhan wisata dan ferry menuju Pulau Weh (Sabang). Gerbang
+                  utama untuk menjelajahi keindahan bawah laut dan pantai
+                  eksotis Sabang dengan fasilitas transportasi laut yang
+                  lengkap.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/4NLvzB7jvFwFwYa97"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -479,17 +487,16 @@ const Home = () => {
             </SwiperSlide>
             <SwiperSlide className="bg-main">
               <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg ">
-                <h1 className="text-3xl font-bold mb-4">
-                  Jarak dari sribudaya ke the pade (100 KM)
+                <h1 className="text-2xl font-bold mb-2">
+                  RSUD dr. Zainoel Abidin, 7 KM
                 </h1>
                 <p className="page-title-desc !text-base  mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  delectus vel rerum molestiae? Eos id eaque sit beatae eum,
-                  saepe earum reprehenderit accusamus molestiae provident,
-                  dolores impedit consectetur quisquam natus.
+                  Rumah sakit rujukan utama Provinsi Aceh dengan fasilitas medis
+                  lengkap dan pelayanan 24 jam. Menjadi jaminan keamanan
+                  kesehatan selama menginap.
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
+                  href="https://maps.app.goo.gl/PmzqPoZGvWPUK5y8A"
                   className="blue-btn"
                   target="_blank"
                   rel="noreferrer"
@@ -509,7 +516,7 @@ const Home = () => {
           <LazyDiv>
             <div className="text-center mb-12 animate-fade-up">
               <h2 className="subtitle">Social Media</h2>
-              <h2 className="page-title">Follow Our Social Media For More</h2>
+              <h2 className="page-title">Follow Akun Media Sosial Kami</h2>
             </div>
           </LazyDiv>
 

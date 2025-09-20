@@ -44,28 +44,6 @@ const Booking = () => {
     groupAll: false,
   });
 
-  // const [fancyboxRefGallery] = useFancybox({
-  //   groupAll: true,
-  //   // Additional custom options for gallery
-  //   loop: true,
-  //   buttons: [
-  //     "zoom",
-  //     "share",
-  //     "slideShow",
-  //     "fullScreen",
-  //     "download",
-  //     "thumbs",
-  //     "close",
-  //   ],
-  //   animationEffect: "zoom-in-out",
-  //   transitionEffect: "slide",
-  //   protect: true,
-  //   keyboard: true,
-  //   thumbs: {
-  //     autoStart: true,
-  //   },
-  // });
-
   // useEffect for wedding package gallery
   useEffect(() => {
     // Bind Fancybox to all elements with data-fancybox attribute
@@ -94,63 +72,6 @@ const Booking = () => {
   // useState to handle accordion opening and closing
   const [openIndex, setOpenIndex] = useState(null);
 
-  // const galleryImages = [
-  //   {
-  //     id: 1,
-  //     thumb:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     title: "Sunset Paradise",
-  //     caption: "A breathtaking view of the golden sunset",
-  //     alt: "Sunset view",
-  //   },
-  //   {
-  //     id: 2,
-  //     thumb:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     title: "Ocean Dreams",
-  //     caption: "Crystal clear waters meet the horizon",
-  //     alt: "Ocean view",
-  //   },
-  //   {
-  //     id: 3,
-  //     thumb:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     title: "Mountain Peak",
-  //     caption: "Majestic mountains touching the clouds",
-  //     alt: "Mountain landscape",
-  //   },
-  //   {
-  //     id: 4,
-  //     thumb:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     title: "City Lights",
-  //     caption: "Urban landscape illuminated at night",
-  //     alt: "City night view",
-  //   },
-  //   {
-  //     id: 5,
-  //     thumb:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     title: "Forest Path",
-  //     caption: "A serene journey through nature",
-  //     alt: "Forest pathway",
-  //   },
-  //   {
-  //     id: 6,
-  //     thumb:
-  //       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     full: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaheRhJ-plr51li9J7DIVU78xq9c0dr07cw&s",
-  //     title: "Desert Dunes",
-  //     caption: "Golden sands stretching to infinity",
-  //     alt: "Desert landscape",
-  //   },
-  // ];
-
   // for smooth scrolling specific page
   useEffect(() => {
     document.documentElement.classList.add("smooth-scroll"); // add to <html>
@@ -167,15 +88,15 @@ const Booking = () => {
         <div className="wrapper">
           <div className="hero-slides h-[80vh] relative">
             <Swiper
-              pagination={{
-                dynamicBullets: true,
-              }}
+              // pagination={{
+              //   dynamicBullets: false,
+              // }}
               autoplay={{
                 delay: 5000,
               }}
               speed={2500}
               loop="true"
-              modules={[Pagination, Autoplay]}
+              modules={[Autoplay]}
               className="mySwiper"
             >
               <SwiperSlide>
@@ -221,7 +142,7 @@ const Booking = () => {
                 />
               </SwiperSlide>
             </Swiper>
-            <div className="absolute inset-0 z-10 bg-black bg-opacity-40"></div>
+            <div className="absolute inset-0 z-10 bg-black bg-opacity-30"></div>
             {/* Description for Hero section */}
             <div className="booking-hero-desc absolute z-30 inset-0  flex justify-center items-center text-white flex-col animate-fade-up">
               <div className="header text-center w-[85%]">

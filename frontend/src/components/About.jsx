@@ -11,7 +11,7 @@ const About = () => {
       {/* Hero section */}
       <div
         className="relative h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/contoh.jpg" }}
+        style={{ backgroundImage: "url('/images/about/about1.jpg" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="text-center text-white flex justify-center animate-fade-up">
@@ -27,12 +27,13 @@ const About = () => {
         {/* Clean Background */}
         <div className="absolute inset-0">
           <div
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            className="w-full h-full md:bg-cover lg:bg-contain bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url()",
+              backgroundImage: "url(/images/about/logo-sribudaya-full.png)",
             }}
           >
-            <div className="absolute inset-0 bg-main"></div>
+            <div className="absolute inset-0 bg-main opacity-90"></div>
+            <div className="absolute inset-0 bg-main opacity-90"></div>
           </div>
         </div>
 
@@ -47,7 +48,7 @@ const About = () => {
                 </h1>
                 <div className="w-12 h-px bg-gray-400 mx-auto mb-6"></div>
                 <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto animate-fade-left">
-                  A sanctuary of tranquility nestled in nature's embrace
+                  Tempat yang damai dikelilingi pepohonan dan bangunan elegan
                 </p>
               </div>
             </LazyDiv>
@@ -59,29 +60,37 @@ const About = () => {
                 <div className="space-y-12 animate-fade-right">
                   <div>
                     <h2 className="text-3xl font-light text-gray-800 mb-6 tracking-wide">
-                      Our Story
+                      Tentang kami
                     </h2>
-                    <p className="text-gray-600 leading-loose text-lg mb-6">
-                      Established with a vision to redefine hospitality,
-                      Sribudaya Resort offers an intimate escape where luxury
-                      meets authenticity. Every element has been thoughtfully
-                      designed to create harmony between comfort and nature.
+                    <p className="text-justify text-gray-600 leading-loose text-lg mb-6">
+                      <strong>Sribudaya Resort</strong> Aceh adalah resor unik yang memadukan
+                      arsitektur bergaya Skandinavia dengan nuansa alam yang
+                      menyegarkan, menciptakan tempat peristirahatan yang tenang
+                      dan modern bagi para tamu kami. Terletak strategis dekat
+                      pusat kota, bandara, pasar tradisional, dan pantai-pantai
+                      indah, resor kami menawarkan kenyamanan dan ketenangan.
                     </p>
-                    <p className="text-gray-600 leading-loose">
-                      We believe in creating experiences that resonate long
-                      after your departure, where every moment is crafted with
-                      intention and care.
+                    <p className="text-justify text-gray-600 leading-loose text-lg mb-6">
+                      Kami menyediakan berbagai fasilitas, termasuk kamar yang
+                      nyaman untuk menginap bersama keluarga, kolam renang,
+                      ruang serbaguna yang luas untuk acara, ruang pertemuan
+                      khusus, area pernikahan yang indah, area parkir gratis,
+                      serta kafe indoor dan outdoor yang dirancang untuk
+                      relaksasi dan pertemuan sosial. Sribudaya Resort adalah
+                      destinasi sempurna untuk liburan, bisnis, dan perayaan
+                      yang berkesan di Aceh.
                     </p>
                   </div>
 
                   {/* Philosophy */}
                   <div className="border-l-2 border-gray-200 pl-8">
                     <h3 className="text-xl font-light text-gray-800 mb-4">
-                      Our Philosophy
+                      Filosofi kami
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Sustainable luxury that honors both our guests and the
-                      pristine environment that surrounds us.
+                      Filosofi kami adalah menghadirkan kemewahan yang
+                      berkelanjutan, dengan mengutamakan kenyamanan tamu
+                      sekaligus menjaga kelestarian lingkungan sekitar.
                     </p>
                   </div>
                 </div>
@@ -167,13 +176,14 @@ const About = () => {
 
             {/* Stats Section */}
             <LazyDiv>
+              <div className="items-center justify-center"></div>
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 mb-16 animate-fade-up">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   {[
-                    { number: "15", label: "Years of Excellence" },
-                    { number: "500+", label: "Satisfied Guests" },
-                    { number: "24/7", label: "Personalized Service" },
-                    { number: "5★", label: "Hospitality Standard" },
+                    { number: "2000+", label: "Kepuasan Tamu" },
+                    { number: "24/7", label: "Layanan personal " },
+                    { number: "4,6★", label: "Standar Pelayanan Terbaik" },
+                    { number: "40+", label: "Profesional staff" },
                   ].map((stat, index) => (
                     <div key={index} className="group">
                       <div className="text-3xl md:text-4xl font-light text-gray-800 mb-2 group-hover:text-gray-900 transition-colors">
@@ -187,18 +197,6 @@ const About = () => {
                 </div>
               </div>
             </LazyDiv>
-
-            {/* Call to Action */}
-            {/* <div className="text-center">
-              <div className="inline-flex space-x-4">
-                <button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-full font-light text-sm tracking-wide uppercase transition-all duration-300 hover:scale-105">
-                  Discover More
-                </button>
-                <button className="border border-gray-300 hover:border-gray-800 text-gray-800 px-8 py-3 rounded-full font-light text-sm tracking-wide uppercase transition-all duration-300 hover:bg-gray-50">
-                  View Gallery
-                </button>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
