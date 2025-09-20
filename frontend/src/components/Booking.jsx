@@ -88,15 +88,15 @@ const Booking = () => {
         <div className="wrapper">
           <div className="hero-slides h-[80vh] relative">
             <Swiper
-              pagination={{
-                dynamicBullets: true,
-              }}
+              // pagination={{
+              //   dynamicBullets: false,
+              // }}
               autoplay={{
                 delay: 5000,
               }}
               speed={2500}
               loop="true"
-              modules={[Pagination, Autoplay]}
+              modules={[Autoplay]}
               className="mySwiper"
             >
               <SwiperSlide>
