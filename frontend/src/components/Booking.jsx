@@ -765,7 +765,7 @@ const Booking = () => {
                       />
                     </a>
                     <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                      <h3 className="text-3xl  font-semibold mb-2">
+                      <h3 className="page-title  font-semibold mb-2 !text-white">
                         Silver Wedding Package
                       </h3>
                       {/* <p className="  ">
@@ -970,13 +970,10 @@ const Booking = () => {
                     />
                   </a>
                   <div className="p-4 text-left bg-dark text-white flex flex-col flex-grow">
-                    <h3 className="text-3xl  font-semibold mb-2">
+                    <h3 className="page-title  font-semibold mb-2 !text-white">
                       Halfday Meeting A Package
                     </h3>
-                    {/* <p className="  ">
-                      Perfect for intimate weddings with essential services
-                      included.
-                    </p> */}
+
                     <a
                       href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20paket%20meeting%20halfday%20A"
                       target="_blank"
@@ -1143,7 +1140,7 @@ const Booking = () => {
             >
               <SwiperSlide>
                 <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                  <h3 className="page-title  font-semibold mb-2 !text-white pb-4 border-b-2 border-white text-center">
                     Pool Package
                   </h3>
                   <h4 className="text-2xl">Rp. 100.000/person</h4>
@@ -1170,7 +1167,7 @@ const Booking = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                  <h3 className="page-title  font-semibold mb-2 !text-white pb-4 border-b-2 border-white text-center">
                     Pool Regular
                   </h3>
                   <h4 className="text-2xl">Rp. 70.000/person</h4>
@@ -1192,7 +1189,7 @@ const Booking = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="p-8 text-left bg-dark rounded-lg text-white flex flex-col flex-grow hover:shadow-xl transition-shadow">
-                  <h3 className="text-3xl  font-semibold mb-2 pb-4 border-b-2 border-white text-center">
+                  <h3 className="page-title  font-semibold mb-2 !text-white pb-4 border-b-2 border-white text-center">
                     Pendamping
                   </h3>
                   <h4 className="text-2xl">Rp. 50.000/person</h4>
