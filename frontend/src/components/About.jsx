@@ -63,12 +63,13 @@ const About = () => {
                       Tentang kami
                     </h2>
                     <p className="text-justify text-gray-600 leading-loose text-lg mb-6">
-                      <strong>Sribudaya Resort</strong> Aceh adalah resor unik yang memadukan
-                      arsitektur bergaya Skandinavia dengan nuansa alam yang
-                      menyegarkan, menciptakan tempat peristirahatan yang tenang
-                      dan modern bagi para tamu kami. Terletak strategis dekat
-                      pusat kota, bandara, pasar tradisional, dan pantai-pantai
-                      indah, resor kami menawarkan kenyamanan dan ketenangan.
+                      <strong>Sribudaya Resort</strong> Aceh adalah resor unik
+                      yang memadukan arsitektur bergaya Skandinavia dengan
+                      nuansa alam yang menyegarkan, menciptakan tempat
+                      peristirahatan yang tenang dan modern bagi para tamu kami.
+                      Terletak strategis dekat pusat kota, bandara, pasar
+                      tradisional, dan pantai-pantai indah, resor kami
+                      menawarkan kenyamanan dan ketenangan.
                     </p>
                     <p className="text-justify text-gray-600 leading-loose text-lg mb-6">
                       Kami menyediakan berbagai fasilitas, termasuk kamar yang
@@ -107,11 +108,11 @@ const About = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-medium text-gray-800 mb-2">
-                          Alpine Views
+                          Pemandangan Alam
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Wake up to breathtaking mountain vistas that change
-                          with the light throughout the day.
+                          Pemandangan gunung dan pepohonan di Sribudaya Resort
+                          yang indah yang memanjakan mata pengunjung kami
                         </p>
                       </div>
                     </div>
@@ -125,11 +126,11 @@ const About = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-medium text-gray-800 mb-2">
-                          Wellness Retreat
+                          Suasana Nyaman dan Tenang
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Restore balance through curated wellness programs and
-                          spa treatments.
+                          Suasana yang membuat pengunjung merasa betah, rileks,
+                          dan jauh dari hiruk pikuk perkotaan.
                         </p>
                       </div>
                     </div>
@@ -143,11 +144,12 @@ const About = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-medium text-gray-800 mb-2">
-                          Sustainable Luxury
+                          Taman yang asri
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Experience refined comfort while supporting
-                          environmental conservation.
+                          Taman kami yang indah dan asri di Sribudaya Resort
+                          membuat pengunjung betah untuk berlama-lama dan cocok
+                          untuk photoshoot.
                         </p>
                       </div>
                     </div>
@@ -161,11 +163,12 @@ const About = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-medium text-gray-800 mb-2">
-                          Curated Experiences
+                          Perpaduan budaya
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">
-                          Thoughtfully designed activities that connect you with
-                          local culture and nature.
+                          Desain arsitektur Sribudaya Resort dirancang
+                          sedemikian rupa dengan memadukan budaya Aceh dan gaya
+                          arsitektur Scandinavia.
                         </p>
                       </div>
                     </div>

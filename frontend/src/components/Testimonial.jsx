@@ -45,14 +45,14 @@ const Testimonial = () => {
   // Data Gallery Resort
   const galleryData = {
     description: {
-      title: "Experience Paradise",
-      subtitle: "Discover Our Beautiful Resort",
-      text: "Immerse yourself in the breathtaking beauty of our resort. From luxurious accommodations to world-class facilities, every corner tells a story of comfort and elegance. Our dedicated team ensures that every moment of your stay is filled with warmth and exceptional service.",
+      title: "Pengalaman Memukau",
+      subtitle: "Jelajahi Keindahan Resort Kami",
+      text: "Rasakan keindahan memukau di resort kami. Dari akomodasi mewah hingga fasilitas berkelas dunia, setiap sudut menghadirkan kisah tentang kenyamanan dan keanggunan. Tim kami yang berdedikasi siap memastikan setiap momen masa inap Anda penuh dengan kehangatan serta pelayanan yang istimewa.",
       highlights: [
-        "Premium Accommodations",
-        "World-Class Facilities",
-        "Professional Staff",
-        "Stunning Natural Views",
+        "Akomodasi Mewah",
+        "Fasilitas Kelas Dunia",
+        "Staff Profesional",
+        "Pemandangan Alam",
       ],
     },
     images: [
@@ -85,7 +85,7 @@ const Testimonial = () => {
         src: "/images/about/kolam.jpg",
         alt: "Kolam renang bersih dan nyaman di sribudaya resort. Cocok untuk anak-anak dan dewasa",
         category: "swimming pool",
-        title: "Kolam renang",
+        title: "Swimming pool",
         position: "right-top",
       },
       {
@@ -127,63 +127,73 @@ const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      location: "Jakarta, Indonesia",
+      name: "Riskia Nanda",
+      location: "Aceh, Indonesia",
       rating: 5,
       comment:
-        "Pengalaman menginap yang luar biasa! Staff sangat ramah dan pemandangan resort yang memukau. Kamar sangat bersih dan nyaman. Pasti akan kembali lagi!",
+        "Lokasi yang sangat strategis, makanannya enak enak ditambah design coffeshopnya yang sangat estetik, apalagi pempeknya best bgt, next aku nginap sini deh penasaran bgt",
       image: "/testimonial/cewe1.png",
-      stayType: "Resort Villa",
+      stayType: "CoffeShop",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      location: "Singapore",
+      name: "Indra",
+      location: "Aceh, Indonesia",
       rating: 5,
       comment:
-        "Perfect getaway destination! The homestay felt like a home away from home. Amazing hospitality and the breakfast was incredible. Highly recommended!",
+        "Tempat yg baru dan masih masuk dalam kawasan perkotaan, namun dengan  area yg sangat luas rasanya seperti jauh dari kebisingan kota, cocok utk tamu jauh yg ingin staycation, selain itu terdapat musholla, kolam ikan, parkiran luas, hall, cafe, dan juga kolam renang, complete dech",
       image: "/testimonial/cowo1.png",
-      stayType: "Homestay Deluxe",
+      stayType: "Homestay",
     },
     {
       id: 3,
-      name: "Rina Sari",
-      location: "Surabaya, Indonesia",
+      name: "Haryanti Huthoria",
+      location: "Aceh, Indonesia",
       rating: 5,
       comment:
-        "Tempat yang sempurna untuk liburan keluarga. Anak-anak sangat senang dengan kolam renang dan taman bermain. Pelayanan sangat memuaskan!",
+        "pengalaman menginap di sribudaya resort selama 2 malam bersama keluarga tercinta. untuk konsep resortnya sungguh baik, mulai dari bangunan serta interiornya didalamnya sangat menarik. Tersedia kolam berenang dan cafe disini jadi tidak perlu kemana mana lagi bisa staycation disini. Sribudaya juga menyediakan sarapan pagi, bisa request di antar ke kamar atau makan di restaurant langsung. Ini saya request untuk di antar ke kamar, untuk menunya setiap hari berbeda dan makanannya cocok dilidah saya.",
       image: "/testimonial/cewe1.png",
       stayType: "Family Resort",
     },
     {
       id: 4,
-      name: "David Wilson",
-      location: "Australia",
-      rating: 4,
+      name: "Teuku vedi",
+      location: "Aceh, Indonesia",
+      rating: 5,
       comment:
-        "Beautiful location with stunning sunset views. The room was spacious and well-maintained. Great value for money and excellent service throughout our stay.",
+        "Tempatnya sangat nyaman. Makanannya enak2. Pelayanannya cepat. Tempatnya bersih. Sangat cocok bawa keluarga. Pengalaman baru untuk menginap dan santai  di sini. Pasti akan sering kembali kesini.",
       image: "/testimonial/cowo1.png",
       stayType: "Ocean View Suite",
     },
     {
       id: 5,
-      name: "Lisa Putri",
-      location: "Bandung, Indonesia",
+      name: "Nur Asiah",
+      location: "Jakarta, Indonesia",
       rating: 5,
       comment:
-        "Homestay yang sangat cozy dan bersih. Lokasinya strategis dan mudah dijangkau. Host sangat baik dan membantu memberikan rekomendasi tempat wisata.",
+        "Pesen makan di sribudaya ayam cobek bakar paling enak di Banda aceh. Udah rasa sambal dimanapun ngga ada lawan selain di sribudaya. Kemarin sampe bawa pulang untuk oleh2 bawa ke jakarta, tempat nya nyaman banget",
       image: "/testimonial/cewe1.png",
-      stayType: "Premium Homestay",
+      stayType: "CoffeShop",
     },
     {
       id: 6,
-      name: "James Rodriguez",
-      location: "Mexico",
+      name: "Sayed Ulil Aqbar",
+      location: "Aceh, Indonesia",
       rating: 5,
       comment:
-        "Outstanding experience! The resort exceeded all expectations. From the luxurious amenities to the breathtaking views, everything was perfect. Will definitely return!",
+        "Pelayanannya sangat bagus dan karyawannya sangat ramah dan pengantaran makanan tidak lama",
       image: "/testimonial/cowo1.png",
-      stayType: "Luxury Resort",
+      stayType: "Profesional staff",
+    },
+    {
+      id: 7,
+      name: "Kintan Kirani",
+      location: "Aceh, Indonesia",
+      rating: 5,
+      comment:
+        "Bulan lalu temen aku nikah disini, ga espek bakal secakep itu view nya, ditambah nginap juga semalam di sini sangat oke bgt!!!!",
+      image: "/testimonial/cewe1.png",
+      stayType: "Wedding Hall",
     },
   ];
 
@@ -579,7 +589,7 @@ const Testimonial = () => {
                 </div>
 
                 {/* View More Button */}
-                <div className="text-center mt-8">
+                {/* <div className="text-center mt-8">
                   <button
                     onClick={() => openModal(galleryData.images[0])}
                     className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center"
@@ -587,7 +597,7 @@ const Testimonial = () => {
                     <Camera className="w-5 h-5 mr-2" />
                     View All Photos
                   </button>
-                </div>
+                </div> */}
               </div>
             </LazyDiv>
           </div>
@@ -640,11 +650,11 @@ const Testimonial = () => {
                 <Quote className="w-8 h-8 text-blue-600" />
               </div>
               <h2 className="page-title animate-fade-up">
-                What Our Guests Say
+                Penilaian Dari Para Tamu
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-up">
-                Discover why thousands of travelers choose our resorts and
-                homestays for their perfect getaway
+                Inilah mengapa banyak para wisatawan memilih resort dan homestay
+                kami untuk liburan dan detinasi mereka
               </p>
             </div>
           </LazyDiv>
