@@ -62,8 +62,9 @@ const Home = () => {
             <h1 className="title drop-shadow-lg">
               Selamat Datang di Sribudaya Resort & Homestay
             </h1>
-            <p className="mt-4 title-desc text-white drop-shadow-md">
-              Nikmati keindahan alam & kenyamanan terbaik untuk liburan Anda
+            <p className="mt-1 title-desc text-white drop-shadow-md">
+              Perpaduan alam dan desain bangunan yang menarik <br /> membuat
+              Sribudaya resort jadi pilihan liburan anda
             </p>
             <div className="mt-8">
               <Link
@@ -85,13 +86,14 @@ const Home = () => {
             <div className="text-left animate-fade-right">
               <p className="subtitle">About</p>
               <h2 className="page-title">
-                Discover <br /> Our Story
+                Sribudaya <br /> Resort
               </h2>
               <div className="w-16 h-[3px] bg-blue-600 mb-6"></div>
               <p className="mb-8 page-title-desc">
-                Sribudaya resort is designed to meet the requirements of modern
-                day travelers. We understand each trip is different and have
-                thoughtfully balanced the scapes of a peaceful home and a luxury
+                Sribudaya Resort dirancang untuk memenuhi kebutuhan para
+                wisatawan masa kini. Kami memahami bahwa setiap perjalanan
+                memiliki keunikan tersendiri, dan telah dengan cermat
+                menggabungkan kehangatan rumah yang tenang dengan kemewahan
                 hotel.
               </p>
               <Link
@@ -123,7 +125,7 @@ const Home = () => {
           <div className="text-center mb-12 animate-fade-up">
             <p className="subtitle">Our Rooms</p>
             <h2 className="page-title mb-[1px]">
-              modern and elegant <br /> Accommodations
+              Penginapan yang <br /> Modern dan Elegan
             </h2>
           </div>
         </LazyDiv>
@@ -133,17 +135,16 @@ const Home = () => {
           <LazyDiv>
             <div className="relative rounded-lg overflow-hidden shadow-lg animate-fade-right">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                alt="Luxury Cottage Room"
+                src="/images/booking/family-suite01_compressed.jpg"
+                alt="Family Suite"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
               <div className="absolute bottom-0 p-6 text-white">
-                <h3 className="text-xl font-semibold">Luxury Cottage Room</h3>
+                <h3 className="text-xl font-semibold">Family Suite</h3>
                 <p className="mt-2">
-                  Our spacious suites embody luxury and sophistication and enjoy
-                  the experience with a spacious sitting area, luxury bedding
-                  and free Wi-Fi.
+                  Suite luas kami menghadirkan kemewahan dan kenyamanan dengan
+                  tempat tidur mewah serta Wi-Fi gratis.
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <Link
@@ -161,17 +162,16 @@ const Home = () => {
           <LazyDiv>
             <div className="relative rounded-lg overflow-hidden shadow-lg animate-fade-left">
               <img
-                src="/images/hotel.jpg"
-                alt="Heritage Cottage Room"
+                src="/images/booking/family-studio02_compressed.jpg"
+                alt="Family Studio"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
               <div className="absolute bottom-0 p-6 text-white">
-                <h3 className="text-xl font-semibold">Heritage Cottage Room</h3>
+                <h3 className="text-xl font-semibold">Family Studio</h3>
                 <p className="mt-2">
-                  Our spacious suites embody luxury and sophistication and enjoy
-                  the experience with a spacious sitting area, luxury bedding
-                  and free Wi-Fi.
+                  Suite luas kami menghadirkan kemewahan dan kenyamanan dengan
+                  tempat tidur mewah serta Wi-Fi gratis.
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <Link
@@ -195,7 +195,7 @@ const Home = () => {
             <div className="text-center mb-12 animate-fade-up">
               <h2 className="subtitle">Partner Sites</h2>
               <h2 className="page-title">
-                You can find us at popular booking sites
+                Anda dapat menemukan kami di situs pemesanan populer.
               </h2>
             </div>
           </LazyDiv>
@@ -255,13 +255,14 @@ const Home = () => {
             <div className="animate-fade-right">
               <p className="subtitle">Amenities</p>
               <h2 className="page-title">
-                Your All-Inclusive <br /> Experience
+                Pengalaman Lengkap
+                <br /> untuk Anda
               </h2>
               <div className="absoulute left-0 w-1/4 h-[3px] bg-blue-600 mb-4"></div>
               <p className="page-title-desc">
-                Indulge in a world of luxury and comfort with our exclusive
-                resort amenities, designed to create unforgettable experiences
-                for you.
+                Nikmati keindahan dan kenyamanan dengan fasilitas resor
+                eksklusif kami, yang dirancang untuk menciptakan pengalaman tak
+                terlupakan bagi Anda.
               </p>
             </div>
           </LazyDiv>
@@ -319,7 +320,7 @@ const Home = () => {
 
           <div className="text-center mb-12 animate-fade-up">
             <p className="subtitle">Location</p>
-            <h2 className="page-title">Our Resort's Location</h2>
+            <h2 className="page-title">Lokasi Resort Kami</h2>
           </div>
 
           {/* Google Maps */}
@@ -343,130 +344,17 @@ const Home = () => {
         <LazyDiv>
           <div className="wrapper">
             <h2 className="subtitle text-center animate-fade-right">
-              Info Lokasi
+              Strategic Location
             </h2>
             <h1 className="page-title text-center animate-fade-left">
-              Lokasi Strategis
+              Lokasi Populer Terdekat
             </h1>
             <p className="page-title-desc text-center animate-fade-right">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis, distinctio cum, unde odit iure quibusdam adipisci
-              delectus expedita ipsa accusantium vero cupiditate. Ipsam omnis
-              sint consectetur nisi, iste eum corporis!
+              Sribudaya Resort & Homestay - Akses Mudah ke Berbagai Destinasi
+              Penting
             </p>
           </div>
-          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
-            <h1 className="text-3xl font-bold mb-4">
-              Jarak dari sribudaya ke the pade (100 KM)
-            </h1>
-            <p className="page-title-desc !text-base  mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
-              earum reprehenderit accusamus molestiae provident, dolores impedit
-              consectetur quisquam natus.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
-              className="blue-btn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit map
-            </a>
-          </div>
-        </div>
-        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
-          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
-            <h1 className="text-3xl font-bold mb-4">
-              Jarak dari sribudaya ke the pade (100 KM)
-            </h1>
-            <p className="page-title-desc !text-base  mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
-              earum reprehenderit accusamus molestiae provident, dolores impedit
-              consectetur quisquam natus.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
-              className="blue-btn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit map
-            </a>
-          </div>
-          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
-            <h1 className="text-3xl font-bold mb-4">
-              Jarak dari sribudaya ke the pade (100 KM)
-            </h1>
-            <p className="page-title-desc !text-base  mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
-              earum reprehenderit accusamus molestiae provident, dolores impedit
-              consectetur quisquam natus.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
-              className="blue-btn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit map
-            </a>
-          </div>
-        </div>
-        <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
-          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
-            <h1 className="text-3xl font-bold mb-4">
-              Jarak dari sribudaya ke the pade (100 KM)
-            </h1>
-            <p className="page-title-desc !text-base  mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
-              earum reprehenderit accusamus molestiae provident, dolores impedit
-              consectetur quisquam natus.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
-              className="blue-btn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit map
-            </a>
-          </div>
-          <div className="card border-2 border-gray-500 p-8 w-full rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-3">
-            <h1 className="text-3xl font-bold mb-4">
-              Jarak dari sribudaya ke the pade (100 KM)
-            </h1>
-            <p className="page-title-desc !text-base  mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              delectus vel rerum molestiae? Eos id eaque sit beatae eum, saepe
-              earum reprehenderit accusamus molestiae provident, dolores impedit
-              consectetur quisquam natus.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/d1qxYKWhvEw3FFcs8"
-              className="blue-btn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit map
-            </a>
-          </div>
-        </div>
-      </section> */}
-      {/*  */}
-      {/* location distance to important places slides for mobile*/}
-      <section className="mt-32 px-6 md:px-12">
-        <h2 className="subtitle text-center">Info Lokasi</h2>
-        <h1 className="page-title text-center">Lokasi Strategis</h1>
-        <p className="page-title-desc text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-          distinctio cum, unde odit iure quibusdam adipisci delectus expedita
-          ipsa accusantium vero cupiditate. Ipsam omnis sint consectetur nisi,
-          iste eum corporis!
-        </p>
+        </LazyDiv>
 
         <div className="wrapper mt-10 flex justify-center items-center gap-5  flex-col md:flex-row ">
           <Swiper
@@ -474,7 +362,9 @@ const Home = () => {
             pagination={{
               dynamicBullets: true,
             }}
-            autoplay={{ delay: 2500 }}
+            autoplay={{ delay: 2000 }}
+            loop={true}
+            speed={5000}
             spaceBetween={20}
             breakpoints={{
               320: { slidesPerView: 1 },
@@ -635,7 +525,7 @@ const Home = () => {
           <LazyDiv>
             <div className="text-center mb-12 animate-fade-up">
               <h2 className="subtitle">Social Media</h2>
-              <h2 className="page-title">Follow Our Social Media For More</h2>
+              <h2 className="page-title">Follow Akun Media Sosial Kami</h2>
             </div>
           </LazyDiv>
 

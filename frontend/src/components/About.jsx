@@ -27,12 +27,12 @@ const About = () => {
         {/* Clean Background */}
         <div className="absolute inset-0">
           <div
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            className="w-full h-full md:bg-cover lg:bg-contain bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url()",
+              backgroundImage: "url(/images/about/logo-sribudaya-full.png)",
             }}
           >
-            <div className="absolute inset-0 bg-main"></div>
+            <div className="absolute inset-0 bg-main opacity-90"></div>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ const About = () => {
                 </h1>
                 <div className="w-12 h-px bg-gray-400 mx-auto mb-6"></div>
                 <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto animate-fade-left">
-                  A sanctuary of tranquility nestled in nature's embrace
+                  Tempat tenang dan damai yang dikeliliingi dengan pepohonan dan bangunan yang elegan
                 </p>
               </div>
             </LazyDiv>
@@ -167,13 +167,13 @@ const About = () => {
 
             {/* Stats Section */}
             <LazyDiv>
+              <div className="items-center justify-center"></div>
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 mb-16 animate-fade-up">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                   {[
-                    { number: "15", label: "Years of Excellence" },
-                    { number: "500+", label: "Satisfied Guests" },
+                    { number: "2000+", label: "Satisfied Guests" },
                     { number: "24/7", label: "Personalized Service" },
-                    { number: "5★", label: "Hospitality Standard" },
+                    { number: "4,7★", label: "Hospitality Standard" },
                   ].map((stat, index) => (
                     <div key={index} className="group">
                       <div className="text-3xl md:text-4xl font-light text-gray-800 mb-2 group-hover:text-gray-900 transition-colors">
