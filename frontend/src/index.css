@@ -90,6 +90,10 @@ p {
   @apply font-normal text-4xl md:text-5xl font-epunda-slab mb-4;
 }
 
+.card-normal-title {
+  @apply text-3xl font-semibold;
+}
+
 .rivage-title {
   @apply font-beau-rivage inline-block leading-snug text-4xl md:text-5xl;
 }
