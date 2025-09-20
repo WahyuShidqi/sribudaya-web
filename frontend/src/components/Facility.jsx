@@ -212,12 +212,12 @@ const Facility = () => {
                 >
                   Jelajahi Fasilitas
                 </a>
-                <a
+                {/* <a
                   href="#booking"
                   className="flex flex-col sm:flex-row gap-4 justify-center items-center blue-btn"
                 >
                   Book Now
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
