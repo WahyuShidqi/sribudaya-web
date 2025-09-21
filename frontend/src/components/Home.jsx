@@ -54,8 +54,8 @@ const Home = () => {
               Selamat Datang di Sribudaya Resort & Homestay
             </h1>
             <p className="mt-1 title-desc text-white drop-shadow-md">
-              Perpaduan alam dan desain bangunan yang menarik <br /> membuat
-              Sribudaya resort jadi pilihan liburan anda
+              Perpaduan alam dan desain bangunan yang menarik membuat Sribudaya
+              resort <br /> jadi pilihan liburan anda
             </p>
             <div className="mt-8">
               <Link
