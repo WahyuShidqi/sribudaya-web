@@ -454,7 +454,7 @@ const Booking = () => {
                       Rp. 1.300.000/malam
                     </h2>
                     {/* <p className="mt-6">1 Kamar/malam</p> */}
-                    <p className="mt-2">2 Dewasa, 2 Anak</p>
+                    <p className="mt-2">4 Dewasa, 2 Anak</p>
 
                     <a
                       href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20Studio"
@@ -593,7 +593,7 @@ const Booking = () => {
                       Rp. 1.300.000/malam
                     </h2>
                     {/* <p className="mt-6">1 Kamar/malam</p> */}
-                    <p className="mt-2">2 Dewasa, 2 Anak</p>
+                    <p className="mt-2">5 Dewasa, 2 Anak</p>
 
                     <a
                       href="https://api.whatsapp.com/send?phone=6282267878880&text=Halo%2C%20Saya%20mau%20booking%20kamar%20dengan%20tipe%20family%20deluxe"
