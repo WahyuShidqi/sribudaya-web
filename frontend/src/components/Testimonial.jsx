@@ -6,7 +6,6 @@ import {
   Quote,
   Camera,
   Eye,
-  X,
 } from "lucide-react";
 import LazyDiv from "./misc/LazyDiv";
 import { Fancybox } from "@fancyapps/ui";
@@ -14,8 +13,6 @@ import { Fancybox } from "@fancyapps/ui";
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // useEffect for wedding package gallery
   useEffect(() => {
@@ -197,17 +194,6 @@ const Testimonial = () => {
     },
   ];
 
-  // Modal functions
-  const openModal = (image) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
-
   // Auto slide functionality
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -296,7 +282,6 @@ const Testimonial = () => {
                   {/* Top Left - Large 0*/}
                   <a
                     className="absolute top-0 left-0 w-80 h-60 group cursor-pointer animate-jump-in"
-                    // onClick={() => openModal(galleryData.images[0])}
                     href={galleryData.images[0].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[0].alt}
@@ -325,7 +310,6 @@ const Testimonial = () => {
                   {/* Top Center wide - Optional 100*/}
                   <a
                     className="absolute -top-16 left-1/3 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer animate-jump-in animate-delay-100"
-                    // onClick={() => openModal(galleryData.images[7])}
                     href={galleryData.images[7].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[7].alt}
@@ -354,7 +338,6 @@ const Testimonial = () => {
                   {/* Top Right - Large 200*/}
                   <a
                     className="absolute top-0 right-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-200"
-                    // onClick={() => openModal(galleryData.images[2])}
                     href={galleryData.images[2].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[2].alt}
@@ -383,7 +366,6 @@ const Testimonial = () => {
                   {/* Right Side - tall 300*/}
                   <a
                     className="absolute top-72 right-0 w-64 h-80 group cursor-pointer animate-jump-in animate-delay-300"
-                    // onClick={() => openModal(galleryData.images[5])}
                     href={galleryData.images[5].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[5].alt}
@@ -412,7 +394,6 @@ const Testimonial = () => {
                   {/* Bottom Right - Large 400*/}
                   <a
                     className="absolute bottom-0 right-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-[400ms]"
-                    // onClick={() => openModal(galleryData.images[6])}
                     href={galleryData.images[6].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[6].alt}
@@ -441,7 +422,6 @@ const Testimonial = () => {
                   {/* Bottom Center wide - Optional 500*/}
                   <a
                     className="absolute -bottom-16 left-1/3 transform -translate-x-1/2 w-[28rem] h-60 group cursor-pointer animate-jump-in animate-delay-[500ms]"
-                    // onClick={() => openModal(galleryData.images[1])}
                     href={galleryData.images[1].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[1].alt}
@@ -470,7 +450,6 @@ const Testimonial = () => {
                   {/* Bottom Left - Large 600*/}
                   <a
                     className="absolute bottom-0 left-0 w-80 h-60 group cursor-pointer animate-jump-in animate-delay-[600ms]"
-                    // onClick={() => openModal(galleryData.images[4])}
                     href={galleryData.images[4].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[4].alt}
@@ -499,7 +478,6 @@ const Testimonial = () => {
                   {/* Left Side - Tall 700*/}
                   <a
                     className="absolute top-72 left-0 w-64 h-80 group cursor-pointer animate-jump-in animate-delay-[700ms]"
-                    // onClick={() => openModal(galleryData.images[3])}
                     href={galleryData.images[3].src}
                     data-fancybox="about-gallery"
                     data-caption={galleryData.images[3].alt}
@@ -560,10 +538,12 @@ const Testimonial = () => {
                 {/* Mobile Gallery Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {galleryData.images.slice(0, 6).map((image) => (
-                    <div
+                    <a
                       key={image.id}
                       className="group cursor-pointer"
-                      onClick={() => openModal(image)}
+                      href={image.src}
+                      data-fancybox="about-gallery-mobile"
+                      data-caption={image.alt}
                     >
                       <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                         <img
@@ -584,7 +564,7 @@ const Testimonial = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
 
@@ -602,41 +582,6 @@ const Testimonial = () => {
             </LazyDiv>
           </div>
         </div>
-
-        {/* Modal for Image Viewing */}
-        {isModalOpen && selectedImage && (
-          <div
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-            onClick={closeModal}
-          >
-            <div
-              className="relative max-w-4xl w-full"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={closeModal}
-                className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
-              >
-                <X className="w-8 h-8" />
-              </button>
-              <img
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                onError={(e) => {
-                  e.target.src =
-                    "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop";
-                }}
-                className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-lg">
-                <h3 className="text-white text-xl font-bold mb-2">
-                  {selectedImage.title}
-                </h3>
-                <p className="text-gray-300">{selectedImage.category}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* Testimonial Section */}
