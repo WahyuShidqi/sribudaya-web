@@ -160,7 +160,7 @@ const Testimonial = () => {
       comment:
         "Tempatnya sangat nyaman. Makanannya enak2. Pelayanannya cepat. Tempatnya bersih. Sangat cocok bawa keluarga. Pengalaman baru untuk menginap dan santai  di sini. Pasti akan sering kembali kesini.",
       image: "/testimonial/cowo1.png",
-      stayType: "Ocean View Suite",
+      stayType: "Resort",
     },
     {
       id: 5,
@@ -618,7 +618,7 @@ const Testimonial = () => {
                   {testimonials.map((testimonial) => (
                     <div
                       key={testimonial.id}
-                      className="w-full flex items-center flex-shrink-0"
+                      className="w-full flex items-center justify-center flex-shrink-0"
                     >
                       <div className="bg-white mx-4 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                         <div className="p-8 md:p-12">
