@@ -150,11 +150,8 @@ const Booking = () => {
                   Liburan nyaman bersama keluarga di Sribudaya Resort
                 </h1>
               </div>
-              <div className="subheader text-center px-4 w-3/4">
+              <div className="subheader text-center px-2 md:px-4 md:w-3/4">
                 <h2 className="title-desc">
-                  {/* Nikmati resort yang tenang dan nyaman, sempurna untuk
-                  bersantai bersama orang terdekat. Pesan sekarang dan buat
-                  liburanmu tak terlupakan */}
                   Nikmati resort indah dengan suasana tenang, dan momen
                   kebersamaan yang penuh kehangatan. Booking sekarang dan
                   nikmati liburan tak terlupakan untuk keluarga Anda
