@@ -355,7 +355,7 @@ const Home = () => {
             }}
             autoplay={{ delay: 2000 }}
             loop={true}
-            speed={5000}
+            speed={3000}
             spaceBetween={20}
             breakpoints={{
               320: { slidesPerView: 1 },
